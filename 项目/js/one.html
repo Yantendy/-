@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        function jc(a){
+
+        if(a===1||a===2) 
+        return 1;
+
+        return jc(a-1)+jc(a-2);
+      }
+
+        
+   var b= jc(3)
+   console.log(b)
+   */
+  /*    var arr=[123,false,'nishi']
+  console.log(arr)
+  console.log(arr.length)
+  for (let index = 0; index < arr.length; index++) {
+      const element = arr[index];
+
+      console.log(element)
+  }
+  var obj={1:'ytd',sex:'男'}
+  console.log(obj)
+  obj.name='王瑶祺'
+  obj.sex='女'  */
+
+  var arr=[ 12, 8, 5, 6, 7, 3, 2, 4, 1 ]
+  console.log(arr)
+
+
+  for (var i = 0; i < arr.length - 1; i++) {
+      for (var j = 0; j < arr.length-1; j++) {
+         if(arr[j]>arr[j+1]){
+            var temp= arr[j]
+            arr[j]=arr[j+1]
+            arr[j+1]=temp
+
+         }
+          
+      }
+      
+  }
+  console.log(arr)
+
+
+
+
+    </script>
+</body>
+</html>

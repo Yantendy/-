@@ -1,0 +1,334 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, PingFangSC-Regular, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  color: #40404c;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.app {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.app .nav {
+  background-color: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app .nav .left {
+  display: flex;
+  align-items: center;
+}
+
+.app .nav .left .img {
+  width: 290px;
+  height: 60px;
+  white-space: nowrap;
+  background: url(https://s1.xmcdn.com/yx/ximalaya-web-static/last/dist/images/logo_2021_554d3ee.png) no-repeat;
+  background-size: 100%;
+  background-position: 0 12px;
+}
+
+.app .nav .left .pos {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+}
+
+.app .nav .left .pos .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 100%;
+  cursor: pointer;
+  color: #72727b;
+  position: relative;
+  z-index: 9;
+}
+
+.app .nav .left .pos .item:nth-child(2) {
+  position: relative;
+}
+
+.app .nav .left .pos .item:nth-child(2) #after {
+  content: '^';
+  position: absolute;
+  right: 2px;
+  text-indent: -99999px;
+  overflow: hidden;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #ccc;
+  transform: rotate(135deg);
+  display: inline-block;
+  border-left: 0;
+  border-bottom: 0;
+  top: 27px;
+  transition: all .5s;
+}
+
+.app .nav .left .pos .item .nav-info {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  z-index: 0;
+  top: 62px;
+  width: 1080px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px 0 0 0;
+  background-color: #fbfbfc;
+  padding-left: 40px;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+
+.app .nav .left .pos .item .items {
+  background: #ebebeb;
+  border-radius: 12px;
+  padding: 3px 16px;
+  margin: auto 16px 20px auto;
+  width: 110px;
+  text-align: center;
+}
+
+.app .nav .left .pos .item .colors {
+  color: #F86442;
+}
+
+.app .nav .left .pos .item .show {
+  display: flex !important;
+  top: 62px;
+  left: 50%;
+  opacity: 1;
+  transform: translateX(-50%);
+  transition: all .3s ease-in-out;
+  z-index: -11;
+}
+
+.app .nav .left .pos .active {
+  font-size: 16px;
+  color: #40404c;
+}
+
+.app .nav .left .pos .tag {
+  height: 3px;
+  width: 20px;
+  bottom: 0;
+  background: #f86442;
+  position: absolute;
+  bottom: 0;
+  left: 26px;
+  cursor: pointer;
+  transition: left .5s;
+}
+
+.app .nav .left .pos .lefts {
+  left: 86px;
+  transition: left .5s;
+}
+
+.app .nav .left .pos .left1 {
+  left: 144px;
+  transition: left .5s;
+}
+
+.app .nav .left .input {
+  width: 298px;
+  height: 100%;
+  margin-left: 5px;
+  position: relative;
+}
+
+.app .nav .left .input input {
+  padding: 10px 70px 10px 20px;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #f86442;
+  border-radius: 54px;
+}
+
+.app .nav .left .input button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  background-image: linear-gradient(90deg, #ff9973 1%, #ff7251 99%);
+  width: 60px;
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 0 54px 54px 0;
+  cursor: pointer;
+}
+
+.app .nav .right {
+  display: flex;
+}
+
+.app .nav .right .item {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  position: relative;
+  cursor: pointer;
+}
+
+.app .nav .right .item .xixi {
+  position: absolute;
+  top: -1px;
+  right: -10px;
+  background: #ff4646;
+  border-radius: 10px;
+  padding: 2px 4px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 15px;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.app .nav .right .item .info {
+  display: none;
+  position: absolute;
+  top: 60px;
+  width: 292px;
+  height: 124px;
+  background: #fff;
+  border-image: linear-gradient(to right, #FC9D77, #F86442) 2;
+  border-top: 2px solid #fc9872;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.app .nav .right .item .info .tags {
+  border-bottom-color: transparent !important;
+  border-right-color: transparent !important;
+  right: 50%;
+  transform: translateX(57%) rotate(45deg);
+  position: absolute;
+  display: block;
+  border-color: #fc9872;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  top: -5px;
+  box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.app .nav .right .item .info .top {
+  display: flex;
+  margin: 13px 0;
+}
+
+.app .nav .right .item .info .top .items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+}
+
+.app .nav .right .item .info .top .items:hover .iconfont {
+  color: #F86442;
+}
+
+.app .nav .right .item .info .top .items:hover p {
+  color: #F86442;
+}
+
+.app .nav .right .item .info .imgs {
+  background: url(https://s1.xmcdn.com/yx/ximalaya-web-static/last/dist/images/pc_banner_f6d4929.png) no-repeat;
+  width: 100%;
+  height: 55px;
+  background-size: 100%;
+}
+
+.app .nav .right .item .desc {
+  height: initial;
+  right: 0;
+}
+
+.app .nav .right .item .desc .tags {
+  right: 10%;
+}
+
+.app .nav .right .item .desc .log {
+  height: 85px;
+  background-image: url(https://s1.xmcdn.com/yx/ximalaya-web-static/last/dist/images/Bitmap_5973392.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0 20px;
+  line-height: 85px;
+  overflow: hidden;
+}
+
+.app .nav .right .item .desc .login {
+  padding: 10px 20px 20px;
+  height: 109px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.app .nav .right .item .desc .login .logins {
+  display: flex;
+}
+
+.app .nav .right .item .desc .login .logins .item {
+  flex: 1;
+}
+
+.app .nav .right .item .desc .login .logins .item:hover p {
+  color: #F86442;
+}
+
+.app .nav .right .item .iconfont {
+  font-size: 20px;
+  position: relative;
+  color: #ccc;
+}
+
+.app .nav .right .item .color {
+  color: #f86442;
+}
+
+.app .nav .right .item p {
+  width: 100%;
+  height: 25%;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #72727b;
+  text-align: center;
+}
+
+.app .nav .right .img {
+  width: 60px;
+  margin-left: 10px;
+}
+
+.app .nav .right .img img {
+  border-radius: 20px;
+  width: 37px;
+  height: 37px;
+}

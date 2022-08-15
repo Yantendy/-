@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <title>Document</title>
+    <style>
+        .mui-slider .mui-slider-group .mui-slider-item img {
+            height: 7.1rem;
+        }
+
+        .nav {
+            background: #fff;
+            text-align: center;
+        }
+
+        .nav li {
+            list-style: none;
+        }
+
+        .nav .mui-col-xs-2,
+        .nav .mui-col-sm-2 {
+            width: 20% !important;
+        }
+
+        .nav img {
+            width: 68%;
+        }
+
+        .nav p {
+            font-size: .6rem;
+            color: #666;
+        }
+
+        .nav .mui-table-view-cell {
+            padding: 5px 15px !important
+        }
+
+        .title {
+            margin: 10px 0;
+            box-shadow: none;
+            overflow: auto !important;
+        }
+
+        .title .mui-navigate-right {
+            position: relative;
+        }
+
+        .title .mui-navigate-right::after {
+            content: "";
+            position: absolute;
+            top: 1rem;
+            left: .35rem;
+            width: 0.15rem;
+            height: .75rem;
+            background-color: #ffbb1b;
+        }
+        .swiper-scorll {
+            width: 35rem !important;
+            overflow-x: auto;
+        }
+        .swiper-scorll .mui-media {
+            width: 3.75rem !important;
+            padding: 0 !important;
+            margin-left: .5rem !important;
+        }
+        .swiper-scorll .mui-media img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <!-- 图片轮播 -->
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/0de73437f26c70d7c7faf5c3d4de2f95" />
+                    </a>
+                </div>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/ce5a02bd9b36cf3b1ca28483c27b5b29" />
+                    </a>
+                </div>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/cd1fcb07e8705eaec11fd451fc357c30" />
+                    </a>
+                </div>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/f38aa402e4d1d54916af18ebd3c9555a" />
+                    </a>
+                </div>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/0de73437f26c70d7c7faf5c3d4de2f95" />
+                    </a>
+                </div>
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/ce5a02bd9b36cf3b1ca28483c27b5b29" />
+                    </a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+        </div>
+        <!-- 导航 -->
+        <div class="mui-row nav">
+            <div class="mui-col-sm-2 mui-col-xs-2">
+                <li class="mui-table-view-cell">
+                    <img src="img/1.png" alt="">
+                    <p>榜单</p>
+                </li>
+            </div>
+            <div class="mui-col-sm-2 mui-col-xs-2">
+                <li class="mui-table-view-cell">
+                    <img src="img/1.png" alt="">
+                    <p>榜单</p>
+                </li>
+            </div>
+            <div class="mui-col-sm-2 mui-col-xs-2">
+                <li class="mui-table-view-cell">
+                    <img src="img/1.png" alt="">
+                    <p>榜单</p>
+                </li>
+            </div>
+            <div class="mui-col-sm-2 mui-col-xs-2">
+                <li class="mui-table-view-cell">
+                    <img src="img/1.png" alt="">
+                    <p>榜单</p>
+                </li>
+            </div>
+            <div class="mui-col-sm-2 mui-col-xs-2">
+                <li class="mui-table-view-cell">
+                    <img src="img/1.png" alt="">
+                    <p>榜单</p>
+                </li>
+            </div>
+        </div>
+        <!-- 横向滚动 -->
+        <div class="title" style="margin: 10px 0 0 0">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <span style="float: right; margin-right: .7rem;">查看更多</span>
+                        排行榜
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mui-card title" style="margin: 0 0 10px 0">
+            <ul class="mui-table-view mui-grid-view swiper-scorll">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="#">
+                        <img class="mui-media-object" src="https://tfbook-1251592799.file.myqcloud.com/cover/0c02619fcdb9adc897560f34880d9499.jpg">
+                        <div class="mui-media-body">幸福就是可以一起睡觉</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="#">
+                        <img class="mui-media-object" src="https://tfbook-1251592799.file.myqcloud.com/cover/0c02619fcdb9adc897560f34880d9499.jpg">
+                        <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="#"><img class="mui-media-object" src="https://tfbook-1251592799.file.myqcloud.com/cover/0c02619fcdb9adc897560f34880d9499.jpg">
+                        <div class="mui-media-body">Color of SIP CBD</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="#">
+                        <img class="mui-media-object" src="https://tfbook-1251592799.file.myqcloud.com/cover/0c02619fcdb9adc897560f34880d9499.jpg">
+                        <div class="mui-media-body">静静看这世界</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="#">
+                        <img class="mui-media-object" src="https://tfbook-1251592799.file.myqcloud.com/cover/0c02619fcdb9adc897560f34880d9499.jpg">
+                        <div class="mui-media-body">静静看这世界</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="#">
+                        <img class="mui-media-object" src="https://tfbook-1251592799.file.myqcloud.com/cover/0c02619fcdb9adc897560f34880d9499.jpg">
+                        <div class="mui-media-body">静静看这世界</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界静静看这世界</div>
+        <div class="button" style="position: fixed; left: 0; right: 0; bottom: 0; height: 50px; line-height: 50px; text-align: center; background: #cb3232">点击按钮</div>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script>
+        // 以750像素  font-size: 40px 编写的js代码
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '40px'
+                    } else {
+                        docEl.style.fontSize = 40 * (clientWidth / 750) + 'px';
+                    }
+
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window)
+        // 控制图片轮播
+        var gallery = mui('.mui-slider');
+        gallery.slider({
+            interval: 2000//自动轮播周期，若为0则不自动播放，默认为0；
+        });
+    </script>
+</body>
+
+</html>

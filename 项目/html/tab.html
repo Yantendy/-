@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        
+        }
+        
+        li{
+            list-style: none;
+        }
+        .body-list{
+            display: flex;
+        }
+        .header-list{
+            display: flex;
+        }
+        .header-list .item,.body-list .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            border: 1px solid red;
+        }
+   
+        .items{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            border: 1px solid red;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+   
+        <div class="table-header">
+            <ul class="header-list">
+                <li class="item">班级名次</li>
+                <li class="item">科目</li>
+                <li class="item">授课内容</li>
+                <li class="item">增值服务</li>
+                <li class="item">课时</li>
+                <li class="item">价格</li>
+                <li class="item">试听</li>
+                <li class="item">购买</li>
+            </ul>
+        </div>
+        <div class="table-body">
+            <ul class="body-list">
+                <li class="items">真题精解班</li>
+                <li class="item">
+                    <ul class="item-list">
+                        <li class="content">行测</li>
+                        <li class="content">行测</li>
+                        <li class="content">申论</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <ul class="item-list">
+                        <li class="content">全科历年真题精解</li>
+                        <li class="content">行测历年真题精解</li>
+                        <li class="content">申论历年真题精解</li>
+                    </ul>
+                </li>
+                <li class="item">课后赠2套模拟卷24小时以内答疑</li>
+                <li class="item">
+                    <ul class="item-list">
+                        <li class="content">48</li>
+                        <li class="content">32</li>
+                        <li class="content">16</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <ul class="item-list">
+                        <li class="content">1280</li>
+                        <li class="content">980</li>
+                        <li class="content">580</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <ul class="item-list">
+                        <li class="content"><span></span></li>
+                        <li class="content"><span></span></li>
+                        <li class="content"><span></span></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <ul class="item-list">
+                        <li class="content"><span></span></li>
+                        <li class="content"><span></span></li>
+                        <li class="content"><span></span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+</body>
+</html>

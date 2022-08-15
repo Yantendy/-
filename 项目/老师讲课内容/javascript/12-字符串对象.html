@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        字符串对象
+            创建字符串对象
+                var str=new String('hello')
+
+                var str='hello'
+
+            对象方法
+                slice(start,end) 
+                截取字符串
+                start表示字符串下标开始位置  开始是从0开始
+                end 表示结束位置 但是不包含当前位置
+
+                split()
+                用某种形式对当前的字符串进行分割 生成一个数组
+
+                indexOf("字符串")
+                返回当前元素在字符串中第一次出现的位置  如果查询到返回对应的位置  查询不到范围-1
+
+                lastIndexOf("字符串")
+                返回字符串在字符串中 最后一次出现的位置  如果查询到返回对应的位置  查询不到范围-1
+
+                replace(表达式,替换的字符串)   // 表达式指的是正则表达式
+                替换一个与正则表表达式相匹配的字符串
+
+                toLowerCase()
+                将字符串转化为小写
+
+                toUpperCase()
+                将字符串转化为大写
+
+                charAt()
+                返回指定索引字符
+
+                substring(start,end)
+                类似于slice()
+                start表示字符串下标开始位置  开始是从0开始
+                end 表示结束位置 但是不包含当前位置
+
+                substr(startIndex, length)
+                startindex 表示下标索引
+                length 表示从当前索引向后截取的字符串的长度
+
+     -->
+
+     <script>
+        var str='hello worldkjuyhfksdhkjsdghk'
+        console.log(str.substr(0,3))
+        // console.log(str.substring(0,3))
+        // console.log(str.charAt(str.length-1))
+        // console.log(str.toUpperCase().toLowerCase())
+        // console.log(str.replace(/lo/g,'v'))
+        // console.log(str.lastIndexOf('l'))
+        // console.log(str.split("o").join("v"))
+        // console.log(str.indexOf("v"))
+        // console.log(str.split("").reverse().join(""))
+        // console.log(str.slice(0,5))
+     </script>
+</body>
+</html>

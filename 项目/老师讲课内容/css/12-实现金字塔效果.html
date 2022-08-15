@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .pyramid {
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            transform-style: preserve-3d;
+            transform: rotate3d(1,1,0,-22deg);
+        }
+
+        .delta {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 200px solid red;
+            transform-origin: bottom;
+        }
+        .m1 {
+            transform: rotateX(30deg);
+        }
+        .m2 {
+            transform: rotateY(90deg) translateX(100px) translateZ(-100px) rotateX(-30deg);
+        }
+        .m3 {
+            transform: translateZ(-200px) rotateX(-30deg);
+        }
+        .m4 {
+            transform: rotateY(90deg) translateX(100px) translateZ(100px) rotateX(30deg);
+        }
+    </style>
+</head>
+<!-- 
+    transform-origin
+        可以改变旋转轴的位置
+        可以改变x轴 y轴 z轴旋转位置
+        x      center
+               left
+               right
+               %
+               length
+
+        y      center
+               top
+               bottom
+               %
+               length
+
+        z      length
+ -->
+
+<body>
+    <div class="pyramid">
+        <div class="delta m1"></div>
+        <div class="delta m2" style="border-bottom-color: blue;"></div>
+        <div class="delta m3" style="border-bottom-color: green;"></div>
+        <div class="delta m4" style="border-bottom-color: pink;"></div>
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<!-- 
+    js中有一个原生方法trim()
+        trim()
+            可以实现清除表单元素内容前后的空格
+ -->
+<body>
+    <div id="app">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button onclick="getVal()">发表评论</button>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <script>
+        var arr=['img/a.webp','img/b.webp','img/c.webp']
+        console.log(Math.floor(arr.length*Math.random()))
+        var text=document.querySelector('textarea')
+        var ul=document.querySelector('ul')
+        function getVal() {
+            console.log(text.value.trim(),text.value)
+            // ul.innerHTML+='<li>'+'<img src='+arr[Math.floor(arr.length*Math.random())]+'>'+text.value+'<p>删除</p>'+'</li>'
+            if(text.value.trim().length!=0) {
+                ul.innerHTML+=`
+                    <li>
+                        <img src="${arr[Math.floor(arr.length*Math.random())]}" alt="">
+                        ${text.value}
+                        <p>删除</p>
+                    </li>
+                `
+                text.value=null
+            }
+            
+        }
+    </script>
+</body>
+</html>

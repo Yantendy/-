@@ -1,0 +1,34 @@
+$red: #666;
+$left: right;
+$sky: sky;
+
+#app {
+    p {
+        width: 100%;
+        height: 500px;
+        float: $left;
+        color: $red;
+        background: $sky+'blue'+$left;
+        border-#{$left}: (120px/100) solid #ccc;
+        margin-#{$left}: (20px+100px)*2
+    }
+    span {
+        color: $red;
+    }
+}
+
+ul {
+    li {
+        color: $red;
+        margin: 50px 0 0 50px;
+        &:hover {
+            color: blue
+        }
+        p {
+           color: aqua;  
+        }
+        span {
+            color: red
+        }
+    }
+}

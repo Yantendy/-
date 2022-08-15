@@ -1,0 +1,12 @@
+div {
+    width: 300px;
+    height: 300px;
+    ul {
+        padding: 0;
+        li {
+            &:nth-of-child(2) {
+                color: yellow;
+            }
+        }
+    }
+}

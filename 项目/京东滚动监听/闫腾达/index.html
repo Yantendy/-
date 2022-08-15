@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="nav">
+            <div class="top">
+                 <div class="img"></div>
+                 <div class="int">
+                    <input type="text" placeholder="消毒器">
+                    <button>搜索</button>
+                 </div>
+                 <div class="cart">
+                    我的购物车
+                 </div>
+            </div>
+        </div>
+        <div class="header">
+
+        </div>
+        <div class="seckill">
+            <h2>京东秒杀</h2>
+            <div class="fixed">
+                <ul class="list">
+                    <li class="item" data-index="0">京东秒杀</li>
+                    <li class="item" data-index="1">特色优选</li>
+                    <li class="item" data-index="2">频道广场</li>
+                    <li class="item none" data-index="3">返回顶部</li>
+                </ul>
+            </div>
+        </div>
+        <div class="seckill charact">
+            <h2>特色优选</h2>
+        </div>
+        <div class="seckill channel">
+            <h2>频道广场</h2>
+        </div>
+
+        
+    </div>
+    <script>
+        
+        window.onscroll=(()=>{
+            var nav = document.querySelector('.nav')
+            var scrol = document.documentElement.scrollTop
+            var bodys = document.querySelector('.app')
+            var fix = document.querySelector('.fixed')
+            var item = document.querySelectorAll('.list .item')
+            var list = document.querySelector('.list')
+            
+            if(scrol>550){
+                fix.classList.add('fix-new')
+                item[0].classList.add('color')
+                nav.classList.add('nav-new')
+                item[3].classList.add('act')
+            }else{
+                fix.classList.remove('fix-new')
+                item[0].classList.remove('color')
+                nav.classList.remove('nav-new')
+                item[3].classList.remove('act')
+            }
+
+            if(scrol>1030){
+                item[0].classList.remove('color')
+                item[1].classList.add('color')
+            }else{
+                item[1].classList.remove('color')
+            }
+
+            if(scrol>1630){
+                item[0].classList.remove('color')
+                item[1].classList.remove('color')
+                item[2].classList.add('color')
+            }else{
+                item[2].classList.remove('color')
+            }
+            list.onclick=(e)=>{
+                if(e.target.dataset.index == 0 ){
+                    window.scrollTo({top: 551, behavior: 'smooth'})
+                }
+                if(e.target.dataset.index == 1){
+                    window.scrollTo({top: 1030, behavior: 'smooth'})
+                }
+                if(e.target.dataset.index == 2){
+                    window.scrollTo({top: 1630, behavior: 'smooth'})
+                }
+                if(e.target.dataset.index == 3){
+                    window.scrollTo({top: 0, behavior: 'smooth'})
+                }
+            }
+
+        })
+
+        
+    </script>
+</body>
+</html>

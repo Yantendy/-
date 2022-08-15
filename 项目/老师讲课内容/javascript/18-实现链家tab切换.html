@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .nav {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .nav li {
+            margin-right: 20px;
+        }
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav"></ul>
+    <ul class="item"></ul>
+    
+
+    <script>
+        var navs=['区域', '价格', '房型', '更多']
+        var lists=[
+            ['郑州','开封','洛阳','平顶山'],
+            ['20万','30万','40万'],
+            ['一室','二室','三室五厅','小别墅'],
+            ['东','南','西','北','红中']
+        ]
+        var ul=document.querySelector('.nav')
+        var list=document.querySelector('.item')
+        for(var i=0; i<navs.length; i++) {
+            ul.innerHTML+=`
+                <li onclick="tab(${i})">${navs[i]}</li>
+            `
+        }
+        function tab(index) {
+            console.log(ul.children)
+            for(var i=0; i<ul.children.length; i++) {
+                ul.children[i].classList.remove('active')
+            }
+            if(index!=0) {
+                event.target.classList.add('active')
+            }else {
+                ul.children[0].classList.add('active')
+            }
+            // 
+            list.innerHTML=''
+            for(var i=0;i<lists[index].length;i++) {
+                list.innerHTML+=`
+                    <li onclick="changeTxt('${lists[index][i]}',${index})">
+                        ${lists[index][i]} 
+                    </li>
+                `
+            }
+        }
+        tab(0)
+
+        function changeTxt(txt,i) {
+            // console.log(txt,navs)
+            navs.splice(i,1,txt)
+            console.log(navs)
+            ul.innerHTML=''
+            for(var i=0; i<navs.length; i++) {
+                ul.innerHTML+=`
+                    <li onclick="tab(${i})">${navs[i]}</li>
+                `
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        var data={
+        "error_code": 0,
+        "result": "ok",
+        "data": {
+            "count": 90,
+            "list": [
+            {
+                "id": "3638744",
+                "subject": "远古的风，蓝色的梦  ---希腊山海20天 （更新中-83）",
+                "url": "https://bbs.qyer.com/thread-3638744-1.html",
+                "uid": "7825588",
+                "userurl": "https://www.qyer.com/u/7825588",
+                "face": "https://pic.qyer.com/avatar/007/82/55/88/200?v=1499195780",
+                "userauth": {
+                "type": "member",
+                "adept_area": "美国,西欧,加拿大,墨西哥,台湾,",
+                "auth_type": "4,2",
+                "desc": "问答探路者，穷游资深精华作者",
+                "info": {
+                    "attestation": "问答探路者，穷游资深精华作者"
+                }
+                },
+                "username": "沐峭",
+                "digest": "0",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "希腊/塞浦路斯",
+                "forumsurl": "https://bbs.qyer.com/forum-26-1.html",
+                "created": "1656358965",
+                "have_plan": "1",
+                "last_post_time": "2小时前",
+                "total_replies": 123,
+                "likeNumber": 114,
+                "viewNumber": "14096",
+                "post": "暖楼片--天蓝海蓝暖楼片--航舟归港暖楼片--坐山观海此岸的蓝色，彼时的星光 （代序）“希腊有什么名人？”听到我们要去希腊，深圳的一位友人问道。还是一名中学生时，听到了阿基米德，“给我一",
+                "image": "https://pic.qyer.com/album/user/4054/57/RUlQRh8AZEk/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                {
+                    "id": 10530,
+                    "name": "家庭",
+                    "url": "https://www.qyer.com/tag/y79l4-HrFd4/bbs"
+                },
+                {
+                    "id": 10543,
+                    "name": "美食",
+                    "url": "https://www.qyer.com/tag/DSiRh-ie3ag/bbs"
+                },
+                {
+                    "id": 10525,
+                    "name": "摄影",
+                    "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                }
+                ]
+            },
+            {
+                "id": "3598717",
+                "subject": "TMB的故事 一个女生的环勃朗峰徒步日记 （大量攻略Tips 已完结）",
+                "url": "https://bbs.qyer.com/thread-3598717-1.html",
+                "uid": "11141045",
+                "userurl": "https://www.qyer.com/u/11141045",
+                "face": "https://pic.qyer.com/avatar/011/14/10/45/200?v=1566645878",
+                "userauth": "",
+                "username": "小安-Anne",
+                "digest": "2",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "环游欧洲",
+                "forumsurl": "https://bbs.qyer.com/forum-112-1.html",
+                "created": "1643710666",
+                "have_plan": "1",
+                "last_post_time": "6小时前",
+                "total_replies": 126,
+                "likeNumber": 890,
+                "viewNumber": "41955",
+                "post": "前言三年前偶然看到TMB的旅行团路线，吸引了当时正想改变生活、环游世界的我。资料查得越多越感兴趣，不知为何萌生一个大胆的想法，做一件从来没做过的事吧。一个从来没徒步过、没自由行过的人",
+                "image": "https://pic.qyer.com/album/user/4030/25/RUlWQhgCZ0k/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                {
+                    "id": 47013,
+                    "name": "TMB",
+                    "url": "https://www.qyer.com/tag/WJ3W-mN8OiY/bbs"
+                },
+                {
+                    "id": 12508,
+                    "name": "勃朗峰",
+                    "url": "https://www.qyer.com/tag/O61CBkS7UCs/bbs"
+                },
+                {
+                    "id": 35634,
+                    "name": "阿尔卑斯山徒步",
+                    "url": "https://www.qyer.com/tag/cmgLK4HAotk/bbs"
+                },
+                {
+                    "id": 10533,
+                    "name": "独自旅行",
+                    "url": "https://www.qyer.com/tag/GN0EV-mELIU/bbs"
+                },
+                {
+                    "id": 14800,
+                    "name": "徒步",
+                    "url": "https://www.qyer.com/tag/LU6MokIBRVc/bbs"
+                }
+                ]
+            },
+            {
+                "id": "3644795",
+                "subject": "世界尽头的灵感之旅｜加拿大大西洋四省房车亲子游，10600公里，117小时驱车，30天（含房车详细攻略）",
+                "url": "https://bbs.qyer.com/thread-3644795-1.html",
+                "uid": "9460",
+                "userurl": "https://www.qyer.com/u/9460",
+                "face": "https://pic.qyer.com/avatar/000/00/94/60/200?v=1525129242",
+                "userauth": {
+                "type": "member",
+                "adept_area": "",
+                "auth_type": "2",
+                "desc": "穷游精华作者",
+                "info": {
+                    "attestation": "穷游精华作者"
+                }
+                },
+                "username": "左手",
+                "digest": "3",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "加拿大",
+                "forumsurl": "https://bbs.qyer.com/forum-54-1.html",
+                "created": "1659556255",
+                "have_plan": "0",
+                "last_post_time": "5小时前",
+                "total_replies": 12,
+                "likeNumber": 316,
+                "viewNumber": "18574",
+                "post": "10600公里，117小时驱车，30天，一台房车。我们曾经自驾横穿东西两岸，在努纳武特的冰川之间穿梭，在西北漫天极光下许愿。而这个暑假的三十天，是我们一家三口第一次踏上大西洋四省，为走过加拿",
+                "image": "https://pic.qyer.com/album/user/4061/54/RUlTQx8DZEk/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                {
+                    "id": 10530,
+                    "name": "家庭",
+                    "url": "https://www.qyer.com/tag/y79l4-HrFd4/bbs"
+                },
+                {
+                    "id": 10535,
+                    "name": "自驾",
+                    "url": "https://www.qyer.com/tag/A91yF3JbKcw/bbs"
+                },
+                {
+                    "id": 11087,
+                    "name": "国家公园",
+                    "url": "https://www.qyer.com/tag/1EvSm9is6A4/bbs"
+                },
+                {
+                    "id": 10525,
+                    "name": "摄影",
+                    "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                },
+                {
+                    "id": 8363,
+                    "name": "加拿大",
+                    "url": "https://www.qyer.com/tag/6UzigfhtBEw/bbs"
+                },
+                {
+                    "id": 11007,
+                    "name": "房车",
+                    "url": "https://www.qyer.com/tag/hkucRHb249I/bbs"
+                },
+                {
+                    "id": 8468,
+                    "name": "纽芬兰岛",
+                    "url": "https://www.qyer.com/tag/ied3mX6y2HU/bbs"
+                }
+                ]
+            },
+            {
+                "id": "3578533",
+                "subject": "​岁月不可辜负之六-----再次黔行 加榜梯田肇兴侗寨小七孔包车+自驾之七日",
+                "url": "https://bbs.qyer.com/thread-3578533-1.html",
+                "uid": "1314579",
+                "userurl": "https://www.qyer.com/u/1314579",
+                "face": "https://pic.qyer.com/avatar/001/31/45/79/200?v=1472618042",
+                "userauth": {
+                "type": "member",
+                "adept_area": "",
+                "auth_type": "2",
+                "desc": "穷游资深精华作者",
+                "info": {
+                    "attestation": "穷游资深精华作者"
+                }
+                },
+                "username": "jane007",
+                "digest": "2",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "带父母旅行",
+                "forumsurl": "https://bbs.qyer.com/forum-123-1.html",
+                "created": "1632295066",
+                "have_plan": "1",
+                "last_post_time": "15小时前",
+                "total_replies": 89,
+                "likeNumber": 414,
+                "viewNumber": "22189",
+                "post": "黔东南前年去年连着去了两次，有些地方尚未完全商业化、民风仍然淳朴，依稀有点二十年前云南的样子。去年去肇兴侗寨时就留意到加榜梯田，但因机缘不对，没去成。后来听说加榜梯田也许不久会成为",
+                "image": "https://pic.qyer.com/album/user/4006/11/RUlVRBsGYkE/index/161x107",
+                "hotel_recommend": 0,
+                "tag": []
+            },
+            {
+                "id": "3602670",
+                "subject": "打卡16个去处的2021年之下半年（苏州、山西全境、南京郊外、宏村西递太平湖）",
+                "url": "https://bbs.qyer.com/thread-3602670-1.html",
+                "uid": "153890",
+                "userurl": "https://www.qyer.com/u/153890",
+                "face": "https://pic.qyer.com/avatar/000/15/38/90/200?v=1448957023",
+                "userauth": {
+                "type": "member",
+                "adept_area": "欧洲",
+                "auth_type": "2",
+                "desc": "穷游资深精华作者",
+                "info": {
+                    "attestation": "穷游资深精华作者"
+                }
+                },
+                "username": "zygao",
+                "digest": "3",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "中国内地",
+                "forumsurl": "https://bbs.qyer.com/forum-51-1.html",
+                "created": "1646231669",
+                "have_plan": "0",
+                "last_post_time": "1天前",
+                "total_replies": 140,
+                "likeNumber": 428,
+                "viewNumber": "31762",
+                "post": "有多远，走多远。版主置顶&amp;3星加精！2021年依然是疫情满满，年底回顾一下，身在上海的我居然打卡了16个去处（其中外地是9处），我也真没闲着哦。 \n不过这16个去处多数是短途，甚至是上海本",
+                "image": "https://pic.qyer.com/album/user/4028/16/RUlXShsBZkg/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                {
+                    "id": 10530,
+                    "name": "家庭",
+                    "url": "https://www.qyer.com/tag/y79l4-HrFd4/bbs"
+                },
+                {
+                    "id": 10525,
+                    "name": "摄影",
+                    "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                },
+                {
+                    "id": 10535,
+                    "name": "自驾",
+                    "url": "https://www.qyer.com/tag/A91yF3JbKcw/bbs"
+                }
+                ]
+            },
+            {
+                "id": "3643950",
+                "subject": "岁月不可辜负之九——滇西北避暑之九日自驾，再见丽江慢游沙溪品味喜洲躺平双廊",
+                "url": "https://bbs.qyer.com/thread-3643950-1.html",
+                "uid": "1314579",
+                "userurl": "https://www.qyer.com/u/1314579",
+                "face": "https://pic.qyer.com/avatar/001/31/45/79/200?v=1472618042",
+                "userauth": {
+                "type": "member",
+                "adept_area": "",
+                "auth_type": "2",
+                "desc": "穷游资深精华作者",
+                "info": {
+                    "attestation": "穷游资深精华作者"
+                }
+                },
+                "username": "jane007",
+                "digest": "0",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "带父母旅行",
+                "forumsurl": "https://bbs.qyer.com/forum-123-1.html",
+                "created": "1658979000",
+                "have_plan": "1",
+                "last_post_time": "2天前",
+                "total_replies": 48,
+                "likeNumber": 111,
+                "viewNumber": "6192",
+                "post": "老妈几年前大病一场之后，我一直不敢带老妈去海拔稍高的地区，以防万一。自从5月带老妈去西昌，除了增加半粒降压药，1500的海拔老妈完全没问题。带老妈可去的地方一下子拓展了，尤其是夏天。大",
+                "image": "https://pic.qyer.com/album/user/4060/1/RUlTQhoGYkE/index/161x107",
+                "hotel_recommend": 0,
+                "tag": []
+            },
+            {
+                "id": "3597242",
+                "subject": "完工-打卡16个去处的2021年之上半年（福建永福镇樱花、罗平黄果树、林芝桃花、昆明蓝花楹、新疆薰衣草独库）",
+                "url": "https://bbs.qyer.com/thread-3597242-1.html",
+                "uid": "153890",
+                "userurl": "https://www.qyer.com/u/153890",
+                "face": "https://pic.qyer.com/avatar/000/15/38/90/200?v=1448957023",
+                "userauth": {
+                "type": "member",
+                "adept_area": "欧洲",
+                "auth_type": "2",
+                "desc": "穷游资深精华作者",
+                "info": {
+                    "attestation": "穷游资深精华作者"
+                }
+                },
+                "username": "zygao",
+                "digest": "3",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "中国内地",
+                "forumsurl": "https://bbs.qyer.com/forum-51-1.html",
+                "created": "1642687134",
+                "have_plan": "0",
+                "last_post_time": "1天前",
+                "total_replies": 221,
+                "likeNumber": 452,
+                "viewNumber": "35171",
+                "post": "本帖完工，更新到6月新疆中南部，其余几处另开一贴吧。有多远，走多远。感谢版主评了3星&amp;置顶！2021年依然是疫情满满，年底回顾一下，身在上海的我居然打卡了16个去处（其中外地是9处），我",
+                "image": "https://pic.qyer.com/album/user/4032/13/RUlWQBsEZk8/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                {
+                    "id": 10525,
+                    "name": "摄影",
+                    "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                },
+                {
+                    "id": 10535,
+                    "name": "自驾",
+                    "url": "https://www.qyer.com/tag/A91yF3JbKcw/bbs"
+                }
+                ]
+            },
+            {
+                "id": "3594413",
+                "subject": "岁月不可辜负之七-----继续黔行之云舍村与梵净山的六日",
+                "url": "https://bbs.qyer.com/thread-3594413-1.html",
+                "uid": "1314579",
+                "userurl": "https://www.qyer.com/u/1314579",
+                "face": "https://pic.qyer.com/avatar/001/31/45/79/200?v=1472618042",
+                "userauth": {
+                "type": "member",
+                "adept_area": "",
+                "auth_type": "2",
+                "desc": "穷游资深精华作者",
+                "info": {
+                    "attestation": "穷游资深精华作者"
+                }
+                },
+                "username": "jane007",
+                "digest": "1",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "带父母旅行",
+                "forumsurl": "https://bbs.qyer.com/forum-123-1.html",
+                "created": "1641025660",
+                "have_plan": "1",
+                "last_post_time": "1天前",
+                "total_replies": 78,
+                "likeNumber": 272,
+                "viewNumber": "28304",
+                "post": "如今似乎连日历都不用翻，一年就过去了！幸好有些留存的记忆，才知道2021也是独一无二的。新年依旧没有奢望，愿望简单而朴实，健康快乐，几分自由！云舍村、梵净山，已成2021的往事。往事并不都",
+                "image": "https://pic.qyer.com/album/user/4025/14/RUlXRxsDZkk/index/161x107",
+                "hotel_recommend": 0,
+                "tag": []
+            },
+            {
+                "id": "3592464",
+                "subject": "【藏地手记】冬回拉萨，寻梦南迦巴瓦（雪山四部曲之壹）",
+                "url": "https://bbs.qyer.com/thread-3592464-1.html",
+                "uid": "8743373",
+                "userurl": "https://www.qyer.com/u/8743373",
+                "face": "https://pic.qyer.com/avatar/008/74/33/73/200?v=1645166202",
+                "userauth": {
+                "type": "member",
+                "adept_area": "",
+                "auth_type": "2,",
+                "desc": "穷游资深精华作者，穷游精华Biu主",
+                "info": {
+                    "attestation": "穷游资深精华作者，穷游精华Biu主"
+                }
+                },
+                "username": "AllenL艾伦伦",
+                "digest": "2",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "中国内地",
+                "forumsurl": "https://bbs.qyer.com/forum-51-1.html",
+                "created": "1639922716",
+                "have_plan": "1",
+                "last_post_time": "2天前",
+                "total_replies": 12,
+                "likeNumber": 451,
+                "viewNumber": "22875",
+                "post": "预览 | 冬日暖阳，令人向往的西藏那个冬天最任性的决定，就是独自去西藏~时隔这么多年再次返回日光之城，领略浓郁而独特的藏地风情，感受古老圣地的崭新变化，更有机会深入林芝地区，踏上寻觅南",
+                "image": "https://pic.qyer.com/album/user/4023/6/RUlXQRoBYUg/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                {
+                    "id": 10533,
+                    "name": "独自旅行",
+                    "url": "https://www.qyer.com/tag/GN0EV-mELIU/bbs"
+                },
+                {
+                    "id": 10543,
+                    "name": "美食",
+                    "url": "https://www.qyer.com/tag/DSiRh-ie3ag/bbs"
+                },
+                {
+                    "id": 10525,
+                    "name": "摄影",
+                    "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                },
+                {
+                    "id": 14249,
+                    "name": "西藏",
+                    "url": "https://www.qyer.com/tag/VY1vDf7Y2k0/bbs"
+                },
+                {
+                    "id": 14276,
+                    "name": "拉萨",
+                    "url": "https://www.qyer.com/tag/LKCc5UrlrcE/bbs"
+                },
+                {
+                    "id": 16872,
+                    "name": "林芝",
+                    "url": "https://www.qyer.com/tag/Q0uso7pdWt8/bbs"
+                },
+                {
+                    "id": 37554,
+                    "name": "人文摄影",
+                    "url": "https://www.qyer.com/tag/D6qLRZrbR4Y/bbs"
+                },
+                {
+                    "id": 10553,
+                    "name": "自然风光",
+                    "url": "https://www.qyer.com/tag/NRdFLFlZxQU/bbs"
+                },
+                {
+                    "id": 42762,
+                    "name": "深度自由行",
+                    "url": "https://www.qyer.com/tag/xtvcc13mxSQ/bbs"
+                },
+                {
+                    "id": 14625,
+                    "name": "攻略",
+                    "url": "https://www.qyer.com/tag/0bWH_eijqYA/bbs"
+                }
+                ]
+            },
+            {
+                "id": "3582548",
+                "subject": "我是你的俘虏【跟新疆私奔】喀什、帕米尔、喀纳斯、禾木、布尔津、江布拉克14天独行",
+                "url": "https://bbs.qyer.com/thread-3582548-1.html",
+                "uid": "2264590",
+                "userurl": "https://www.qyer.com/u/2264590",
+                "face": "https://pic.qyer.com/avatar/002/26/45/90/200?v=1515080275",
+                "userauth": "",
+                "username": "EllisInWL",
+                "digest": "2",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "中国内地",
+                "forumsurl": "https://bbs.qyer.com/forum-51-1.html",
+                "created": "1633776375",
+                "have_plan": "0",
+                "last_post_time": "2天前",
+                "total_replies": 55,
+                "likeNumber": 5270,
+                "viewNumber": "291576",
+                "post": "前言“谁能凭爱意要富士山私有？”我不知道。谁能凭爱意要新疆私有？我能。这是我的第三次新疆之旅，我决定一个人奔向它的时候，它就是我的，我也是它的。这是我人生的第31个秋天，之前30年因求",
+                "image": "https://pic.qyer.com/album/user/4009/65/RUlVSxwCY0k/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                {
+                    "id": 10533,
+                    "name": "独自旅行",
+                    "url": "https://www.qyer.com/tag/GN0EV-mELIU/bbs"
+                },
+                {
+                    "id": 14800,
+                    "name": "徒步",
+                    "url": "https://www.qyer.com/tag/LU6MokIBRVc/bbs"
+                },
+                {
+                    "id": 14195,
+                    "name": "新疆",
+                    "url": "https://www.qyer.com/tag/Bj7o69aizY0/bbs"
+                },
+                {
+                    "id": 17612,
+                    "name": "南疆",
+                    "url": "https://www.qyer.com/tag/DcbBFuI1J-c/bbs"
+                },
+                {
+                    "id": 11685,
+                    "name": "喀纳斯",
+                    "url": "https://www.qyer.com/tag/4LZmE1EuHr4/bbs"
+                },
+                {
+                    "id": 14136,
+                    "name": "禾木",
+                    "url": "https://www.qyer.com/tag/BTrhj9M84WI/bbs"
+                },
+                {
+                    "id": 69824,
+                    "name": "布尔津",
+                    "url": "https://www.qyer.com/tag/LV0CLxfBRqg/bbs"
+                }
+                ]
+            }
+            ],
+            "ad": "<iframe id='a9035ff0' name='a9035ff0' src='//ad.qyer.com/www/delivery/afr.php?zoneid=512&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='640' height='100'><a href='//ad.qyer.com/www/delivery/ck.php?n=a44c45f4&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='//ad.qyer.com/www/delivery/avw.php?zoneid=512&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a44c45f4' border='0' alt='' /></a></iframe>",
+            "request_id": false
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

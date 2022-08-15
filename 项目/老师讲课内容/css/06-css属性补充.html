@@ -1,0 +1,302 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-right: 20px;
+        }
+        p {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul onclick="tab()">
+        <li data-index="0">标题1</li>
+        <li data-index="1">标题2</li>
+        <li data-index="2">标题3</li>
+    </ul>
+    <p class="active">内容1</p>
+    <p>内容2</p>
+    <p>内容3</p>
+
+    <script>
+        var p=document.querySelectorAll('p')
+        function tab() {
+            console.log(event.target.dataset.index)
+            console.log(p)
+            for(var i=0; i<p.length; i++) {
+                p[i].removeAttribute('class')
+            }
+            p[event.target.dataset.index].setAttribute('class','active')
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            color: #fff;
+            font: italic bold 18px/30px '微软雅黑';
+            background: rgba(236, 6, 6, 1);
+        }
+        .blue {
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+        /* a:link {
+            color: red;
+        } */
+        /* a:visited {
+            color: green;
+        } */
+        a:hover {
+            color: yellow;
+        }
+        /* a:active {
+            color: blue;
+        } */
+        .img {
+            width: 100%;
+            height: 500px;
+            /* background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.nipic.com%2F2007-11-23%2F20071123233613201_2.jpg&refer=http%3A%2F%2Fpic.nipic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660187998&t=c2d43042300e92d8749ad730877d95bc);
+            background-repeat: no-repeat;
+            background-size: 100px auto;
+            background-repeat: repeat; */
+            border: 1px solid red;
+            /* background-position: 100px 100px;
+            background-color: aquamarine; */
+            background: red url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.nipic.com%2F2007-11-23%2F20071123233613201_2.jpg&refer=http%3A%2F%2Fpic.nipic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660187998&t=c2d43042300e92d8749ad730877d95bc) left top/100px 20px no-repeat;
+        }
+        .line {
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            background: red;
+            /* border: 10px solid green; */
+            /* border-top: 10px solid red;
+            border-right: 10px solid green;
+            border-bottom: 10px solid yellow;
+            border-left: 10px solid pink; */
+            /* border-width: 10px;
+            border-style: dashed;
+            border-color: #666; */
+            border-top-width: 20px;
+            border-top-style: dashed;
+            border-top-color: yellow
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        css属性补充
+            opacity
+                控制透明度
+                    值范围只能0-1.0
+                    如果等于0代表透明
+                    等于1.0表示完全不透明
+
+            rgba(0,0,0,0)
+                rgba是一种颜色格式
+                r red    0-255
+                g green
+                b blue
+                a alpha  0.0-1.0
+
+            z-index
+                定位层级
+                    只作用于定位元素 absolute fixed
+                层级越大 元素显示的位置越高 (三维空间中的z轴)
+                允许写负值
+
+            font
+                文字样式
+                    是一种复合样式
+                    font:font-style font-weight font-size/line-height font-family;
+                    先后顺序不能写反 写反不起作用
+
+                注意：
+                    该属性很少进行使用 
+
+            a 超链接标签
+                四个伪类
+                    a:link       表示访问前的样式
+                    a:visited    表示访问后的样式
+                    a:hover      表示鼠标经过的样式
+                    a:active     表示鼠标按上去的样式
+
+                编写a标签完整属性样式时候 四个先后顺序不能写反  写反不起作用
+
+            background
+                背景  复合属性
+                     background: color image position/size repeat; 
+
+                     background可以编写多个背景图片
+                        background: url() position/size no-repeat, url() position/size no-repeat, ...;
+                background-image
+                    背景图片
+                        background-image: url(图片路径)   // 该图片路径可以是本地图片或者线上路径
+                background-size
+                    背景尺寸
+                        background-size: 100%;   // 宽度高度都是100%
+                        background-size: 50% 100%;  // 宽度50% 高度100%
+                        cover    以宽高中短边进行100%完全等比例填充
+                        contain  以宽高中长边进行100%完全等比例填充
+                background-position
+                    背景定位
+                        background-position: 10px 20px;  x轴往右偏移10px    y轴往下偏移20px    
+                        background-position: 10px;    x轴往右偏移10px   y轴向下偏移50%
+                        left top    
+                        left center
+                        left bottom
+                        right top
+                        right center
+                        right bottom
+                        center top
+                        center center
+                        center bottom
+                        如果写的是以上值 表示当前图片所在的水平和垂直方向位置
+                        水平方向有三个值  left center right
+                        垂直方向也有三个值 top  center  bottom
+                background-color
+                    背景颜色
+                        background-color: red | rgb() | rgba() | #ccc;
+
+
+                background-repeat
+                    背景图片重复
+                        background-repeat: no-repat | repeat | repeat-x | repeat-y
+
+                border
+                    边框 复合写法
+                    border: 1px solid #ccc;
+                        宽度
+                        样式
+                        颜色
+
+                    border-width   边框的宽度
+                        px
+                        em
+                        rem
+                        ...
+                    border-style   边框的样式
+                        solid     实线
+                        dashed    虚线
+                        dotted    圆点
+                        double    双实线
+                        none      什么都没有
+                    border-color   边框的颜色
+                        red
+                        #cb3232
+                        rgb()
+                        rgba()
+
+                    边框某一个方向
+                        border-top: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                        border-left: 1px solid #ccc;
+                        border-bottom: 1px solid #ccc;
+
+                        border-top-width: 2px;
+                        border-top-style: dashed;
+                        border-top-color: #333;
+                        ...
+
+
+
+     -->
+
+     <!-- <div class="bg">这是文本</div>
+     <div class="blue"></div> -->
+     <!-- <a href="https://www.baidu.com" target="_blank">超链接</a> -->
+
+     <!-- <div class="img">
+
+     </div> -->
+     <!-- <div class="line">
+
+     </div> -->
+     <style>
+        .demo1 {
+            width: 1000px;
+            height: 800px;
+            margin: auto;
+            border: 1px solid red;
+            background: url('./2.png') 200px 180px no-repeat,url('./1.png') 100px 100px no-repeat, url('./2.png') top right no-repeat;
+            background-color: skyblue;
+        }
+        /* ul {
+            list-style: none;
+        }
+        li {
+            float: left;
+        }
+        .list {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+        }
+        .i1 {
+            background-image: url(./demo.png);
+            background-repeat: no-repeat;
+            background-position: -17px -12px;
+            background-size: 786%;
+        }
+        .i1:hover {
+            background-image: url(./demo.png);
+            background-repeat: no-repeat;
+            background-position: -89px -12px;
+            background-size: 786%;
+        } */
+     </style>
+     <div class="demo1"></div>
+     <!-- <ul>
+        <li>
+            <div class="list i1"></div>
+        </li>
+        <li>
+            <div class="list i2"></div>
+        </li>
+        <li>
+            <div class="list i3"></div>
+        </li>
+     </ul> -->
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/ytd/mui.min.css">
+    <link rel="stylesheet" href="../../../css/ytd/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/ytd/flight-home.css">
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/ytd/font/iconfont.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="headers">
+            <header id="header" class="mui-bar mui-bar-nav">
+
+                <h1 class="mui-title">携程机票</h1>
+                <button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
+                    <a href="../../../html/ytd/index.html">
+                        <span class="iconfont icon-zuojiantou mui-icon mui-icon-left-nav">
+                        </span>
+                        <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/home-black.png" alt="">
+                    </a>
+
+                </button>
+                <a class="iconfont icon-gerenzhongxin mui-icon mui-icon-bars mui-pull-right"></a>
+            </header>
+        </div>
+        <div class="flight-home">
+            <div class="home-bg">
+            </div>
+            <div class="serch-flight">
+                <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+                    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab"
+                                data-toggle="tab" aria-controls="home" aria-expanded="true">单程</a></li>
+                        <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab"
+                                data-toggle="tab" aria-controls="profile" aria-expanded="false">往返</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane  active " id="home" aria-labelledby="home-tab">
+                            <div class="city-wrap">
+                                <h3>北京</h3>
+                                <div class="wrap-tag">
+                                    <div>
+                                        <img src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_circle.png"
+                                            alt="">
+                                        <img src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_icon.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <h3>上海</h3>
+                            </div>
+                            <div class="city-wrap city-time">
+                                <div class="left">
+                                    <h3>07月31日<span>后天</span></h3>
+                                </div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="city-info">
+                                <div class="left">
+                                    <h4>经济舱</h4>
+                                </div>
+                                <div class="right">
+                                    <input class="iconfont icon-weixuanzhongyuanquan" name="checkbox" value="Item 1"
+                                        type="checkbox">
+                                    <span>机票+酒店</span>
+                                    <span>更省心</span>
+                                </div>
+                            </div>
+                            <div class="city-serch">
+                                搜索
+                            </div>
+                            <div class="city-desc">
+                                <ul>
+                                    <li>机票订单</li>
+                                    <li>航班助手</li>
+                                    <li>在线选座</li>
+                                    <li>乘机指南</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane " id="profile" aria-labelledby="profile-tab">
+                            <div class="city-wrap">
+                                <h3>北京</h3>
+                                <div class="wrap-tag">
+                                    <div>
+                                        <img src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_circle.png"
+                                            alt="">
+                                        <img src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_icon.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <h3>上海</h3>
+                            </div>
+                            <div class="city-wrap city-time">
+                                <div class="left">
+                                    <h3>07月31日<span>后天</span></h3>
+                                </div>
+                                <div class="left right">
+                                    <h3>08月18日<span>周四</span></h3>
+                                </div>
+                            </div>
+                            <div class="city-info">
+                                <div class="left">
+                                    <h4>经济舱</h4>
+                                </div>
+                                <div class="right">
+                                    <input class="iconfont icon-weixuanzhongyuanquan" name="checkbox" value="Item 1"
+                                        type="checkbox">
+                                    <span>机票+酒店</span>
+                                    <span>更省心</span>
+                                </div>
+                            </div>
+                            <div class="city-serch">
+                                搜索
+                            </div>
+                            <div class="city-desc">
+                                <ul>
+                                    <li>机票订单</li>
+                                    <li>航班助手</li>
+                                    <li>在线选座</li>
+                                    <li>乘机指南</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="roration">
+                    <div id="slider" class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop"
+                            style="transform: translate3d(0px, 0px, 0px) translateZ(0px) !important;">
+                            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="https://pages.c-ctrip.com/flight_h5/swift/home/xklb_new.png">
+                                </a>
+                            </div>
+                            <!-- 第一张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="https://pages.c-ctrip.com/flight_h5/swift/home/yhqzjy.jpg">
+                                </a>
+                            </div>
+                            <!-- 第二张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="https://pages.c-ctrip.com/flight_h5/swift/home/xklb_new.png">
+                                </a>
+                            </div>
+                            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="https://pages.c-ctrip.com/flight_h5/swift/home/yhqzjy.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                            <div class="mui-indicator switch mui-active"></div>
+                            <div class="mui-indicator switch"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="home-container">
+            <div class="super">
+                <div class="title">
+                    <div class="left">
+                        <img src="https://pages.ctrip.com/flight_h5/swift/home/sale_fire.png" alt="">
+                        超值低价
+                    </div>
+                    <div class="right">
+                        查看更多
+                        <span class="iconfont icon-youjiantou"></span>
+                    </div>
+                </div>
+                <ul class="super-list">
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price"><i>¥</i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price"><i>¥</i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price">
+                            <i><i>¥</i></i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price"><i>¥</i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price">
+                            <i><i>¥</i></i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price"><i>¥</i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../../css/ytd/jquery/jq.js"></script>
+    <script src="../../../js/ytd/mui.min.js"></script>
+    <script src="../../../css/ytd/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        var slider = mui("#slider");
+
+        slider.slider({
+            interval: 1000
+        });
+
+        !(function (x) {
+            function w() {
+                var s = x.document,
+                    r = s.documentElement,
+                    a = r.getBoundingClientRect().width;
+                var ratio = (40 * 750) / 640;
+                if (a >= 640) {
+                    r.style.fontSize = '40px';
+                } else {
+                    if (a <= 320) {
+                        r.style.fontSize = '20px';
+                    } else {
+                        r.style.fontSize = (a * ratio) / 750 + 'px';
+                    }
+                }
+            }
+            x.addEventListener('resize', function () {
+                w();
+            });
+            w();
+        })(window);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 400px;
+    height: 500px;
+    margin: 100px auto;
+    position: relative;
+    transform: rotate3d(1, 1, 1, -30deg);
+    transform-style: preserve-3d;
+}
+
+.bottom {
+    width: 460px;
+    height: 460px;
+    background-color: aquamarine;
+    transform: rotateX(90deg) translateX(32px) translateZ(-125px) translateY(-46px);
+}
+
+.container:hover {
+    transform: rotate3d(1, 1, 1, 360deg);
+    transition: all 10s linear;
+}
+
+.container div {
+    position: absolute;
+    bottom: 0;
+
+}
+
+.container:hover div:first-child {
+    transform: rotateX(90deg) translateX(32px) translateZ(-125px) translateY(-46px) translateZ(-200px);
+    transition: all 2s;
+}
+
+.arrow-1 {
+    border-left: 230px solid transparent;
+    border-right: 230px solid transparent;
+    border-bottom: 400px solid lightblue;
+    width: 0px;
+    height: 0px;
+    z-index: 2;
+    transform: translateZ(70px) translateY(-68px) translateX(33px) rotateX(35deg);
+
+}
+
+.container:hover div:nth-child(2) {
+    transform: translateZ(70px) translateY(-68px) translateX(33px) rotateX(35deg) translateZ(200px);
+    transition: all 2s;
+}
+
+.arrow-2 {
+    border-left: 230px solid transparent;
+    border-right: 230px solid transparent;
+    border-bottom: 400px solid red;
+    width: 0px;
+    height: 0px;
+    transform: rotateY(90deg) rotateX(-35deg) translateX(44px) translateZ(-107px) translateY(-10px);
+}
+
+.container:hover div:nth-child(3) {
+    transform: rotateY(90deg) rotateX(-35deg) translateX(44px) translateZ(-107px) translateZ(-200px);
+    transition: all 2s;
+}
+
+.arrow-3 {
+    border-left: 230px solid transparent;
+    border-right: 230px solid transparent;
+    border-bottom: 400px solid blue;
+    width: 0px;
+    height: 0px;
+    transform: rotateX(-35deg) translateX(33px) translateY(34px) translateZ(-169px);
+}
+
+.container:hover div:nth-child(4) {
+    transform: rotateX(-35deg) translateX(32px) translateY(34px) translateZ(-169px) translateZ(-200px);
+    transition: all 2s;
+}
+
+.arrow-4 {
+    border-left: 230px solid transparent;
+    border-right: 230px solid transparent;
+    border-bottom: 400px solid yellow;
+    width: 0px;
+    height: 0px;
+    transform: rotateY(90deg) rotateX(35deg) translateX(48px) translateZ(160px) translateY(27px);
+}
+
+.container:hover div:nth-child(5) {
+    transform: rotateY(90deg) rotateX(35deg) translateX(48px) translateZ(160px) translateZ(200px);
+    transition: all 2s;
+}

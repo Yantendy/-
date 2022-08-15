@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        分支结构 逻辑判断语句
+            if语句
+                格式：
+                    if(条件1) {
+
+                    }else if(条件2) {
+
+                    }else if(条件3) {
+
+                    }else {
+
+                    }
+
+                    注意：
+                        if可以单独使用
+                        else if else不能单独使用 使用的时候 前边必须有if
+                        if  else if必须添加条件  else不能添加条件
+            三元运算符
+                ?:
+            switch语句
+                定义：
+                    用于多次判断的语句
+                语法：
+                    switch(表达式) {
+                        case 常量1:
+                            语句1
+                            break;
+                        case 常量2:
+                            语句2
+                            break;
+                        ...
+                        default: 语句n
+                    }
+
+                注意：
+                    switch case语句 每一个case后边必须添加break   并且最后要写上default
+
+            break continue语句
+                break和continue语句不同之处
+                    break语句可以立即退出循环 阻止再次反复执行任何的代码
+                    continue语句只是退出当前循环 根据控制表达式继续进行下一次的循环
+            循环语句
+                循环用来指明当某些条件满足时候 要重复执行的动作
+                不满足的时候 就会跳出当前的循环 不再执行
+                    for
+                        格式:
+                            for(语句1; 语句2; 语句3) {
+                                // 要执行的代码块
+                            }
+
+                        for一般是针对于数组进行循环遍历
+
+                    while
+                        进行测试循环的语句
+                        格式：
+                            while(条件) {
+                                // 执行代码块
+                            }
+                    do while
+                        先进行循环 后执行条件
+                        换句话 在表达式执行之前 循环之内代码至少会被执行一次
+                        格式：
+                            do {
+                                // 要执行代码块
+                            }while(条件)
+                    for in
+                        只针对于对象进行循环遍历  也可以遍历数组   但是一般都遍历对象
+                        格式：
+                            for(var 变量 in 对象) {
+                                console.log(变量)  // 对象的属性名
+                                console.log(对象[变量])
+                            }
+
+                    以上循环语句使用最多的是for循环和for in
+     -->
+     <ul>
+
+     </ul>
+    <script>
+        // var arr=['区域','价格','房型','更多']
+        // var i=0;
+        // do{
+        //     console.log(arr[i])
+        //     i++
+        // }while(3<2)
+        // while(i<arr.length) {
+        //     console.log(arr[i])
+        //     i++
+        // }
+        // var obj=[
+        //     {
+        //         "sourceName": "tf",
+        //         "sourceId": "nz_3915",
+        //         "title": "重生后我嫁了未婚夫的皇叔",
+        //         "intro": "前世，她是贵门嫡女，为了他铺平道路成为太子，却惨遭背叛，冠上谋逆之名，满门无一幸免。一朝重生回十...",
+        //         "freeType": 2,
+        //         "categoryId": 201000,
+        //         "authorName": "季微微",
+        //         "allWords": 2058631,
+        //         "coverUrl": "https://tfbook-1251592799.file.myqcloud.com/cover/04e0b622a9e2631e7bc6d3ee62436675.jpg",
+        //         "categoryName": "玄幻言情",
+        //         "createTime": 1656552649000,
+        //         "chapterSize": 942,
+        //         "recommend": "推荐-书城推荐榜-女频",
+        //         "recommendId": "recommend:10:2:1000:n",
+        //         "status": 30,
+        //         "completeOn": 1656552649000,
+        //         "offline": 0,
+        //         "issue": 0,
+        //         "searchOffline": 0,
+        //         "cpName": "南泽文化",
+        //         "rank": 1,
+        //         "goReading": true,
+        //         "tagList": [
+        //             "医妃",
+        //             "女强",
+        //             "重生",
+        //             "复仇",
+        //             "皇叔",
+        //             "嫡女"
+        //         ],
+        //         "mainTagList": [
+        //             "医妃",
+        //             "女强"
+        //         ],
+        //         "roleList": [
+        //             "顾念笙"
+        //         ],
+        //         "recTitle": "医妃 · 女强",
+        //         "latestChapterUpdateTime": 1659392617000,
+        //         "latestChapter": "第942章 震惊的结果",
+        //         "latestChapterId": "nz_2119337"
+        //     },
+        //     {
+        //         "sourceName": "tf",
+        //         "sourceId": "wd_46514",
+        //         "title": "新婚夜重生，战王招架不住了",
+        //         "intro": "【重生+宠夫+甜宠+团宠+1V1】重生后如何暖化冰山夫君？那不得白莲花+小绿茶，配上...",
+        //         "freeType": 2,
+        //         "categoryId": 203000,
+        //         "authorName": "橘子味的咖啡t",
+        //         "allWords": 1202413,
+        //         "coverUrl": "https://tfbook-1251592799.file.myqcloud.com/cover/caa9cae55e77e65b77f53ad66f6d46c8.jpg",
+        //         "categoryName": "古代言情",
+        //         "createTime": 1655107245000,
+        //         "chapterSize": 565,
+        //         "recommend": "推荐-书城推荐榜-女频",
+        //         "recommendId": "recommend:10:2:1000:n",
+        //         "status": 30,
+        //         "completeOn": 1655107245000,
+        //         "offline": 0,
+        //         "issue": 0,
+        //         "searchOffline": 0,
+        //         "cpName": "万读文学",
+        //         "rank": 2,
+        //         "goReading": true,
+        //         "tagList": [
+        //             "重生",
+        //             "甜宠",
+        //             "虐渣",
+        //             "王妃"
+        //         ],
+        //         "mainTagList": [
+        //             "重生",
+        //             "甜宠"
+        //         ],
+        //         "roleList": [],
+        //         "recTitle": "甜宠",
+        //         "latestChapterUpdateTime": 1659327112000,
+        //         "latestChapter": "第565章 他究竟是谁？",
+        //         "latestChapterId": "wd_27394781"
+        //     },
+        //     {
+        //         "sourceName": "tf",
+        //         "sourceId": "lc_19657",
+        //         "title": "婚期365天",
+        //         "intro": "七年前，她是寄住在霍家的小孤女，他是深陷热恋的霍家二公子。她在青春萌动的时候爱上这个大自己...",
+        //         "freeType": 2,
+        //         "categoryId": 204000,
+        //         "authorName": "淡月新凉",
+        //         "allWords": 3281984,
+        //         "coverUrl": "https://tfbook-1251592799.file.myqcloud.com/cover/c4dac0a2d54f197708e7ebdd1efc7ef6.jpg",
+        //         "categoryName": "现代言情",
+        //         "subCategoryName": "婚恋情缘",
+        //         "createTime": 1657613423000,
+        //         "chapterSize": 1526,
+        //         "recommend": "推荐-书城推荐榜-女频",
+        //         "recommendId": "recommend:10:2:1000:n",
+        //         "status": 30,
+        //         "completeOn": 1657613423000,
+        //         "offline": 0,
+        //         "issue": 0,
+        //         "searchOffline": 0,
+        //         "cpName": "落尘文学",
+        //         "rank": 3,
+        //         "goReading": true,
+        //         "tagList": [
+        //             "婚恋",
+        //             "总裁",
+        //             "萌宝",
+        //             "追妻火葬场"
+        //         ],
+        //         "mainTagList": [
+        //             "婚恋",
+        //             "总裁"
+        //         ],
+        //         "roleList": [
+        //             "慕浅",
+        //             "霍靳西"
+        //         ],
+        //         "recTitle": "婚恋 · 总裁",
+        //         "latestChapterUpdateTime": 1659362649000,
+        //         "latestChapter": "第1519章",
+        //         "latestChapterId": "lc_42937971"
+        //     },
+        //     {
+        //         "sourceName": "tf",
+        //         "sourceId": "zx_106",
+        //         "title": "婚色绵绵",
+        //         "intro": "为了自保，未婚夫把她送到了别人的床上。都说季霆深不近女色。他却笑得残忍：“你自己送上...",
+        //         "freeType": 2,
+        //         "categoryId": 204000,
+        //         "authorName": "绯音音",
+        //         "allWords": 1119636,
+        //         "coverUrl": "https://tfbook-1251592799.file.myqcloud.com/cover/f22a5a2a630da92b73841be5d1868487.jpg",
+        //         "categoryName": "现代言情",
+        //         "subCategoryName": "豪门世家",
+        //         "createTime": 1654675944000,
+        //         "chapterSize": 930,
+        //         "recommend": "推荐-书城推荐榜-女频",
+        //         "recommendId": "recommend:10:2:1000:n",
+        //         "status": 30,
+        //         "completeOn": 1654675944000,
+        //         "offline": 0,
+        //         "issue": 0,
+        //         "searchOffline": 0,
+        //         "cpName": "知心阅读",
+        //         "rank": 4,
+        //         "goReading": true,
+        //         "tagList": [
+        //             "婚恋",
+        //             "总裁",
+        //             "甜宠",
+        //             "虐渣"
+        //         ],
+        //         "mainTagList": [
+        //             "婚恋",
+        //             "总裁"
+        //         ],
+        //         "roleList": [],
+        //         "recTitle": "婚恋 · 总裁",
+        //         "latestChapterUpdateTime": 1659359544000,
+        //         "latestChapter": "第九百三十章 绝对不能让你毁了他",
+        //         "latestChapterId": "zx_12394"
+        //     },
+        //     {
+        //         "sourceName": "tf",
+        //         "sourceId": "yw_16741064505858704",
+        //         "title": "反派宿主是大佬",
+        //         "intro": "【1V1/女强/甜宠/虐渣/逆袭】云夕为了找回道心，穿梭在三千世界，每一个世界，都有一个需...",
+        //         "freeType": 2,
+        //         "categoryId": 207000,
+        //         "authorName": "云灵兮",
+        //         "allWords": 2194426,
+        //         "coverUrl": "https://tfbook-1251592799.file.myqcloud.com/cover/5ddca60b72d721b32e45b161646c1632.jpg",
+        //         "categoryName": "科幻空间",
+        //         "subCategoryName": "时空穿梭",
+        //         "createTime": 1656489567000,
+        //         "chapterSize": 1004,
+        //         "recommend": "推荐-书城推荐榜-女频",
+        //         "recommendId": "recommend:10:2:1000:n",
+        //         "status": 50,
+        //         "completeOn": 1656489567000,
+        //         "offline": 0,
+        //         "issue": 16,
+        //         "searchOffline": 0,
+        //         "cpName": "阅文集团",
+        //         "rank": 5,
+        //         "goReading": true,
+        //         "tagList": [
+        //             "快穿",
+        //             "甜宠",
+        //             "女强",
+        //             "逆袭"
+        //         ],
+        //         "mainTagList": [
+        //             "快穿",
+        //             "甜宠"
+        //         ],
+        //         "roleList": [
+        //             "云夕"
+        //         ],
+        //         "recTitle": "快穿 · 甜宠",
+        //         "latestChapterUpdateTime": 1656489567000,
+        //         "latestChapter": "第1013章 终章：神域篇【番外】",
+        //         "latestChapterId": "yw_60042494180037965"
+        //     },
+        //     {
+        //         "sourceName": "tf",
+        //         "sourceId": "yq_25670",
+        //         "title": "爆宠萌宝：娘亲你的马甲又掉了",
+        //         "intro": "当暗夜杀手一朝穿越，现有的格局应该如何改变，至此有怨报怨，有仇报仇，身怀异能空间，契约灵兽，凭着...",
+        //         "freeType": 2,
+        //         "categoryId": 203000,
+        //         "authorName": "李可欣子",
+        //         "allWords": 3251261,
+        //         "coverUrl": "https://tfbook-1251592799.file.myqcloud.com/cover/6ed62590425f14d8a1787ac9eddf953b.jpg",
+        //         "categoryName": "古代言情",
+        //         "subCategoryName": "穿越奇情",
+        //         "createTime": 1657176882000,
+        //         "chapterSize": 2907,
+        //         "recommend": "推荐-书城推荐榜-女频",
+        //         "recommendId": "recommend:10:2:1000:n",
+        //         "status": 50,
+        //         "completeOn": 1657176883000,
+        //         "offline": 0,
+        //         "issue": 0,
+        //         "searchOffline": 0,
+        //         "cpName": "原创书殿",
+        //         "rank": 6,
+        //         "goReading": true,
+        //         "tagList": [
+        //             "神医",
+        //             "萌宝",
+        //             "空间",
+        //             "穿越",
+        //             "女强",
+        //             "虐渣"
+        //         ],
+        //         "mainTagList": [
+        //             "神医",
+        //             "萌宝",
+        //             "空间"
+        //         ],
+        //         "roleList": [],
+        //         "recTitle": "神医 · 空间",
+        //         "latestChapterUpdateTime": 1657176883000,
+        //         "latestChapter": "第2907章：大结局",
+        //         "latestChapterId": "yq_3383638"
+        //     },
+        //     {
+        //         "sourceName": "tf",
+        //         "sourceId": "siji_2087",
+        //         "title": "逃荒：她从空间掏出千万物资",
+        //         "intro": "穿成丫鬟不可怕，可怕的是她刚穿来，就要跟着便宜相公去逃难，朱珠心里慌得一批。为了活下去，不...",
+        //         "freeType": 2,
+        //         "categoryId": 203000,
+        //         "authorName": "大猫爱吃鱼",
+        //         "allWords": 1092505,
+        //         "coverUrl": "https://tfbook-1251592799.file.myqcloud.com/cover/be8c80f0be35ab852f0d55db3dcc3c7a.jpg",
+        //         "categoryName": "古代言情",
+        //         "subCategoryName": "女尊王朝",
+        //         "createTime": 1655369122000,
+        //         "chapterSize": 960,
+        //         "recommend": "推荐-书城推荐榜-女频",
+        //         "recommendId": "recommend:10:2:1000:n",
+        //         "status": 30,
+        //         "completeOn": 1655369122000,
+        //         "offline": 0,
+        //         "issue": 16,
+        //         "searchOffline": 0,
+        //         "cpName": "四季文学",
+        //         "rank": 7,
+        //         "goReading": true,
+        //         "tagList": [
+        //             "种田",
+        //             "空间",
+        //             "穿越",
+        //             "甜宠"
+        //         ],
+        //         "mainTagList": [
+        //             "种田",
+        //             "空间"
+        //         ],
+        //         "roleList": [
+        //             "朱珠"
+        //         ],
+        //         "recTitle": "种田",
+        //         "latestChapterUpdateTime": 1659322225000,
+        //         "latestChapter": "第九百六十章 担忧",
+        //         "latestChapterId": "siji_94126"
+        //     },
+        //     {
+        //         "sourceName": "tf",
+        //         "sourceId": "qg_846881c83612gf76d38214b2",
+        //         "title": "追妹火葬场：满级大佬完爆假千金",
+        //         "intro": "兢兢业业十几年，一朝回到解放前是什么感受？苏羡本是灵族继承者，被亲妹妹害死，穿越后决心低调...",
+        //         "freeType": 2,
+        //         "categoryId": 204000,
+        //         "authorName": "非妄",
+        //         "allWords": 799255,
+        //         "coverUrl": "https://tfbook-1251592799.file.myqcloud.com/cover/e1d049b5c9d9c95e29a65688e8f3b6f0.jpg",
+        //         "categoryName": "现代言情",
+        //         "createTime": 1657874677000,
+        //         "chapterSize": 356,
+        //         "recommend": "推荐-书城推荐榜-女频",
+        //         "recommendId": "recommend:10:2:1000:n",
+        //         "status": 30,
+        //         "completeOn": 1657874677000,
+        //         "offline": 0,
+        //         "issue": 0,
+        //         "searchOffline": 0,
+        //         "cpName": "青果阅读",
+        //         "rank": 8,
+        //         "goReading": true,
+        //         "tagList": [
+        //             "神医",
+        //             "掉马甲",
+        //             "全能",
+        //             "女强",
+        //             "真假千金"
+        //         ],
+        //         "mainTagList": [
+        //             "神医",
+        //             "掉马甲"
+        //         ],
+        //         "roleList": [],
+        //         "recTitle": "神医",
+        //         "latestChapterUpdateTime": 1659274962000,
+        //         "latestChapter": "第356章三亿！涪灵丹！",
+        //         "latestChapterId": "qg_84f807bge1f1894030b8792g"
+        //     }
+        // ]
+
+//         var ul=document.querySelector("ul")
+//         var str=''
+        
+
+//             fetch('http://m.taoyuewenhua.com/ajax/book_mall?ctype=2&seed=434').then(res=> {
+//                 return res.json()
+//             }).then(res1=> {
+//                 console.log(res1.data.channelList[1].bookList
+// ,999)
+//         for(var i=1; i<res1.data.channelList[1].bookList.length; i++) {
+//             console.log(res1.data.channelList[1].bookList[i].title)
+//             str+=`
+//                 <li>${res1.data.channelList[1].bookList[i].title}</li>
+//             `
+//         }
+//         ul.innerHTML=str
+//             }).catch(err=> {
+//                 console.log(err)
+//             })
+
+
+       
+        // var str='hello world'
+        // console.log(str.length)
+        // for(var i=0; i<str.length; i++) {
+        //     console.log(str.slice(0,6))
+        // }
+        // var arr=[1,2,3]
+        // var obj={
+        //     name: '张三',
+        //     age: 15,
+        //     sex: '男'
+        // }
+        // for(var i in obj) {
+        //     console.log(obj[i])
+        // }
+        // console.log(obj.length)
+        // for(var i=0; i<obj.length; i++) {
+        //     console.log(i)
+        // }
+
+        // var arr=[1,23,2]
+        // var arr=[
+        //     [1,2,3],
+        //     [[3,4,5],4,5],
+        // ]
+
+
+        // var day = 60
+
+        // switch (day) {
+        //     case 6:
+        //         document.write('星期六')
+        //         break
+        //     case 1:
+        //         document.write('星期一')
+        //         break
+        //     case 2:
+        //         document.write('星期二')
+        //         break
+        //     case 3:
+        //         document.write('星期三')
+        //         break
+        //     case 4:
+        //         document.write('星期四')
+        //         break
+        //     case 5:
+        //         document.write('星期五')
+        //         break
+        //     default:
+        //         document.write('星期日')
+        // }
+
+        // if(day==1) {
+        //     document.write('星期一')
+        // }else if(day==2) {
+        //     document.write('星期二')
+        // }else if(day==3) {
+        //     document.write('星期三')
+        // }else if(day==4) {
+        //     document.write('星期四')
+        // }else if(day==5) {
+        //     document.write('星期五')
+        // }else if(day==6) {
+        //     document.write('星期六')
+        // }else {
+        //     document.write('星期日')
+        // }
+        // if(day==1) {
+        //     document.write('星期一')
+        // }
+        // if(day==2) {
+        //     document.write('星期二')
+        // }
+        // if(day==3) {
+        //     document.write('星期三')
+        // }
+        // if(day==4) {
+        //     document.write('星期四')
+        // }
+        // if(day==5) {
+        //     document.write('星期五')
+        // }
+        // if(day==6) {
+        //     document.write('星期六')
+        // }
+        // if(day>6 || day<=0) {
+        //     document.write('星期日')
+        // }
+
+        // document.write(day==1?'1':day==2?'2':day==3?'3':day==4?'4':day==5?'5':day==6?'6':'7')
+    </script>
+</body>
+
+</html>

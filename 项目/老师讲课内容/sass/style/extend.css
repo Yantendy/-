@@ -1,0 +1,25 @@
+.app, .child, .child1 {
+  width: 150px;
+  height: 150px;
+  border: 1px solid red;
+}
+
+.app a, .child a, .child1 a {
+  color: pink;
+}
+
+.child, .child1 {
+  background: blue;
+}
+
+.m, .child1 {
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.child1 {
+  color: yellow;
+  background: red;
+}
+
+/*# sourceMappingURL=extend.css.map */

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id选择器一个页面只允许出现一次 一般用于js代码编写 */
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        html,body {
+            padding: 0;
+            margin: 0;
+            background: #F1F3F5;
+        }
+        /* #demo {
+            width: 100%;
+            height: 100vh;
+            border: 1px solid #ccc;
+        } */
+        /* .item {
+            display: flex;
+            width: 100%;
+            border: 1px solid red;
+            margin: auto;
+        }
+        .left {
+            width: 100px;
+            height: 400px;
+            background: blue;
+        }
+        .middle {
+            width: 30%;
+            height: 300px;
+            background: yellow;
+        }
+        .right {
+            width: calc(70% - 100px);
+            height: 200px;
+            background: green;
+        } */
+        .lists {
+            width: 1198px;
+            margin: auto;  
+            /* 上下左右auto */
+            list-style: none;
+        }
+        li {
+            float: left;
+            width: 230px;
+            height: 306px;
+            margin-right: 12px;
+            margin-top: 10px;
+            /* margin: 10px 12px 0 0; */
+            background-color: #fff;
+            font-size: 14px;
+            text-align: center;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .clear {
+            margin-right: 0;
+        }
+        li img {
+            display: block;
+            margin: 20px auto;
+            width: 142px;
+            height: 142px;
+        }
+        .title {
+            white-space: nowrap;  
+            overflow: hidden;  
+            text-overflow: ellipsis;
+            /* 文本不折行  控制元素在一行 超过宽度显示三个小圆点 */
+        }
+        .desc {
+            opacity: .5;
+            /* margin-top: 5px;
+            margin-bottom: 10px; */
+            margin: 5px 0 10px;
+        }
+        .price {
+            font-size: 16px;
+            color: rgb(207, 10, 44)
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        width
+            元素的宽度
+                属性单位
+                    px
+                    rem
+                    em
+                    vw
+                    %
+                    ...
+
+                    calc()  计算属性
+                        格式：
+                            width: cale(100% - 100px + 10%)    运算符号的前后需要加空格
+        height  
+            元素的高度
+                属性单位
+                    px
+                    rem
+                    em
+                    vh
+                    %
+                    ...
+
+                    calc()  计算属性
+
+        margin  
+            外边距
+                margin-top
+                margin-right
+                margin-bottom
+                margin-left
+
+                margin: 0 10px 10px 0;   // 上 右 下 左
+                margin: 0 10px 0;   // 上  左右  下
+                margin: 5px 10px;   // 上下 左右
+                margin: 5px;        // 上下左右
+
+                如果元素块级元素 想要在水平方向居中  我们的margin需要设置 left  right都为auto
+
+                margin重叠 margin穿透
+                    两个或者多个元素 margin外边距写在一起了 (上边元素写了bottom  下边的元素写了top)
+                    如果出现重叠 谁的值更大就会显示谁的效果
+
+                    为了避免margin重叠 我们需要将元素外边距方向写同一个方向  上边 下边都写 top或者是bottom
+
+                marin的重叠只出现在top  bottom上边 而左右方向不存在重叠
+
+        padding
+            内边距
+                padding-top
+                padding-right
+                padding-bottom
+                padding-left
+
+                padding: 0 10px 10px 0;   // 上 右 下 左
+                padding: 0 10px 0;   // 上  左右  下
+                padding: 5px 10px;   // 上下 左右
+                padding: 5px;        // 上下左右
+
+        box-sizing
+             属性定义如何计算一个元素的总宽度和总高度，主要设置是否需要加上内边距(padding)和边框等
+             border-box  使用该属性 可以控制元素整体宽度或者高度不变 而在内部添加内边距或者边框
+             content-box 默认值 如果添加了内边距或者边框  元素整体宽度或者高度 会自动加上内边距或者边框的宽度或者高度
+     -->
+
+     <!-- <div id="demo">
+
+     </div> -->
+
+     <!-- <div class="item">
+        <div class="left"></div>
+        <div class="middle"></div>
+        <div class="right"></div>
+     </div> -->
+     <ul class="lists">
+        <li>
+            <img src="https://res.vmallres.com/pimages//uomcdn/CN/pms/202205/gbom/6945878328853//428_428_F9EE03F17D211D9AFA1F3DF93435E682mp.png" alt="">
+            <p class="title">美的滚筒洗衣机 全自动10公斤家用大容量MG100T10WDQCY 巴赫银（支持鸿蒙智联）</p>
+            <p class="title desc">FCS快净洗，溶漩风科技，除菌免熨蒸汽洗，支持鸿蒙智联</p>
+            <p class="price">￥2000</p>
+        </li>
+        <li>
+            <img src="https://res.vmallres.com/pimages//uomcdn/CN/pms/202205/gbom/6945878328853//428_428_F9EE03F17D211D9AFA1F3DF93435E682mp.png" alt="">
+            <p class="title">美的滚筒洗衣机 全自动10公斤家用大容量MG100T10WDQCY 巴赫银（支持鸿蒙智联）</p>
+            <p class="title desc">FCS快净洗，溶漩风科技，除菌免熨蒸汽洗，支持鸿蒙智联</p>
+            <p class="price">￥2000</p>
+        </li>
+        <li>
+            <img src="https://res.vmallres.com/pimages//uomcdn/CN/pms/202205/gbom/6945878328853//428_428_F9EE03F17D211D9AFA1F3DF93435E682mp.png" alt="">
+            <p class="title">美的滚筒洗衣机 全自动10公斤家用大容量MG100T10WDQCY 巴赫银（支持鸿蒙智联）</p>
+            <p class="title desc">FCS快净洗，溶漩风科技，除菌免熨蒸汽洗，支持鸿蒙智联</p>
+            <p class="price">￥2000</p>
+        </li>
+        <li>
+            <img src="https://res.vmallres.com/pimages//uomcdn/CN/pms/202205/gbom/6945878328853//428_428_F9EE03F17D211D9AFA1F3DF93435E682mp.png" alt="">
+            <p class="title">美的滚筒洗衣机 全自动10公斤家用大容量MG100T10WDQCY 巴赫银（支持鸿蒙智联）</p>
+            <p class="title desc">FCS快净洗，溶漩风科技，除菌免熨蒸汽洗，支持鸿蒙智联</p>
+            <p class="price">￥2000</p>
+        </li>
+        <li class="clear">
+            <img src="https://res.vmallres.com/pimages//uomcdn/CN/pms/202205/gbom/6945878328853//428_428_F9EE03F17D211D9AFA1F3DF93435E682mp.png" alt="">
+            <p class="title">美的滚筒洗衣机 全自动10公斤家用大容量MG100T10WDQCY 巴赫银（支持鸿蒙智联）</p>
+            <p class="title desc">FCS快净洗，溶漩风科技，除菌免熨蒸汽洗，支持鸿蒙智联</p>
+            <p class="price">￥2000</p>
+        </li>
+     </ul>
+     <!-- <span style="margin: auto">11111</span> -->
+     <!-- <input type="text" style="margin: auto; width: 1000px"> -->
+     <!-- <img src="./1.png" alt="" style="margin: auto;"> -->
+</body>
+</html>

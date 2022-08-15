@@ -1,0 +1,35 @@
+{
+	"html/bbs/bbs.html": {
+		"resources": [
+			"html/bbs/bbsIndex.html"
+		],
+		"refer": [
+			"html/bbs/bbsIndex.html",
+			"html/bbs/bbsChannel.html"
+		]
+	},
+	"html/main.html": {
+		"resources": [
+			"html/index/home.html"
+		],
+		"refer": [
+			"html/my/user.html",
+			"html/tool/tool.html",
+			"html/bbs/bbs.html",
+			"html/index/home.html",
+			"html/hello.html",
+			"html/pk/pk.html"
+		]
+	},
+	"html/hello.html": {
+		"refer": [
+			"html/main.html"
+		]
+	},
+	"html/index/home.html": {
+		"refer": [
+			"html/index/search.html",
+			"html/index/citySelect.html"
+		]
+	}
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html {
+            padding: 0;
+            margin: 0;
+        }
+        /* .app, .demo {
+            float: right;
+            float: left;
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        } */
+        /* span {
+            float: left;
+            display: inline-block;
+            width: 500px;
+            border: 1px solid red;
+        } */
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            float: left;
+            font-size: 12px;
+            margin-right: 16px;
+            color: rgba(255,255,255,0.6)
+        }
+        li::after {
+            content: "";
+            border-left: 1px solid rgba(255,255,255,0.6);
+            height: 10px;
+            display: inline-block;
+            position: absolute;
+            right: -8px;
+            top: 14px;
+        }
+        li:last-child::after {
+            border-left: none;
+        }
+        .top {
+            height: 36px;
+            line-height: 36px;
+            background: #000;
+        }
+        .nav {
+            width: 1200px;
+            /* height: 36px; */
+            margin: auto;
+            /* overflow: hidden; */
+        }
+        .left-nav {
+            float: left;
+        }
+        .rig-nav {
+            float: right;
+        }
+        .p1 {
+            border: 1px solid red;
+        }
+        /* .clear {
+            clear: both;
+        } */
+        .nav::after {
+            display: inline-block;
+            content: "";
+            clear: both
+        }
+        .red {
+            /* position: relative;
+            left: 500px;
+            top: 500px; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            transform: translate(-50%, -50%);
+            /* margin-left: -250px;
+            margin-top: -250px; */
+            background: red;
+            
+        }
+        .green {
+            position: absolute;
+            /* left: 150px; */
+            left: 50%;
+            top: 50%;
+            width: 300px;
+            height: 300px;
+            transform: translate(-50%, -50%);
+            /* margin-left: -150px;
+            margin-top: -150px; */
+            background: green;
+            
+        }
+        .blue {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            transform: translate(-50%, -50%);
+            /* margin-left: -50px;
+            margin-top: -50px; */
+            background: blue;
+        }
+        .parent {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 1000px;
+            height: 500px;
+            border: 1px solid red;
+            /* margin: 100px auto; */
+        }
+        .test {
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            color: #fff;
+            text-align: center;
+        }
+        .top-nav {
+            /* position: fixed; */
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            line-height: 80px;
+            background: #ccc;
+            z-index: 99;
+        }
+        .naver {
+            width: 1200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        float
+            控制元素的浮动
+                属性值：
+                    left
+                        左浮动
+                    right
+                        右浮动
+
+                注意：
+                    如果对当前元素添加浮动  当前元素会变为行内块元素
+
+                    如果当前元素的子元素添加了浮动 则父元素的高度无法被子元素所撑开 高度为0
+                    为了解决这个问题  我们需要清除浮动
+
+                    四种形式
+                        1 给父元素添加overflow: hidden
+
+                        2 给父元素添加固定高度
+
+                        3 给父元素子元素添加clear: both
+
+                        4 给父元素添加伪元素before after也可以实现
+                            父元素::before {
+                                display: inline-block;
+                                content: "";
+                                clear: both
+                            }
+                            父元素::after {
+                                display: inline-block;
+                                content: "";
+                                clear: both
+                            }
+
+        position
+            定位
+                定位了元素的位置
+            属性值
+                static
+                    没有定位 正常元素显示
+                relative
+                    相对定位
+                        相对于自身的正常位置
+                fixed
+                    固定定位
+                        相对于浏览器窗口
+                        
+                absolute
+                    绝对定位
+                         相对于离自己最近的父元素 前提是父元素定位了 
+                         如果父元素没有定位 相对是html定位  
+
+                    控制元素在水平或者垂直方向完全居中
+                        1 使用margin-left  margin-right   值等于当前元素宽高的一半
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          width: 500px;
+                          height: 500px;
+                          margin-left: -250px;
+                          margin-top: -250px;
+
+                        2 使用transform: tranlate(-50%, -50%)
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          width: 500px;
+                          height: 500px;
+                          transform: tranlate(-50%, -50%)
+
+                sticky
+                    粘性定位
+                       如果当前页面出现滚动条时候  它所实现的跟fixed  但是z-index对粘性定位没用
+
+                       如果没有滚动条 我们认为粘性定位跟relative一样
+
+                    不推荐使用 只作为了解
+                    浏览器兼容性不好 ie浏览器 edge15以前版本  甚至是Safari不能直接支持
+                
+            
+     -->
+
+     <!-- <div class="app">这是一个测试div块</div>
+     <div class="demo" style="float: right;">这是一个新的元素</div> -->
+     <!-- <span>这是文本内容</span>
+     <span>这是文本内容</span> -->
+    <!-- <div class="top">
+        <div class="nav">
+            <ul class="left-nav">
+                <li>首页</li>
+                <li>华为官网</li>
+                <li>花粉俱乐部</li>
+                <li>V码(优购码)</li>
+                <li>企业购</li>
+                <li>Select Region</li>
+                <li>更多精彩</li>
+            </ul>
+            <ul class="rig-nav">
+                <li>首页</li>
+                <li>华为官网</li>
+                <li>花粉俱乐部</li>
+                <li>V码(优购码)</li>
+                <li>企业购</li>
+                <li>Select Region</li>
+                <li>更多精彩</li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="p1">1111</div>
+    </div> -->
+     
+    <!-- <div class="parent">
+        
+    </div> -->
+    <!-- <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div> -->
+    <div class="demo" style="height: 10000px;">
+        <div class="test">固定定位</div>
+        <div class="top-nav">
+            <ul class="naver">
+                <li>标题</li>
+                <li>标题</li>
+                <li>标题</li>
+                <li>标题</li>
+            </ul> 
+        </div>
+        <p>123</p>
+    </div>
+
+</body>
+</html>

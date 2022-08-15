@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .ch {
+            margin: 30px auto;
+            width: 100px;
+            border: 1px dashed rebeccapurple;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        hr {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ch">
+        全选 : <input type="checkbox"><br>
+        <hr>
+        <input type="checkbox"> 选项一 <br>
+        <input type="checkbox"> 选项二 <br>
+        <input type="checkbox"> 选项三 <br>
+        <input type="checkbox"> 选项四 <br>
+    </div>
+
+    <script>
+        var allbt = document.querySelector('input')
+        console.log(allbt)
+        var items = document.querySelectorAll('input:nth-child(n+2)')
+        console.log(items)
+        allbt.onclick = function () {
+            var type = allbt.checked
+            for (let i = 0; i < items.length; i++) {
+                items[i].checked = type
+            }
+
+        }
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].onclick = function () {
+                var flag = true
+                for (let j = 0; j < items.length; j++) {
+                    if (items[j].checked === false) {
+                        flag = false
+                        break
+                    }
+                }
+                allbt.checked = flag
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

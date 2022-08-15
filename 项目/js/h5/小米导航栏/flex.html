@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/flex.css">
+    <style>
+        *{
+            margin: 0;
+        }
+        .warp {
+            height: 40px;
+            background-color: #333;
+
+        }
+
+        .tobar {
+            width: 1226px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tobar .left {
+            display: flex;
+            height: 40px;
+            align-items: center;
+            font-size: 12px;
+
+        }
+
+        .tobar .left .item {
+            color: #b0b0b0;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .tobar .left .step {
+            color: #424242;
+            margin: 0 3.6px;
+            font-family: sans-serif;
+        }
+
+        .tobar .right {
+            display: flex;
+            font-size: 12px;
+            height: 40px;
+            align-items: center;
+        }
+
+        .tobar .right .item {
+            font-size: 12px;
+            color: #b0b0b0;
+            padding: 0 5px;
+            display: flex;
+            height: 40px;
+            align-items: center;
+        }
+        .tobar .right .color{
+            color: #424242;
+            font-size: 12px;
+            height: 40px;
+            line-height: 40px;
+        }
+        .tobar .right .shop{
+            width: 120px;
+            height: 40px;
+            margin-left: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #b0b0b0;
+            background-color: #424242;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warp">
+        <div class="container tobar">
+            <div class="left">
+                <div class="item">小米商城</div>
+                <div class="step">|</div>
+                <div class="item">MIUI</div>
+                <div class="step">|</div>
+                <div class="item">loT</div>
+                <div class="step">|</div>
+                <div class="item">云服务</div>
+                <div class="step">|</div>
+                <div class="item">天星教材</div>
+                <div class="step">|</div>
+                <div class="item">有品</div>
+                <div class="step">|</div>
+                <div class="item">小艾开放平台</div>
+                <div class="step">|</div>
+                <div class="item">企业团队</div>
+                <div class="step">|</div>
+                <div class="item">资质证明</div>
+                <div class="step">|</div>
+                <div class="item">协议规则</div>
+                <div class="step">|</div>
+                <div class="item">下载APP</div>
+
+
+                <div class="step">|</div>
+                <div class="item">Select Location</div>
+            </div>
+            <div class="right">
+                <div class="item">登录</div>
+                <div class="color">|</div>
+                <div class="item">注册</div>
+                <div class="shop">购物车</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

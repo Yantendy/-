@@ -1,0 +1,943 @@
+body {
+    background-color: rgb(243, 245, 247);
+    font-family: "Microsoft Yahei", "微软雅黑", verdana;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.site-nav {
+    font-size: 12px;
+    min-width: 1200px;
+    height: 40px;
+    color: #71797F;
+    background-color: #F3F5F7;
+
+}
+
+
+
+/* 定位 */
+
+.psi-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    height: 202px;
+    border: 1px solid #E9ECF0;
+    padding: 20px 10px 10px;
+    background-color: #fff;
+    top: 35px;
+    left: -1px;
+    z-index: 1;
+}
+
+.psi-1 p {
+    margin-top: 10px;
+}
+
+.psi-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    min-width: 78px;
+    padding-bottom: 6px;
+    border: 1px solid #E9ECF0;
+    background-color: #Fff;
+    left: -1px;
+    border-top-color: #fff;
+
+
+}
+
+.psi-2 p {
+    line-height: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.psi-2 p:hover {
+    color: #ff6600;
+}
+
+
+.psi-3 {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 126px;
+    padding: 15px;
+    right: 0;
+    background-color: #Fff;
+    border: 1px solid #E9ECF0;
+    border-top: none;
+    z-index: 1;
+
+}
+
+.psi-3 p {
+    width: 288px;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.psi-4 {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    border-color: #ff6a00;
+    border: 1px solid #ff6a00;
+    padding: 10px 15px 0;
+    border-bottom: 3px solid #ff6a00;
+    background-color: #fff;
+    top: 40px;
+    left: 0;
+}
+
+.psi-4 .psi-4-list .title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #ff6600;
+    cursor: pointer;
+}
+
+.psi-4 .psi-4-list .shop-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 178px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E9ECF0;
+}
+
+.psi-4 .psi-4-list .shop-list .shop-item {
+    margin-right: 4px;
+    height: 22px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+
+.psi-4 .psi-4-list .shop-list .shop-item:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+.display {
+    position: relative;
+}
+
+.position {
+    position: absolute;
+    display: none;
+}
+
+.display:hover .position {
+    display: flex;
+
+}
+
+.white:hover {
+    background-color: #fff;
+    /* border-bottom-color: #fff; */
+}
+
+.nav {
+    background-color: #F7F9FA;
+}
+
+.site-nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.site-nav-top .item {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 12px;
+}
+
+.site-nav-top .site-nav-left a,
+.site-nav-top .site-nav-right a {
+    font-family: "Microsoft Yahei", 微软雅黑, verdana;
+    color: #71797F;
+}
+
+.site-nav-right .item-pi {
+    color: #d9d9d9;
+    width: 1px;
+
+}
+
+.site-nav-top .site-nav-right .display .tags {
+    background: url(https://img02.hua.com/pc/pimg/home/top_nav_arrow.png
+);
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+}
+
+.site-nav-top .site-nav-right .display:hover .tags {
+    background: url(https://img02.hua.com/pc/pimg/home/top_nav_arrow.png
+);
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+    transform: rotate(180deg);
+    transition: all .5s;
+}
+
+.site-nav-top .site-nav-left .rel-1:hover {
+    background-color: #fff;
+
+}
+
+.site-nav-top .site-nav-left .rel-1:hover a {
+    border-bottom-color: #fff;
+    border-color: #d9d9d9;
+}
+
+.site-nav-top .site-nav-right .item .color {
+    color: #d9d9d9;
+    font-size: 12px;
+}
+
+.site-nav-top .site-nav-left .item:hover a {
+    color: #ff6a00;
+}
+
+.site-nav-top .site-nav-left .item:nth-child(1):hover a {
+    color: #71797F;
+}
+
+.site-nav-top .site-nav-left .rel-1:hover .psi-1 {
+    border-top-color: #fff;
+}
+
+/* .site-nav-top .site-nav-right .item:hover a {
+    color: #ff6a00;
+} */
+
+.site-nav-top .site-nav-right .item:hover a .color {
+    color: #ff6a00;
+}
+
+.site-nav-top .item a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+
+.site-nav-top .iconfont {
+    font-size: 20px;
+    color: #ffb680;
+    margin-right: 2px;
+}
+
+.site-nav-top .site-nav-left .left-tag {
+    width: 14px;
+    height: 14px;
+    background: url(https://img02.hua.com/pc/pimg/home/common_sprite.png) no-repeat;
+    background-position: 0px -22px;
+    margin-right: 5px;
+}
+
+.site-nav-top .site-nav-left .left-tag1 {
+    width: 14px;
+    height: 14px;
+    background: url(https://img02.hua.com/pc/pimg/home/common_sprite.png) no-repeat;
+    background-position: -25px -22px;
+    margin-right: 5px;
+}
+
+.site-nav-top .site-nav-left .left-tag2 {
+    width: 14px;
+    height: 14px;
+    background: url(https://img02.hua.com/pc/pimg/home/common_sprite.png) no-repeat;
+    background-position: -49px -22px;
+    margin-right: 5px;
+}
+
+.zero {
+    color: #ff6a00;
+}
+
+.site-nav-left {
+    display: flex;
+    height: 35px;
+    align-items: center;
+}
+
+.site-nav-right {
+    display: flex;
+    height: 35px;
+    align-items: center;
+}
+
+.header {
+    background-color: #F7F9FA;
+}
+
+.header-top {
+    display: flex;
+    height: 120px;
+    width: 1200px;
+
+}
+
+.header-top .log {
+    width: 238px;
+    height: 60px;
+    background: url(https://img02.hua.com/pc/2021_image/big-logo.png) left center no-repeat;
+    background-size: 238px;
+    margin-top: 28px;
+
+}
+
+.header-top .serch {
+    width: 440px;
+    margin: auto;
+}
+
+.header-top .serch .serch-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 440px;
+    height: 48px;
+    border-radius: 24px;
+    border: 2px solid #FF734C;
+
+}
+
+.header-top .serch .serch-top input {
+    width: 264px;
+    height: 100%;
+    border: none;
+    font-size: 14px;
+    background-color: inherit;
+}
+
+.header-top .serch .serch-top .iconfont {
+    width: 54px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.header-top .serch .serch-top .serch-button {
+    position: absolute;
+    right: -1px;
+    width: 118px;
+    height: 48px;
+    font-size: 18px;
+    padding: 6px 12px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #ff734c 0%, #ff3d12 100%);
+    cursor: pointer;
+}
+
+
+.header-right {
+    width: 350px;
+    height: 30px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.header-right li {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.header-right .iconfont {
+    font-size: 30px;
+    margin-right: 3px;
+    color: #ff6a00;
+}
+
+.header-right .tel {
+    margin-right: 6px;
+}
+
+.header-right .pi {
+    margin-left: 20px;
+}
+
+.header-right .off {
+
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.header-right .off:hover span:nth-child(2) {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+
+.nav {
+    display: flex;
+    height: 52px;
+    align-items: center;
+}
+
+.nav>img {
+    display: inline-block;
+}
+
+.nav .nav-list {
+    display: flex;
+    align-items: center;
+    height: 52px;
+    margin-bottom: 1px;
+}
+
+.nav .nav-list .nav-item {
+
+    font-family: "Microsoft Yahei", 微软雅黑, verdana;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    margin: 0 50px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding-bottom: 8px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    color: #232628;
+}
+
+.nav .nav-list .nav-item a {
+    color: #232628;
+    font-size: 18px;
+}
+
+.nav .nav-list .nav-item:hover a {
+    color: #19AFE8;
+}
+
+.nav .nav-list .active {
+    font-weight: bold;
+    border-bottom: 4px solid #19AFE8;
+}
+
+.roration img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bodys-first {
+    background-color: #fff;
+    padding: 40px 0;
+    color: #232628;
+}
+
+.bodys-one .bodys-top {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bodys-one .bodys-top .left {
+    display: inline-block;
+    width: 312px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(54, 216, 245, 0) 0%, #19afe8 100%);
+}
+
+.bodys-one .bodys-top .title {
+    font-family: "Microsoft Yahei", "微软雅黑", verdana;
+    font-size: 36px;
+    margin: 0 48px;
+
+}
+
+.bodys-one .bodys-top .right {
+    display: inline-block;
+    width: 312px;
+    height: 4px;
+    background: linear-gradient(-90deg, rgba(54, 216, 245, 0) 0%, #19afe8 100%);
+}
+
+
+.bodys-first .third-left {
+    width: 588px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.bodys-first .third-left .title {
+    padding-left: 24px;
+    color: #232628;
+    font-size: 16px;
+}
+
+.bodys-first .third-left .title h3 {
+    font-size: 20px;
+
+}
+
+.bodys-first .third-left .title h3 span {
+    display: inline-block;
+    width: 4px;
+    height: 12px;
+    background: #19AFE8;
+    margin-right: 6px;
+
+}
+
+.bodys-first .third-row {
+    display: flex;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.bodys-first .third-left .title p {
+    margin-left: 10px;
+    margin-top: 2px;
+    font-size: 16px;
+    color: rgba(35, 38, 40, 0.7);
+}
+
+.bodys-first .third-left:nth-child(3) {
+    margin-top: 24px;
+}
+
+.bodys-first .third-left:nth-child(4) {
+    margin-top: 24px;
+}
+
+.bodys-color {
+    background-color: #F3F5F7;
+    margin-top: 20px;
+}
+
+
+
+
+
+.footer-list {
+    display: flex;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-list li {
+    cursor: pointer;
+}
+
+
+.footer-list .footer-item {
+    padding-left: 28px;
+    margin-left: 33px;
+    border-left: 1px solid #fff;
+}
+
+
+.footer {
+    padding: 40px 46px;
+    font-size: 12px;
+    padding-bottom: 20px;
+
+    background-color: #232628;
+    ;
+}
+
+.footer .auth {
+    margin: 20px 0 0;
+}
+
+.footer .container p:nth-child(3) {
+    margin-bottom: 7px;
+    line-height: 22px;
+}
+
+
+
+.footer .auth img {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.fix-right {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 100%;
+    background-color: #595656;
+}
+
+.fix-right .fix-list {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -190px;
+    z-index: 2;
+    width: 34px;
+}
+
+.fix-right .fix-list li {
+    margin-top: 10px;
+    height: 36px;
+    position: relative;
+    cursor: pointer;
+}
+
+.fix-right .fix-list li:hover {
+    background-color: #ff6600;
+}
+
+.fix-right .fix-list li:hover .cracle {
+    background-color: #fff;
+    color: #ff6600;
+}
+
+.fix-right .fix-list .items {
+    display: flex;
+    flex-direction: column;
+    line-height: 16px;
+    height: 133px;
+    margin: 10px 0;
+    color: #fff;
+    background: url(https://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+    background-position: -36px -216px;
+}
+
+.fix-right .fix-list .items .shop-ic {
+    width: 16px;
+    height: 48px;
+    margin: 38px 0 0 13px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.fix-right .fix-list .items .cracle {
+    font-size: 12px;
+    line-height: 21px;
+    width: 21px;
+    height: 21px;
+    margin: 9px 0 0 8px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: #ff6600;
+}
+
+.fix-right .fix-list li i {
+    position: absolute;
+    background: url(https://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png);
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    vertical-align: top;
+    background-repeat: no-repeat;
+}
+
+.fix-right .fix-list li:nth-child(2) i {
+    background-position: 0 -36px;
+}
+
+.fix-right .fix-list li:nth-child(3) i {
+    background-position: 0 -72px;
+}
+
+.fix-right .fix-list li:nth-child(4) i {
+    background-position: 0 -108px;
+}
+
+.fix-right .fix-list li:nth-child(5) i {
+    background-position: 0 -144px;
+}
+
+.fix-right .fix-list li:nth-child(6) i {
+    background-position: 0 -180px;
+}
+
+.fix-right .fix-bot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 36px;
+    z-index: 1;
+}
+
+.fix-right .fix-bot li {
+    margin-top: 10px;
+    height: 36px;
+}
+
+.fix-right .fix-bot li:hover {
+    background-color: #ff6600;
+}
+
+.fix-right .fix-bot li i {
+    position: absolute;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    vertical-align: top;
+    background: url(https://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+}
+
+.fix-right .fix-bot li:nth-child(1) i {
+    background-position: 0 -216px;
+}
+
+.fix-right .fix-bot li:nth-child(2) i {
+    background-position: 0 -362px;
+}
+
+.fix-right .fix-bot li:nth-child(3) i {
+    background-position: 0 -252px;
+}
+
+.fix-right .fix-relavate {
+    position: relative;
+}
+
+.fix-right .fix-relavate:hover .fix-posi {
+    display: block;
+}
+
+
+.fix-right .fix-posi {
+    display: none;
+    position: absolute;
+    width: 288px;
+    height: 200px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+    border-radius: 3px 0 0 3px;
+    background-color: #fff;
+    left: -288px;
+}
+
+.fix-right .fix-posi .posi-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    font-size: 12px;
+    padding-top: 20px;
+
+}
+
+.fix-right .fix-posi .arrow {
+    top: 7px;
+    right: -10px;
+    position: absolute;
+    background: url(https://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+    width: 23px;
+    height: 26px;
+    background-position: 13px -295px;
+}
+
+.fix-posi2 {
+    display: none;
+    position: absolute;
+    width: 120px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    left: -120px;
+    background-color: #fff;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+
+}
+
+.fix-posi3 {
+    display: none;
+    position: absolute;
+    width: 288px;
+    height: 200px;
+    top: -162px;
+    left: -288px;
+    text-align: center;
+    border-radius: 3px 0 0 3px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+    padding: 0 13px;
+}
+
+.fix-posi3 .flex {
+    display: flex;
+
+}
+
+.fix-posi3 .flex p {
+    width: 110px;
+    margin: 30px 10px 0;
+    color: #595656;
+    font-weight: bold;
+}
+
+.fix-posi3 .flex p img {
+    margin-bottom: 10px;
+}
+
+.fix-posi3 .posi2-tag {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: -10px;
+    top: 171px;
+    background: url(https://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+    background-position: 20px -297px;
+}
+
+.fix-posi2 .posi2-tag {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: -10px;
+    top: 10px;
+    background: url(https://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+    background-position: 20px -297px;
+}
+
+.fix-relavate:hover .fix-posi3 {
+    display: block;
+}
+
+.fix-relavate:hover .fix-posi2 {
+    display: block;
+
+}
+
+.fix-right .fix-posi .posi-top img {
+    border-radius: 50%;
+}
+
+.fix-right .fix-posi .posi-top p {
+    margin-top: 10px;
+}
+
+.fix-right .fix-posi .posi-top p span {
+    color: #ff6600;
+}
+
+.fix-right .fix-posi .posi-bottom {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.fix-right .fix-posi .posi-bottom .posi-tag {
+    background: url(https://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+    width: 36px;
+    height: 36px;
+    background-position: -37px -72px
+}
+
+
+
+
+
+.fix-info {
+    position: fixed;
+    width: 180px;
+    height: 300px;
+    top: 50%;
+    right: 89px;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px 10px 0;
+    font-size: 14px;
+    color: #232628;
+    border: 1px solid rgba(25, 175, 232, 0.3);
+
+}
+
+.fix-info .title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.fix-info div {
+    margin-bottom: 8px;
+    color: rgba(35, 38, 40, 0.7);
+}
+
+.fix-info .person {
+    font-weight: bold;
+    color: #232628;
+}
+
+.fix-info p:nth-last-child(2) {
+    text-align: center;
+}
+
+.fix-info p:nth-last-child(1) {
+    margin-top: 8px;
+    text-align: center;
+    color: #B4BABF;
+    line-height: 16px;
+}
+
+
+.fix-bottom {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: #ff6600;
+    width: 144px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    right: 60px;
+    bottom: 0;
+}
+
+.fix-bottom .left {
+    background: url(https://static.meiqia.com/fe-widget-prod/v1.0.66.20220713_1/static/icon-mq-round@2x.png);
+    background-repeat: no-repeat;
+    background-size: 64px;
+    width: 40px;
+    height: 40px;
+    background-position: 4px 7px;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.fix-bottom .right {
+    width: 104px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}

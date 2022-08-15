@@ -1,0 +1,158 @@
+
+body{
+    background-color: #ccc !important;
+}
+.app{
+    margin: auto;
+    width: 100%;
+    .nav{
+        display: flex;
+        width: 100%;
+        margin: auto;
+        height: 50px;
+        font-size: 20px;
+        position: absolute;
+        background-color: #fff;
+        top: -50px;
+        transition: top 1s;
+        z-index: 1;
+        border-bottom: 2px solid #f10214;
+        .top{
+            width: 1200px;
+            margin: auto;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .int{
+                width: 546px;
+                height: 32px;
+                border: 2px solid #e2231a;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input{
+                    padding: 2px 44px 2px 17px;
+                    width: 425px;
+                    height: 26px;
+                    border: 1px solid transparent;
+                    line-height: 26px;
+                    font-size: 12px;
+                }
+                button{
+                    border-radius: 0;
+                    right: 0;
+                    width: 58px;
+                    height: 100%;
+                    display: flex;
+                    border: none;
+                    background-color: #e1251b;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .cart{
+                width: 130px;
+                height: 34px;
+                background-color: #fff;
+                text-align: center;
+                border-color: #eee;
+                border: 1px solid #e3e4e5;
+                font-size: 12px;
+                color: #e1251b;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                justify-content: center;
+            }
+        }
+        .img{
+            background-image: url(https://misc.360buyimg.com/mtd/pc/index_2019/1.0.0/assets/sprite/header/sprite.png);
+            background-position: 0 -120px;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: block;
+            width: 125px;
+            height: 40px;
+        }
+    }
+    .nav-new{
+        position: fixed;
+        top: 0;
+        transition: top 1s;
+}
+    .header{
+        height: 600px;
+    }
+    .seckill{
+        position: relative;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        h2{
+            font-size: 50px;
+        }
+        .fixed{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: 615px;
+            z-index: 2;
+            height: 180px;
+
+            .list{
+                position: relative;
+                .item{
+                    width: 58px;
+                    height: 58px;
+                    padding: 10px;
+                    font-size: 14px;
+                    color: #333;
+                    background: #fff;
+                    transition: color .2s ease;
+                    text-align: center;
+                    cursor: pointer;
+                    &:hover{
+                        background: #c81623;
+                        transition: background .2s ease;
+                        color: #fff;
+                    }
+                }
+                .color{
+                    color: #e1251b;
+                }
+                .none{
+                    display: none;
+                    position: absolute;
+                    bottom: 0;
+                    z-index: -1;
+                }
+                .act{
+                    display: block;
+                    bottom: -58px;
+                    transition: bottom 1s;
+                    color: #c81623;
+}
+            }
+        }
+        .fix-new{
+            position: fixed;
+            top: 70px;
+            transition: top .5s;
+}
+        
+    }
+    .charact{
+        height: 600px;
+    }
+    .channel{
+        height: 2000px;
+    }
+}

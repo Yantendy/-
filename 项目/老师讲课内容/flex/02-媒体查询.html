@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* @media only screen and (max-width: 320px) {
+            .app {
+                display: block;
+            }
+            .left {
+                width: 50%;
+                height: 300px;
+                background: red;
+            }
+            .right {
+                width: 100%;
+                height: 400px;
+                margin-left: 0;
+                margin-top: 50px;
+                background-color: aqua;
+            }
+        }
+        @media (min-width: 320px) and (max-width: 800px) {
+            .app {
+                display: flex;
+            }
+            .left {
+                width: 100%;
+                height: 300px;
+                background: red;
+            }
+            .right {
+                display: none;
+            }
+        }
+        @media (min-width: 800px) {
+            .app {
+                display: flex;
+            }
+            .left {
+                width: 300px;
+                height: 300px;
+                background: red;
+            }
+            .right {
+                margin-left: 50px;
+                width: 400px;
+                height: 400px;
+                background: yellow;
+            }
+        } */
+        .nav {
+            width: 1170px;
+            margin: auto;
+            display: flex;
+            list-style: none;
+        }
+        li {
+            flex: 1;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+        }
+        .items {
+            width: 1170px;
+            margin: auto;
+        }
+        .items img {
+            width: 360px;
+            height: auto;
+        }
+        .img-list {
+            display: flex;
+            padding-top: 40px; 
+        }
+        .bg {
+            background: #f5f5f5;
+        }
+        .items div:nth-child(odd) {
+            background: #f5f5f5;
+        }
+        @media (min-width: 500px) and (max-width: 1170px) {
+            .nav {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            li {
+                flex: 0 0 50%;
+            }
+            .items {
+                width: 100%;
+            }
+            .img-list {
+                flex-direction: column;
+            }
+            .img-list img {
+                margin: auto;
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            .nav {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            li {
+                flex: 0 0 100%;
+            }
+            .items {
+                width: 100%;
+            }
+            .img-list {
+                flex-direction: column;
+            }
+            .img-list img {
+                width: 100%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        媒体查询
+            移动端优先（响应式布局 pc移动端响应式  bootstrap）
+            我们可以针对不同的屏幕尺寸设置不同的样式 保证页面正常进行渲染
+
+            格式
+                @media
+
+                实例：
+                    某两个尺寸之间的样式
+                    @media (min-width: 最小尺寸) and (max-width: 最大尺寸) {
+                        当前尺寸范围内想要实现的样式
+
+                    }
+
+                    @media only screen and (max-width: 最大尺寸) {
+                        当前尺寸以下所有的寸尺想要实现的样式
+                    }
+
+                    @media (min-width: 最小尺寸) {
+                        当前尺寸以下所有的寸尺想要实现的样式
+                    }
+
+     -->
+
+     <!-- <div class="app">
+        <div class="left"></div>
+        <div class="right"></div>
+     </div> -->
+     <div class="app">
+        <ul class="nav">
+            <li>
+                <img src="https://code.visualstudio.com/assets/images/home-debug.svg">
+            </li>
+            <li>
+                <img src="https://code.visualstudio.com/assets/images/home-debug.svg">
+            </li>
+            <li>
+                <img src="https://code.visualstudio.com/assets/images/home-debug.svg">
+            </li>
+            <li>
+                <img src="https://code.visualstudio.com/assets/images/home-debug.svg">
+            </li>
+        </ul>
+        <div class="items">
+            <div class="img-list">
+                <img src="https://code.visualstudio.com/assets/images/home-debug.svg" alt="">
+                <p>Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.</p>
+            </div>
+            <div class="img-list">
+                <img src="https://code.visualstudio.com/assets/images/home-debug.svg" alt="">
+                <p>Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.</p>
+            </div>
+            <div class="img-list">
+                <img src="https://code.visualstudio.com/assets/images/home-debug.svg" alt="">
+                <p>Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.</p>
+            </div>
+        </div>
+     </div>
+     
+</body>
+</html>

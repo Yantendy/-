@@ -1,0 +1,88 @@
+$num: 50;
+$score: 15;
+
+@function demo($x) {
+    @if $x>5 {
+        @return $x + px;
+    }
+    @else {
+        @return $x*$x + px;
+    }
+    
+};
+
+.demo {
+    margin-top: demo(4)
+}
+
+@for $i from 12 to 19 {
+    .ft-#{$i} {
+        font-size: $i + px;
+    }
+}
+
+$a: 2;
+@while $a<10 {
+    .margin#{$a} {
+        margin-left: $a + px;
+    }
+    $a: $a*$a
+}
+
+$arr: left top right bottom;
+
+@each $item in $arr {
+    .margin-#{$item} {
+        margin-#{$item}: 10px;
+    }
+}
+
+@for $i from 1 to 100 {
+    .border-#{$i} {
+        border: $i+px solid red;
+    }
+}
+
+.app {
+    width: 200px;
+    height: 100px;
+    @if $score<60 {
+        &::after {
+            content: "不及格";
+        }
+    }
+    @else if $score>=60 and $score<70 {
+        &::after {
+            content: '及格';
+        }
+    }
+    @else if $score>=70 and $score<90 {
+        &::after {
+            content: "良好";
+        }
+    }
+    @else {
+        &::after {
+            content: '优秀';
+        }
+    }
+    // @if $num>50 {
+    //     border: 1px solid red;
+    // } 
+    // @else if $num==50 {
+    //     border: 10px solid pink;
+    // }
+    // @else {
+    //     border: 1px solid blue;
+    // }
+    // @else {
+    //     border: 1px solid blue;
+    // }
+    // @if $num==50 {
+    //     border: 1px solid green;
+    // }
+
+    // @if $num<50 {
+    //     border: 1px solid blue;
+    // }
+}

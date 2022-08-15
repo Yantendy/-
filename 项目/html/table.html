@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            
+            background-color: aquamarine;
+
+        }
+        .container{
+            margin: 90px auto;
+            width: 300px;
+            /* height:450px ; */
+            position: relative;
+        }
+        .top{
+            height: 400px;
+            width: 300px;
+            background-color: red;
+            overflow: hidden;
+            position: absolute;
+            border-radius: 8em 8em 1em 1em ;
+        }
+        .bottom{
+            height: 200px;
+            width: 50px;
+            background-color: beige;
+            position: absolute;
+            top: 400px;
+            left: 125px;
+        }
+        .top::before {
+    content: '';
+    position: absolute;
+    width: 145%;
+    height: 130%;
+    background: linear-gradient(
+        hotpink 0%,
+        hotpink 25%,
+        deepskyblue 25%,
+        deepskyblue 50%,
+        gold 50%,
+        gold 75%,
+        lightgreen 75%,
+        lightgreen 100%);
+     z-index: 1;
+     right: -21%;
+    transform: rotate(-25deg);
+}
+.top::after {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 17em;
+    background-color: rgba(255, 255, 255, 0.5);
+    left: 2em;
+    bottom: 2em;
+    border-radius: 1em;
+}
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+</body>
+</html>

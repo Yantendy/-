@@ -1,0 +1,42 @@
+<body id="clock" onload="clock(3600)"></body>
+
+<script>
+    var now = new Date().getTime()
+    var input= new Date('2022-7-8 24:00:00').getTime()
+
+
+    function clock(times) {
+
+
+        var shi = parseInt(3600 / 3600);
+        console.log(shi)
+
+        var fen = parseInt((times % 3600) / 60);
+
+
+        var miao = (times % 3600) % 60;
+
+
+        document.getElementById("clock").innerHTML = shi + "时" + fen + "时" + miao + "秒";
+
+        if (times > 0) {
+
+            times = times - 1;
+
+
+            setTimeout(function () {
+
+                clock(times);
+
+            }, 1000);
+
+        } else {
+
+            alert("倒计时结束");
+
+        }
+    }
+
+</script>
+
+</html>

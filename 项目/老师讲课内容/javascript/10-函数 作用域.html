@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        函数
+            函数的概念
+                1 在js中 可能会编写很多的相同或者是功能相近代码  这些代码可以多次重复使用
+                2 函数: 就是封装了一段可以被反复使用的代码块 通过这些代码块可以实现大量的代码重复使用
+                3 函数对于一大段为了达到某种目的的代码进行归类  以使代码更加具有条理
+
+            使用
+                1 声明函数
+                    function 自定义函数名() {
+                        // 要执行的代码块
+                    }
+
+                   函数表达式
+                    var 自定义函数名=function() {
+                        // 要执行的代码块
+                    }
+
+                函数名的命名 严格遵循变量名命名规则
+
+            函数调用
+                函数名()
+
+            函数参数
+                形参: 在声明函数时候 小括号里边所写 就是形参(形式上的参数)
+                    用来接收我们的实参
+
+                实参：在调用函数时候 小括号里边所写的实参 (实际的参数)
+
+                形参与实参个数不匹配
+                    1 实参多于形参
+                        只取形参的个数
+
+                    2 实参少于形参
+                        对结果输出 undefined
+
+            函数的返回值
+                return
+                格式:
+                    function 函数名() {
+                        return 返回值;
+                    }
+
+                1 return语句之后的内容不再执行
+                2 return 只有一个返回值 如果用逗号隔开多个值 只返回最后一个
+                3 如果函数有return 则返回return后边的值 如果函数没有return  则返回结果为哦undefined
+
+            作用域
+                定义：
+                    作用域就是变量与函数可访问的范围
+
+                    全局作用域
+                        在代码中的任何地方都能访问的对象拥有全局作用域
+                            1 在最外层的函数和在最外层函数外定义的变量 拥有全局作用域
+                            2 所有未定义直接赋值(没有关键字var)变量 自动声明为全局作用域
+                            3 所有window对象的属性拥有的作用域 全局作用域
+                                window.alert()
+                                window.location
+                                ...
+                    局部作用域
+                        和全局作用域刚好相反  局部作用域一般只在固定的代码片段中可以访问  最常见是函数的内部
+
+                每一个函数都拥有各地独立作用域  他们之间互相不影响
+                    
+     -->
+
+     <script>
+
+        function tab() {
+            var a=123
+            // return a,1,2,3;
+            return a
+        }
+        function demo() {
+            
+            console.log(tab())
+        }
+
+        // tab()
+        demo()
+        // tab()
+        // console.log(tab())
+
+        // a=123
+        // console.log(window.location)
+        // function tab() {
+        //     // var a=123
+        //     a=456
+        //     console.log(a)
+        //     console.log(window.location.href)
+        // }
+        // tab()
+        // console.log(a)
+        // function demo(a,b,c) {
+        //     // console.log(a,b,c)
+        //    a()
+        // }
+
+        // var demo1=function() {
+        //     console.log(2222)
+        // }
+
+        // demo(2)
+        // demo(function() {
+        //     alert(1111)
+        // })
+        // var str='hello world'
+        // function test(alert) {
+        //     var a=123
+        //     return str;
+        //     console.log(alert)
+        // }
+        // console.log(a)
+
+        // // test(1111)
+        // console.log(test(1111))
+     </script>
+</body>
+</html>

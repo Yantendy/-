@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+
+        *{
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            
+        }
+
+        .table {
+            width: 1600px;
+            margin: 200px auto;
+            border-bottom: 1px solid #333;
+            border-right: 1px solid #333;
+        }
+
+        .list{
+            display: flex; 
+        }
+        .list .item{
+            display: flex;
+            flex-direction: column;
+        }
+        .list .item .color{
+            color: red;
+        }
+        .list .item p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: #999;
+            height: 30px;
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            color: darkslateblue;
+        }
+        .font{
+            color: darkslateblue;
+        }
+        .list .item .left{
+            height: 90px;
+        }
+        .list .item .size{
+            text-align: justify;
+            padding: 0 38px;
+        }
+        .list .item span{
+            font-size: 16px;
+            width: 200px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+        }
+        .list .item .iconfont{
+            font-size: 22px;
+            color: yellowgreen;
+        }
+        .list .items .iconfont{
+            font-size: 22px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="table">
+        <ul class="list">
+            <li class="item">
+                <p>班级名次</p>
+                <span class="left font">真题精解班</span>    
+                <span class="left font">真题精解班</span>          
+            </li>
+            <li class="item">
+                <p>科目</p>
+                <span>行测+申论</span>
+                <span>行测</span>  
+                <span>申论</span>  
+                <span>行测+申论</span>
+                <span>行测</span>  
+                <span>行测</span>
+            </li>
+            <li class="item">
+                <p>授课内容</p>
+                <span>全科历年真题精解</span>
+                <span>行测历年真题精解</span>  
+                <span>申论历年真题精解</span>  
+                <span>全科技巧强化</span>
+                <span>行测速解技巧强化</span>  
+                <span>申论速解技巧强化</span>
+            </li>
+            <li class="item">
+                <p>增值服务</p>
+                <span class="left size">课后赠2套模拟卷24小时以内答疑</span>    
+                <span class="left size">课后赠2套模拟卷24小时以内答疑</span> 
+            </li>
+            <li class="item">
+                <p>课时</p>
+                <span>28</span>
+                <span>32</span>  
+                <span>16</span>  
+                <span>32</span>
+                <span>18</span>  
+                <span>14</span>
+            </li>
+            <li class="item">
+                <p>价格</p>
+                <span class="color">1280元</span>
+                <span>980元</span>  
+                <span>580元</span>  
+                <span class="color">980元</span>
+                <span>680元</span>  
+                <span>580元</span>
+            </li>
+            <li class="item">
+                <p>试听</p>
+                <span class="iconfont icon-24gf-headphones"></span>
+                <span class="iconfont icon-24gf-headphones"></span>
+                <span class="iconfont icon-24gf-headphones"></span>
+                <span class="iconfont icon-24gf-headphones"></span>
+                <span class="iconfont icon-24gf-headphones"></span>
+                <span class="iconfont icon-24gf-headphones"></span>
+            </li>
+            <li class="item items">
+                <p>购买</p>
+                <span class="iconfont icon-gouwugouwuchedinggou"></span>
+                <span class="iconfont icon-gouwugouwuchedinggou"></span>
+                <span class="iconfont icon-gouwugouwuchedinggou"></span>
+                <span class="iconfont icon-gouwugouwuchedinggou"></span>
+                <span class="iconfont icon-gouwugouwuchedinggou"></span>
+                <span class="iconfont icon-gouwugouwuchedinggou"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

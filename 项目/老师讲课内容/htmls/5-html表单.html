@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 300px;
+            height: 300px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        html表单
+            input  
+                type  类型
+                    text    文本  
+                    password  密码
+                    button    按钮
+                    checkbox  复选框
+                    radio    单选框
+                    file     文件
+                    submit   提交
+                    ...
+                value   默认值
+                placeholder  文字提示
+                disabled    禁用
+                readonly    只读
+                name   添加名称
+                maxlength   最大长度
+                minlength   最小长度
+
+            label
+                input 元素定义标注
+
+            textarea
+                多行文本输入框
+                cols    允许一行输入多少个字  折行时候所显示一行的字数
+                rows    允许在可视区域输入多少行
+                placeholder  文字提示
+                disabled    禁用
+                readonly    只读
+                maxlength   最大长度
+                minlength   最小长度
+
+            select
+                下拉选项框
+                配合着option(下拉选项)来使用
+                    value  配合着js获取当前下拉框选中元素的时候 使用的
+
+            form       表单
+                action      动作   提交的后台接口(php  java  python ...)
+                method     提交的方法  get  post delete put ....
+
+            form表单 一般情况是用来包裹表单元素  但是现有的企业在进行使用时候  直接进行数据的提交 而不再外层再去包裹form表单元素
+
+     -->
+
+     <select name="" id="">
+        <option value="郑州">郑州</option>
+        <option value="开封">开封</option>
+        <option value="洛阳">洛阳</option>
+        <option value="平顶山">平顶山</option>
+        <option value="安阳">安阳</option>
+     </select>
+
+     <!-- <textarea name="" id="" rows="10" cols="10" placeholder="123" maxlength="12"></textarea> -->
+
+    <!-- <input type="text" name="" id="" maxlength="11" placeholder="请输入手机号" minlength="5">
+    <input type="text" name="" id="" maxlength="18" placeholder="请输入身份证号"> -->
+    <!-- <form>
+        <input type="text" name="" id="" value="这是一个默认数值" placeholder="提示文本内容" readonly>
+    </form> -->
+  
+        <!-- <input type="text" name="" id="" placeholder="邮箱/用户名/登录手机">
+        <input type="password" name="" id="" placeholder="密码">
+        <input type="button" value="提交数据">
+        <input type="submit" name="" id="">
+        <input type="file" name="" id=""> -->
+        <!-- <p onclick="submit()">提交</p>
+        <ul id="demo"></ul> -->
+
+        <!-- <input type="checkbox" name="sport" id="">羽毛球
+        <input type="checkbox" name="sport" id="">乒乓球
+
+        <input type="radio" name="sex" id="">男
+        <input type="radio" name="sex" id="">女 -->
+
+        <!-- <label for="m1">
+            <input type="checkbox" name="sport" id="m1">
+            羽毛球
+        </label>
+        <label for="m2">
+            <input type="checkbox" name="sport" id="m2">
+            乒乓球
+        </label> -->
+
+        <!-- <input type="checkbox" name="sport" id="m1">
+        <label for="m1">乒乓球</label>
+
+        <input type="checkbox" name="sport" id="m2">
+        <label for="m2">羽毛球</label> -->
+
+
+    <!-- <script>
+        var demo=document.getElementById("demo")
+        var str=''
+        function submit() {
+            fetch('https://cnodejs.org/api/v1/topics').then(res=> {
+                return res.json()
+            }).then(res1=> {
+                console.log(res1)
+                for(var i=0; i<res1.data.length; i++) {
+                    str+=`
+                        <li>${res1.data[i].title}</li>
+                    `
+                }
+                demo.innerHTML=str
+            }).catch(err=> {
+                console.log(err)
+            })
+        }
+    </script> -->
+    <!-- <script>
+        function getTxt() {
+            console.log(event.target.value)
+
+        }
+    </script> -->
+</body>
+</html>

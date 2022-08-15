@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-color: rgb(241, 243, 245);
+            font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif !important;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 100px auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            height: 64px;
+            line-height: 64px;
+        }
+
+        .left {
+            font-size: 24px;
+        }
+
+        .right span {
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        .right .iconfont {
+            font-size: 14px;
+        }
+
+        .list ul {
+            display: flex;
+        }
+
+        .list .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 230px;
+            height: 306px;
+            margin-left: 12px;
+        }
+
+        .list ul .color {
+            background-color: rgba(207, 10, 44, 0.06);
+            margin-left: 0;
+        }
+
+        .list .item .nz {
+            margin-top: 55px;
+            margin-bottom: 10px;
+        }
+
+        .time {
+            font-size: 20px;
+            color: rgb(207, 10, 44);
+            ;
+            margin-bottom: 35px;
+        }
+
+        .over {
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            opacity: 0.5;
+            margin-bottom: 17px;
+            font-weight: 400;
+        }
+
+        .ds {
+            display: flex;
+        }
+
+        .ds .fang {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.6);
+            ;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            line-height: 40px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            ;
+        }
+
+        .imgs {
+            height: 183px;
+            line-height: 183px;
+        }
+
+        .bd {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding: 0 2px;
+        }
+
+        .red {
+            background-image: linear-gradient(1.5708rad, rgb(207, 10, 44), rgb(255, 45, 78));
+            font-size: 12px;
+            height: 16px;
+            text-align: center;
+            width: 56px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .artical .title {
+            font-size: 14px;
+            margin: 4px 0;
+            overflow: hidden;
+            max-width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .colors {
+            background: #fff;
+        }
+
+        .artical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 10px;
+            width: 230px;
+        }
+
+        .money {
+            font-size: 13px;
+            color: rgb(0, 0, 0);
+            opacity: 0.5;
+            margin-bottom: 10px;
+        }
+
+        .moneys {
+            font-size: 16px;
+            color: rgb(207, 10, 44);
+            ;
+        }
+
+        .moneys span {
+            text-decoration: line-through;
+            color: rgb(0, 0, 0);
+            ;
+            opacity: 0.5;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body onload="clock(25200)">
+    <div class="content">
+        <div class="container">
+            <div class="header">
+                <span class="left">秒杀</span>
+                <div class="right">
+                    <span>限时秒杀</span>
+                    <span class="iconfont icon-xiangyoujiantou"></span>
+                </div>
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="item color">
+                        <img class="nz" width="48"
+                            src="https://res.vmallres.com/portal/1.11.5.300/h5/images/timeCount.png" alt="">
+                        <p class="time">00:00场</p>
+                        <p class="over">距离结束还有</p>
+                        <div class="ds">
+                            <span class="fang">00</span><span class="bd">:</span>
+                            <span class="fang fang1">00</span><span class="bd">:</span>
+                            <span class="fang fang2">44</span>
+                        </div>
+                    </li>
+                    <li class="item colors">
+                        <div class="imgs"><img width="142"
+                                src="https://res.vmallres.com/pimages//uomcdn/CN/pms/202205/gbom/6945878328853//428_428_F9EE03F17D211D9AFA1F3DF93435E682mp.png"
+                                alt=""></div>
+
+                        <div class="artical">
+                            <p class="red">超级秒杀</p>
+                            <p class="title">美的滚筒洗衣机 全自动10公斤家用大容量MG100T10WDQCY 巴赫银（支持鸿蒙智联）</p>
+                            <p class="money">限时降价2360元</p>
+                            <p class="moneys">￥2549<span>￥3799</span></p>
+                        </div>
+
+                    </li>
+                    <li class="item colors">
+                        <div class="imgs"><img width="142"
+                                src="https://res.vmallres.com/pimages//product/6955269901718//428_428_1562825245883mp.png"
+                                alt=""></div>
+
+                        <div class="artical">
+                            <p class="red">超级秒杀</p>
+                            <p class="title">凯优台式速热净饮机</p>
+                            <p class="money">限时降价1000元</p>
+                            <p class="moneys">￥1399<span>￥2300</span></p>
+                        </div>
+
+                    </li>
+                    <li class="item colors">
+                        <div class="imgs"><img width="142"
+                                src="https://res.vmallres.com/pimages//FssCdnProxy/vmall_bop_server/BopMaterialCenter//428_428_9B3CB56675091C8B7D2FF701631E8795.png"
+                                alt=""></div>
+
+                        <div class="artical">
+                            <p class="red">超级秒杀</p>
+                            <p class="title">OGAWA奥佳华家用按摩椅 OG7306</p>
+                            <p class="money">限时降价4700元</p>
+                            <p class="moneys">￥8299<span>￥12000</span></p>
+                        </div>
+
+                    </li>
+                    <li class="item colors">
+                        <div class="imgs"><img width="142"
+                                src="https://res.vmallres.com/pimages//FssCdnProxy/vmall_bop_server/BopMaterialCenter//428_428_07DD46A6D0991924337EC3206BB46E76.png"
+                                alt=""></div>
+
+                        <div class="artical">
+                            <p class="red">超级秒杀</p>
+                            <p class="title">臻邦（ZHENBANG）智能家居驱蚊器（支持鸿蒙智联）</p>
+                            <p class="money">限时降价10元</p>
+                            <p class="moneys">￥129<span>￥130</span></p>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var fang = document.querySelector('.fang')
+        var fang1 = document.querySelector('.fang1')
+        var fang2 = document.querySelector('.fang2')
+
+        function clock(times) {
+            var shi = parseInt(times / 3600);
+            var fen = parseInt((times % 3600) / 60);
+            var miao = (times % 3600) % 60;
+
+            console.log(shi)
+            fang.innerHTML = shi
+            fang1.innerHTML = fen
+            fang2.innerHTML = miao
+            if (times > 0) {
+                times = times - 1;
+                setTimeout(function () {
+                    clock(times);
+                }, 1000);
+            } else {
+
+                alert("倒计时结束");
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

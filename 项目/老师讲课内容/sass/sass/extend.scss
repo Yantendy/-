@@ -1,0 +1,32 @@
+.app {
+    width: 150px;
+    height: 150px;
+    border: 1px solid red;
+    
+}
+.app a {
+    color: pink;
+}
+.child {
+    // width: 150px;
+    // height: 150px;
+    // border: 1px solid red;
+    @extend .app;
+    background: blue;
+}
+.m {
+    margin: {
+        top: 50px;
+        left: 200px;
+    }
+}
+.child1 {
+    // width: 150px;
+    // height: 150px;
+    // border: 1px solid red;
+    // background: blue;
+    @extend .child,.m;
+    // @extend .m;
+    color: yellow;
+    background: red;
+}

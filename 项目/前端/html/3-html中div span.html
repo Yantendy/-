@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        div
+            块级元素 该元素可以包括所有的元素内容 包括其本身
+            块级元素会单独占一行 如果不设置宽度的话 相当于宽度撑满一整行
+
+        span
+            存放文本元素
+            存放文本 图片 或者是表单
+            不能存放p div ul li ol li h1-h6等等
+     
+     -->
+
+     <!-- <div>
+        <ul>
+            <li>1111</li>
+        </ul>
+     </div>
+     <ul>
+        <li>
+            <div>
+                <img src="" alt="">
+                <p>1111</p>
+                <h2>33333</h2>
+            </div>
+        </li>
+     </ul> -->
+
+     <!-- <div class="lists" style="display: flex">
+        <img width="296" src="https://image1.ljcdn.com/newhouse-user-image/42e8de3c485349464b0e93287524e34b.jpg.592x432.jpg" alt="">
+        <div class="text" style="margin-left: 20px">
+            <h2>华润置地北龙湖·瑞府</h2>
+            <p>郑东新区 / 北龙湖 / 龙源路华润置地北龙湖·瑞府</p>
+            <p>3室 / 4室</p>
+        </div>
+     </div> -->
+     <!-- <span>11234</span>
+     <span>11234</span> -->
+
+     <ul id="demo">
+        <li>
+            <p>
+                <span>
+                    文本
+                    <!-- <img src="https://t14.baidu.com/it/u=1055210280,172003752&fm=30&app=106&size=f242,150&n=0&f=JPEG&fmt=auto?s=CCA830726970449AECD86CCA030070B6&sec=1657126800&t=c5cd5231eeb1d0cd1c596a2d04f3dbdb" alt=""> -->
+                    <!-- <input type="text" name="" id="" value="123455"/>
+                    <textarea name="" id="" cols="30" rows="10" value="2222"></textarea> -->
+                </span>
+                900余件故宫文物在港展出
+                <span>热</span>
+            </p>
+        </li>
+        <li>
+            <p>
+                <span>2</span>
+                900余件故宫文物在港展出
+                <span>热</span>
+            </p>
+        </li>
+        <li>
+            <p>
+                <span>3</span>
+                900余件故宫文物在港展出
+                <span>热</span>
+            </p>
+        </li>
+     </ul>
+     <!-- <script>
+        var ul=document.getElementById("demo")
+        var str=''
+        for(var i=0; i<10; i++) {
+            str+=`
+                <li>
+                    <span>${i+1}</span>
+                    900余件故宫文物在港展出
+                    <span>热</span>
+                </li>
+            `
+        }
+        ul.innerHTML=str
+     </script> -->
+</body>
+</html>

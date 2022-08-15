@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 2000px;
+        }
+
+        .header {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rebeccapurple;
+
+            position: fixed;
+            top: -80px;
+            left: 0px;
+
+        }
+
+        .top {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            text-align: center;
+            line-height: 90px;
+            background-color: yellow;
+
+
+            position: fixed;
+            bottom: 90px;
+            right: 90px;
+                              
+            display: none;   /*不会自动显示  写入Javascript的时候没有反应。*/
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">顶部央视</div>
+    <div class="top">sada</div>
+
+    <script>
+        var header = document.querySelector('.header')
+        var top = document.querySelector('.top')
+
+        window.onscroll = function () {
+            var height = document.documentElement.scrollTop || document.body.scrollTop
+            if (height >= 300) {
+                header.style.top = '0px'
+                top.style.display = 'block'
+
+            } else {
+                header.style.top = '-80px'
+                top.style.display = 'none'
+            }
+
+        }
+
+        top.onclick = function () {
+            window.scroll({
+                top: '0',
+                behavior: 'smooth'
+
+            })
+        }
+
+    </script>
+</body>
+
+</html>

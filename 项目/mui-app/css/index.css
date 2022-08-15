@@ -1,0 +1,204 @@
+
+.top{
+    height: 2.45rem;
+    color: #2e2e2e;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top .left{
+    font-size: .98rem;
+    padding-left: .8rem;
+}
+.top .right{
+    padding: 0 .8rem 0 0;
+    display: flex;
+ 
+  
+
+}
+.top .right img{
+    width: 1.42rem;
+    height: 1.42rem;
+    margin-right: .3rem;
+    margin-top: .1rem;
+}
+.top .right .sex span{
+    opacity: .6;
+    font-size: .8rem;
+}
+.top .right .sex{
+    text-align: center;
+    padding-left: 1.2rem;
+    width: 5.4rem;
+    height: 1.69rem;
+    line-height: 1.69rem;
+    border-radius: .2rem;
+     background: url(data:image/png;base64,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) no-repeat 100%   transparent;
+     background-size: 0.6708rem 0.3552rem;
+    background-position: 18% 54%;
+     background-color: #f2f2f2;
+}
+.nav-list{
+    display: flex;
+    padding: .58rem 0;
+    border-bottom: 0.272rem solid #f9f9f9;
+    width: 100%;
+    background: #fff;
+}
+.nav-list .nav-item{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-list .nav-item img{
+    width: 1.9rem;
+    margin-bottom: .2rem;
+}
+.nav-list .nav-item span{
+    font-size: .76rem;
+}
+.rank {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    height: 3.23rem;
+    padding: 0 .3rem;
+}
+.rank i{
+    width: 0.17rem;
+    height: 0.88rem;
+    border-radius: 0.0288rem;
+    background-color: #ffbb1b;
+}
+.rank h2{
+    margin-right: auto;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: .5rem;
+}
+.rank p{
+    color: #2e2e2e;
+    font-size: .8rem;
+    opacity: .5;
+    margin-right: .5rem;
+}
+.rank img{
+   width: .4rem;
+   margin-right: .5rem;
+}
+.info-list{
+    display: flex;
+    overflow-x: scroll;
+    border-bottom: 0.272rem solid #f9f9f9;
+    padding-bottom: .5rem;
+    
+}
+.info-list::-webkit-scrollbar {   
+     display: none;
+}
+.info-list .info-item{
+    width: 20%;
+    padding-right: .54rem;
+    text-align: center;
+    box-sizing: content-box;
+}
+.info-list .info-item:nth-child(1){
+    padding-left: .54rem;
+}
+.info-list .info-item img {
+    display: inline;
+    vertical-align: top;
+    width: 4.4rem;
+    height: 5.88rem;
+    text-align: center;
+
+}
+.info-list .info-item .title{
+    
+    display: block;
+    margin: .4rem 0 .2rem;
+    /* width: 100%; */
+    font-size: .6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: .88rem;
+    line-height: .88rem;
+}
+.info-list .info-item .intro{
+    display: block;
+    /* width: 100%; */
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: .88rem;
+    line-height: .88rem;
+    opacity: .6;
+}
+
+.goods {
+    display: flex;
+    font-size: .7rem;
+}
+.goods img{
+    flex:  0 1 5rem;
+    width: 5rem;
+    padding-right: .5rem;
+}
+
+.goods .item h2{
+    color: #2e2e2e;
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+
+}
+.goods .item>p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: .7rem;
+    font-size: .7rem;
+    opacity: .6;
+}
+.goods .item .tell{
+    display: flex;
+    justify-content: space-between;
+    font-size: .7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.goods .item .tell .left{
+    
+    margin-right: auto;
+    width: 4rem;
+    opacity: .5;
+}
+.goods .item .tell .right{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.goods .item .tell .right span{
+    padding: 0 .2rem;
+    margin-left: .42rem;
+    background: #f6f6f6;
+    opacity: .5;
+    border-radius: .2rem;
+}
+.goods .item .tell .right span:nth-child(3){
+    background: rgba(255,187,27,.1);
+    color: #ff9000;
+    opacity: 1;
+}
+.mui-table-view:before{
+    display: none;
+}

@@ -1,0 +1,452 @@
+body {
+    background-color: #fff;
+    font: 12px/1.5 Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, \5b8b\4f53, sans-serif;
+    color: #323232;
+}
+
+.container {
+
+    margin: 20px auto;
+    width: 680px;
+
+    .nav {
+        display: flex;
+        line-height: 50px;
+        font-size: 20px;
+        color: #959595;
+        border-bottom: 1px solid #ececec;
+
+        .item {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                color: #10b041;
+            }
+        }
+
+        .active {
+            color: #10b041;
+            border-bottom: 1px solid #10b041;
+            transition: all 1s;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+        }
+    }
+
+    .artical {
+        .list {
+            display: flex;
+            display: none;
+            flex-direction: column;
+            width: 680px;
+        }
+
+        .active {
+            display: flex !important;
+            transition: all 1s;
+        }
+
+        .travels {
+            .item {
+                display: flex;
+                position: relative;
+                padding: 17px 0 20px;
+                width: 100%;
+
+                .line {
+                    position: absolute;
+                    left: 23px;
+                    top: 30px;
+                    height: 100%;
+                    border-left: 1px solid #ececec;
+                    z-index: -1;
+                }
+
+                .tag {
+                    position: absolute;
+                    right: 0;
+                    background: url(https://common1.qyerstatic.com/bbs/old/images/index/indexs.png) no-repeat;
+                    width: 10px;
+                    height: 10px;
+                    background-position: 0 -59px;
+                    cursor: pointer;
+                }
+
+                .head {
+                    img {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+
+                    }
+                }
+
+                .body {
+                    margin: 14px 0 0 9px;
+                    font-size: 12px;
+
+                    .top {
+                        display: flex;
+                        span{
+                            cursor: pointer;
+                        }
+                        .title {
+                            display: flex;
+                            align-items: flex-start;
+                            margin: 0 9px 0 0;
+                            
+                            img {
+                                margin-left: 2px;
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        .desc {
+                            display: flex;
+                            align-items: flex-start;
+                            color: #959595;
+
+                            .desc-1 {
+                                margin: 0 7px;
+                                text-decoration: underline;
+                            }
+
+                            .desc-2 {
+                                margin-left: 16px;
+
+                                .iconfont {
+                                    font-size: 12px;
+                                    color: #ececec;
+                                    ;
+                                }
+                            }
+                        }
+
+                        .time {
+                            display: flex;
+                            align-items: flex-start;
+                            color: #959595;
+
+                            .iconfont {
+                                margin: 0 5px 0 20px;
+                                font-size: 16px;
+                                color: #ececec;
+                            }
+                        }
+                    }
+
+                    .bottom {
+                        margin-top: 22px;
+                        color: #323232;
+                        display: flex;
+
+                        .left {
+                            display: flex;
+                            flex-direction: column;
+                            margin-right: 15px;
+
+                            h2 {
+                                font-size: 16px;
+                                word-wrap: break-word;
+                                word-break: break-all;
+                                color: #323232;
+                                span{
+                                display: inline-block;
+                                color: #fff;
+                                background: #ff8c7d;
+                                border: 1px solid #ff8c7d;
+                                line-height: 16px;
+                                border-radius: 2px;
+                                font-size: 12px;
+                                padding: 0 5px;
+                                height: 16px;
+                                word-wrap: break-word;
+                                word-break: break-all;
+                                i{
+                                    display: inline-block;
+                                    width: 9px;
+                                    height: 9px;
+                                    background: url(https://common1.qyerstatic.com/bbs/old/images/w-star.png);
+                                    margin-right: 2px;
+                                }
+                                }
+                            }
+
+                            p {
+                                margin-top: 15px;
+                                color: #959595;
+                                display: -webkit-box;
+                                overflow: hidden;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                text-overflow: ellipsis;
+                            }
+                        }
+
+                        .right {
+                            flex: 0 1 161px;
+                            margin-left: 9px;
+
+                            img {
+                                width: 161px;
+                                height: 107px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .ship {
+
+            padding-top: 18px;
+            display: flex;
+            display: none;
+            flex-direction: column;
+
+            .title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                font-size: 14px;
+                color: #636363;
+
+                i {
+                    background: url(https://common1.qyerstatic.com/bbs/old/images/index/indexs.png) no-repeat;
+                    width: 16px;
+                    height: 12px;
+                    margin-right: 8px;
+                    background-position: -53px -271px;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    color: #10b041;
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    i {
+                        width: 10px;
+                        height: 9px;
+                        background: url(https://common1.qyerstatic.com/bbs/old/images/index/indexs.png) no-repeat;
+                        margin-left: 7px;
+
+                        background-position: -18px -150px;
+                    }
+                }
+            }
+
+            .lists {
+                display: flex;
+                flex-direction: column;
+
+                .item {
+                    .bodys {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 14px 0 0 9px;
+                        width: 415px;
+                        .top {
+
+                            display: flex;
+                            margin: 0 9px 4px 0;
+                            color: #959595;
+                            justify-content: flex-start;
+                            .title {
+                                display: flex;
+                                align-items: flex-start;
+                                color: #323232;
+                                margin-right: 9px;
+                                span{
+                                    color: #323232;
+                                }
+                            }
+
+                            .desc {
+                                display: flex;
+                                align-items: flex-start;
+                                i {
+                                    background: url(https://common1.qyerstatic.com/bbs/old/images/index/indexs.png) no-repeat;
+                                    margin-right: 3px;
+                                    width: 16px;
+                                    height: 12px;
+                                    background-position: 0 -79px;
+                                }
+
+                            }
+                            .word{
+                                display: flex;
+                                align-items: flex-start;
+                                i{
+                                  background: url(https://common1.qyerstatic.com/bbs/old/images/index/indexs.png) no-repeat;
+                                  margin: 0 3px 0 20px;
+                                    width: 12px;
+                                    height: 12px;
+                                    background-position: 0 -92px;  
+                                }
+                                
+                            }
+                            .time{
+                                display: flex;
+                                align-items: flex-start;
+                                i{
+                                   
+                                    background: url(https://common1.qyerstatic.com/bbs/old/images/index/indexs.png) no-repeat;
+                                    width: 14px;
+                                    height: 14px;
+                                    margin: 0 5px 0 20px;
+                                    background-position: -28px -263px;
+                                    vertical-align: -2px;
+                                }
+                            }
+                            i{
+                                margin-top: 3px !important;
+                            }
+                        }
+                        .bottom{
+                            margin-top: 18px;
+                            h2{
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #323232;
+                                word-wrap: break-word;
+                                word-break: break-all;
+                                margin-right: 6px;
+                                min-height: 48px;
+                            }
+                            .times{
+                                display: flex;
+                                position: relative;
+                                left: -34px;
+                                width: 435px;
+                                top: 0;
+                                margin-top: 5px;
+                                padding-left: 34px;
+                                border: 1px solid #ececec;
+                                border-left: none;
+                                .left{
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 165px;
+                                    box-sizing: content-box;
+                                    margin: 12px 15px 10px 0;
+                                    padding-right: 16px;
+                                    color: #9d9d9d;
+                                    font-size: 14px;
+                                    line-height: 14px;
+                                    border-right: 1px solid #ececec;
+                                    p{
+                                        &:first-child{
+                                            margin-bottom: 6px;
+                                        }
+                                        span{
+                                            color: #323232;
+                                            margin-left: 8px;
+                                        }
+                                    }
+                                }
+                                .right{
+                                    height: 56px;
+                                    font-size: 14px;
+                                    width: 230px;
+                                    padding-right: 10px;
+                                    color: #636363;
+                                    display: flex;
+                                    align-self: center;
+                                    position: relative;
+                                    i{
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        background:
+                                        url(https://common1.qyerstatic.com/bbs/old/images/index/indexs.png) no-repeat;
+                                        width: 10px;
+                                        height: 14px;
+                                        background-position: -27px -202px;
+                                        -webkit-transform: translateY(-50%);
+                                        -moz-transform: translateY(-50%);
+                                        -ms-transform: translateY(-50%);
+                                        -o-transform: translateY(-50%);
+}
+                                    p{
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 1px 0 0 20px;
+                                        width: 230px;
+                                        vertical-align: middle;
+                                        line-height: 20px;
+                                        word-wrap: break-word;
+                                        word-break: break-all;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .page{
+            padding-top: 15px;
+            .list{
+                display: flex;
+                flex-direction: column;
+
+                .title{
+                        margin: 20px 0 30px;
+                        padding-left: 10px;
+                        line-height: 19px;
+                        border-left: 2px solid #10b041;
+                        font-size: 20px;
+                        color: #636363;
+                }
+                .page-li{
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+                    .item{
+                        padding-bottom: 35px;
+                        display: flex;
+                        width: 33%;
+                        div{
+                            &:last-child{
+                                margin-left: 5px;
+                            }
+                        }
+                        .img{
+                            img{
+                                width: 48px;
+                                height: 48px;
+                            }
+                        }
+                        p{
+                            display: flex;
+                            flex-direction: column;
+                            padding: 1px 0 0;
+                            color: #959595;
+                            h3{
+                                font-size: 14px;
+                                color: #323232;
+                                line-height: 16px;
+                            }
+                            p{
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

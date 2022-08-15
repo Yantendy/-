@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <title>淘小说</title>
+</head>
+
+<body>
+    <div class="app">
+       
+        <div class="top">
+            <div class="left">
+                淘小说商城
+            </div>
+            <div class="right">
+                <img src="http://m.taoyuewenhua.com/img/ic_denglu@3x.e9cd9507.png" alt="">
+                <div class="sex">
+                    <span>女生版</span>
+                </div>
+                <!-- <select class="sex mui-btn mui-btn-block">
+                    <span>女生版</span>
+                    <option value="item-1">女生版</option>
+                    <option value="item-2">男生版</option>
+                </select> -->
+            </div>
+        </div>
+        <div id="slider" class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/ce5a02bd9b36cf3b1ca28483c27b5b29">
+                    </a>
+                </div>
+                <!-- 第一张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/cd1fcb07e8705eaec11fd451fc357c30">
+                    </a>
+                </div>
+                <!-- 第二张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/0de73437f26c70d7c7faf5c3d4de2f95">
+                    </a>
+                </div>
+                <!-- 第三张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/f38aa402e4d1d54916af18ebd3c9555a">
+                    </a>
+                </div>
+                <!-- 第四张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/ce5a02bd9b36cf3b1ca28483c27b5b29">
+                    </a>
+                </div>
+                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="https://mibook-1251592799.file.myqcloud.com/img/cd1fcb07e8705eaec11fd451fc357c30">
+                    </a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+        </div>
+        <div class="nav-list">
+            <div class="nav-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAA3NCSVQICAjb4U/gAAAAmVBMVEX////6sSP6qyT9cS36qyT9cS39ai76sSP6qyT9cS36tiP6qyT9cS36qyT9cS36tCP6qyT7lyf9cS36ryT6qyT9cS36qyT7iSn9cS36qyT9cS39ai76qyT9cS36qyT9cS36qyT9cS39cC36qyT7jyj7iSn9cS36qyT9cS39bC76sSP6ryT6rST6qyT7kSj7jSn7iSn9cS39bC5ggqUwAAAAM3RSTlMAERERIiIiMzMzREREVVVmZmZmd3d3iIiImZmZqqq7u8zMzN3d3d3u7u7///////////882hYtAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAAk5JREFUWIXt2NFCgjAUBmCCrIigIjAwxS1qkGI03//hQsFkyM4G2138V16Mz+Nhg03DmDJlypT/HTMuFBKbAP2kIhfFE0C/qNEvAB2o0QEXtm5eNyry5vXG6oVn/vqrVKPLr7U/u5Q9TOleld5Tiv2uHFGqh6Y0YuWQ6qNp2JYfqIhG8zqJBE0fWjQW0k4z8lqGxla3aG10q+yFbnrR7Yc+Gv/RuZh2B9H5EDpFyJSn6R9NxHSV6zFVr3XT685a1Eif1+Ms10vnrcdfpJduP6AsopMmzAvBJvpoYhtMbJzroXPckQ/ThOTqdE7CC/jQcP/tU43+fPP737tVntXoZ55b5XGnQu8eARrcmAlpcGPmZCp05gD0HeJcdXjrHh+qZvWBO+gOoM0l5yq3PcrlDFpCm2DufpL5qQ5nEH83eexIOr7qFOpHFc6xQKbqGJZ5ZTPTqn+Kioo2jHnvdRlqpX+GzkWyYfKmliAInB51HM6dhJNCy+XcSmhJcpJBa7yV+WA7Ezd6pC0vD+2JbDfqOAPmidwdPMdcShaewQ+l3ricpcHCyBVLPQlEeIaC4SXXMYMEWD9pMho+xo379TSJx7WCKd0J4gSlu2K73Wy222KXoiQOHKWCW7m6vf/4Kcvv77L8+bi/vdLENsH7Jlg8dmDeTyegd52qZXt+eDpKURL6ns3d2g1hvWiFCTkd/+rzBCF4FXlqvL3ADMp8AV5c7qSlExGe2/QmEhu9sVYwfMhqXFdCsdz5x0a6aEE3mp6MKduSkSnVMQ2nTJkyZYowvxOVMEI8xVbBAAAAAElFTkSuQmCC"
+                    alt="">
+                <span>榜单</span>
+            </div>
+            <div class="nav-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAA3NCSVQICAjb4U/gAAABgFBMVEX////O7//P/sI4vvxMyynR8P81vv3S/8bb/9FMyylFyiBjzP1mzP/j9v+686qu8Zs9xxc4vvxPzi0puv1Myyk3vv9IyiRKyydMyyk4vvxMyyk4vvw4vvw4vvzY8/9Bwv1Myyk4vvw4vvxMyynK7/9Myyk4vvw4vvxMyylMyyng9f9hy/03vv9MyylMyynP/sLV/8hq10pMyyk4vvxMyyk4vvxMyynf/9PZ/83b8/+O2v1v2VJVyP1d0z1a0jnP/sLP/sLO7/84vvxFyiDO7//O7//O7//P/sLa/87K/b3K+7zD+LK86f6u8Jyp75aJ2P5/1v2F4Wtey/1GxP1OzS0wvP3O7//K7/+n4/+n4/89wP0Vs/2186Qpuv3O7//P/sLO7/+99q4twQTP/sLP/sLP/sLC7P/P/sLG7f/P/sJZyf4puv1ey/01vv3P/sLN/L/O7/84vvxFyiA9xxfO7/+38aap75ZPzi3g/9fP/cHX7//G+bbG7f/C7P+09KO386jUWNN8AAAAgHRSTlMA///////////u/////////8z//3ci///dEVUiiO7//xGqu8z/IjNEZqr//xEzu+7//0RViJmZ//////////8RIjN3d4i7zN3//////////////////xERESIiIjMzRFVVVVVmd4iImZmqqqq7u8zM3d3d3e7u7u7//////////46iicsAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAACpklEQVRYhe3W13LaQBSAYUmggMAxISGA6b33ZqoTO8UNg3Gc3nvvvTmvnt1VMlkJ4Qud5SIz+h/g48xBWi3HGRkZGRnNp6VUwBk06SzoDKSWZsF1p172b866Ju5vQmFc0z8t33x5BJhsx1Jq+eqLBVD2fD8s6zHV3JefHIXVEYfdfJjYTeW+74g8tFAuMb5A7DotXzoPlnk+Eep0ie2kx15lICNb7IzJTuh/8iwTGs3N2zEdoGgW+yB2rhvGG6HoD4xoXhz20dhBimYl8/y3PN7IPOhEbmFeND9HWlQv5A0rOTTsI/ktRZ9jRcsPX4z9K8OHfuypX5lVNrIo7uKhFS86m42ExC45Quh9cNwt9IvQQsNd+cBOK2juEdDlfw7HfRORA0qZu/LMDiq/1zddJHJ06qN+/fkJWDJsimp80q8FdN9u/hUMaMjoipOOAvFgND3r/uRPr0VjTp3FomtpzZH/VCic1F2hcAj8v5asZTIuXWUyteQhsK9V8kq685ZavhlwMes1A/NmNSf3xaEwLl7TkOWR3bZjsN7fm9qGJMMrk5FjxwFo59MNpRzB2/AgeHvzqwXY61MK2oVld/WgYrEI4B4ohpaIvNiGu6gyPbYPDz0YWZnIgnCboltINk+sDJZBekzR6E/0rDAbWnhF0XjV1a0KK7pM0fhP7DHbhyCo6S/M5Cl6Yy5To127q5tz2TU6mtwDB7MnZJ2is+S5Xma1kacUncHLHhwsM6LvU3SSnCG972yev/Jp+nxq4MPa3dveaFfAuuUhLXNJL7Groy1L2wpsXTE0Ovsk8pHZ700cvxZBfbzLqXJJ5DtjM+8fB/X5jFpGNvnuetw2UO80ZLSTEvyuUJpxyYm4YJccb9YV0ZaRXWzEJb2wFG8UZ8pGRkZGRsB+A+C0ksSafyDaAAAAAElFTkSuQmCC"
+                    alt="">
+                <span>完结</span>
+            </div>
+            <div class="nav-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAA3NCSVQICAjb4U/gAAAA3lBMVEX///8zzP82xP04wf05v/1jf/5oeP5neP5od/42w/04wf05v/1jf/5kff5mfP5me/5oeP5od/40xf02xP02w/04wf05v/1jf/5kff5mfP5me/40xf04wf03wf05v/1igv5jf/5kff5mfP5me/40xf04wf03wf05v/1jf/5kff5kfv40xf05v/1jf/43wf05v/1jgf5jf/5kfv5mfP5me/44wf03wf05v/1jf/45v/1jf/43wf05v/1jgf5jf/44wf05v/1jgf45v/1jf/45v/1jf/45v/1jf/45v/1jf/6CiNI1AAAASnRSTlMAEREREREREREiIiIiIiIiIiIzMzMzMzMzMzNERERERERERERVVVVVVVVVZmZmd3d3d3d3d4iIiIiZmaqqqqq7u7vMzN3d7u7//6eta3EAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAACj0lEQVRYhe2Y2XbTMBBA1cYFSsxWaMoa9jqAg8PqyjjUkvf//yFkh7qqNZJHhJ7DKb6vlm4mo8UzJmRkZGTk/+QFK2sbyrWLNVt5W3Kkm9mr6wintsvGhhSn/gPzqL4C6jz6/PxS1Gz5+BpObKlOF3eaObtzP6RxHNPQn/0ddbm63cw4/sGzotpQZJx626vTl2L45HunPaPgwZbq6LoY/TGrAIrM30Z9IsYeJpC4lcdTk7o00Zj9fipksrlWzQYv4cAgbgJXkiL/4W3Mgr77TJ0vjrTcQpmryoPVJr4Q4pny3OV7Zqv+Scg+71l4Av1W4tipy0dkh/bNDomhuAM7tQj6WT/EWJP8Ymqlfkh2lAiFOgTTHdqoxb1/qBi0ajnsQfUnyKJVy5t7UO2SffVO0qs5Xp1D+TCoq6mi1p1GF9wLBrWnqPV3iAPsYIOaKmr9zTfpn0SzOlFzrbmoXTIBjrRBnaGXcY/cBOYb1MUVV7uXpz7SLaOXnCOP4Gj1Qrf5ZALw0ZB6RSb990DVf50QT3oUotVM1B9AQmkgEcr3l3rQy2gFsiRkplkwGEdRG+oQKNlazs95p17r1VBGtEi1SJeQlMGI33yAKUI2ZI6q1vNOfzxU5GphWC3eu/fBshoK2q5YKN/jKr6GC1XfsLoJexeslRSoZWHWbswDzAbkF1sDjDp/RcjT4V3SK1RxvUwq2sW3Q26l5UCpayZa3GPzNuFKd4pT1+yuyPepwQy0YEh1ze6JiuSbLvAM6kqx6pqJtSRPYijjGQVbdbS6zlc3xPg3tB85p2rL2JLj3fX6dTPj4ANNfuuLLKH6jwtLC3WdR62cTOeeL/C8GdA/d+yd2H3pY1/Rn1pGRkZGRv55fgFHakdNkJ0G1wAAAABJRU5ErkJggg=="
+                    alt="">
+                <span>新书</span>
+            </div>
+            <div class="nav-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAA3NCSVQICAjb4U/gAAABgFBMVEX////+Rkb6rST+Rkb////6qyT6rST6uCD+QEj9cjf+QED+RET+Rkb+QkL+Pj76rST6rST+Rkb/mZn+Skr+SEj+Njb+PDz+ODj6rST6rST6qSX/u7v+SUX6rST6rST/ra36rST6rST6rST/+/v/2dn+fn76rST/8fH/7e3/39/+enr+WFj+TEz6rST/+fn/9/f/6+v/5+f/29v/ycn+dHT6rST6rST/7+//4eH/k5P/fHz+Tk7+Ojr/6en/3d3/xcX/r6//p6f/dnb+amr+UFD/9fX/z8//x8f/wcH/vb3/sbH/paX/oqL/oaH+nZ3/kJD+g4P+cHD+X1/+Vlb+Q0f/MzP6sSP+SkT+Q0f+XD/+Rkb+Rkb6wBz6qyT9VkD+SEb+O0r9dDb+Rkb/5eX/w8P/v7//uLj/tbX/s7P6syL+gYH8hzD7fjP/Zmb+Y2P+Xl7+VFT+P0j+MDD+Li7/8/P+1NT/09P/zMz/ubn+qan/n5/+j4/+jY3+iIj+eHj+cXGDLxsQAAAAgHRSTlMA///u///u//////8R//8RiJn///////8id////0Td/6ozzP///1X///////+7/////////2aZ/////////////////////////////////////////xERESJmd4iIiJmZzN3//////////////////////////////////////3z5En0AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAADt0lEQVRYhe2X+VvaSBjHE3xN25kmWEICWTSgBAGhHIquQisq1Xpf1d73fV/u9tjtbv/1HRIDMTOybcyzv2w+v8yThHyeb2aSeV84LiAgICAg4D/i7K2HfJ8n+Ie3eqtv9vGe6bvZU33Ou5nnzwXqQP2/U987ifpeT/X9k6jv91Tf3fNu3rvrksUHuty5/eCDd/WHB7fvOGRxLi6EOvSfOnPau/r0mVP9XZcQ5zjtODVSkTVKIs9LhyByiMyT7bOd39BqrT0jOlONcevlW5WMfGt7V+RrmbE29Z1iK/MO87ixUL9Chiv1DBkYaj3enm2NqRbRU5guXJDV4gREFLkKFo92E/BcFdFWGWZUEc+DsYtYas1ayBG2OgEwERWlxlJbnUs3vyYJkUtz8EmU8DOAJJLkJUjyrNQjcesl0djqLwDpiKo2zNS5bE1RyVyr0rdypaWITYDfd2PFKsnOmmvt8P0LjxyTeimd2zmw1QsxRBBRIQ8z+61qLl/KKAvpXA0x1CNh+92eFNjqzSR8lrGprpSfbm5srK/XFL4JyYMILCfTfyrzsIJFWi1Mdj4bO7ZbPVMYhy3ctJYxbS7j+kdxq3RZmoPt2uKy3IQ1CdPqbuhObLc6ovxdqmZWzNSlZbKIc6v1C1IhV80sZ98XKtWd2d8yiFYLo46vPXyerZaiq5A3zLn+9ftHJRZTUBS9z6cfP5ouihPp1bLRYHwy5x2hOW6UrUZqwYCypa7FpPY6Yhydh0VIRA/+gAo8QQy1M7Qdm1ZjZSwL1huS4WVZLsrkm98pQbmu7L9chNJMdz466qOhOW6IVq/AJtkx0JqpzkLVMMbHx40xRXpXgeybfelNFS4WJJ5SD7n21nDKvYeIG7N/kaeNXUrkt2Ny05jNE6aNBQU31oxEQcV43ngWRZQ65QpNYgvUzmc9LDZHZIPNM/bA82614A5NYk+51Rg7RmzjuGQfHVFPUaFJbN2PUqDToc0N0Ae1veUdQfOngGm0uV1s/FDrdGyNqo3e1HTsYd0vtT7sUg/QFd2jOjTgCi34pxaG6dB+tTgDdGi/1EdiT9EF7ATq0BQV2je1I3bKbh9evBr03AXvDb56YXs6sYe6zWr/60GTn/vrb93zumPp7qypkINfTG5cu372B7l+7YZ1j9OSssyjQojiKrUR9OAqfb/VL4RT9JUQYz8/njBDYJaxIcaFk6vbxfewu/FdTVqGUdZ5H9Sk0WHNdEj/ObXOcqRIJ8mAUYV6obEck/9+X0BAQEBAgFf+AcBqiFdv9lntAAAAAElFTkSuQmCC"
+                    alt="">
+                <span>榜单</span>
+            </div>
+            <div class="nav-item">
+                <img src="data:image/png;base64,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"
+                    alt="">
+                <span>分类</span>
+            </div>
+        </div>
+        <div class="rank">
+            <i></i>
+            <h2>排行榜</h2>
+            <p>查看更多</p>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAZCAYAAAABmx/yAAAAAXNSR0IArs4c6QAAAeNJREFUOBGNk8lKw1AUhpvbCYoVtQsXIs4TiguhsfZdXPoAnbt117nPILjxPawdfAFRwVnBWkFEaEsH/1NyQhJjmsDlJrnnv99/zzlXKhQKm/1+/0wIEU4kEj8Om4+A6GQ4HO72er27crm8bFPnEC6X6xDBrcFgMNVut2v5fH7JjljEYrFrj8cTcjqd36BPY9RAXhwnFhQQjUZvccYQ6F+wPNPpdOo4+4KVWNIu5nK5NViuQ+yHg5YkSXI6nX7UxvD7iMgfyWTyBsEHIJPtAJLWKBaL87yunXVEXqASgVrFmMAmH9gsmEqlnnmdZh2RF+Lx+BWCw0SGOAD7jVKpNMfrNJsSOSCbzW7BbhW2fThzE9mXkciXsUIKyGQy25gqLFZsv1oSSUgPmmIHwnNF/O71eoO2hCRWyJd49YB6aktoRjTNKhH4IZLGZhM0ORKJvFkSOasoiY/qiawGOav/EhVRhUQohU5EbkyF1Dmo3wVEfpBauABq/fgIf6yCtEFFJxE1OtnD1XtiAc86Ihp6nUl8O8xEJFaJypWqgTQJe58YMnr2gQnGeUREA6+ikVUROmPfSkSbCJBWut2uKoLFEOp0byQYv1040xF+BmDNgUTscZ2MgcZv4Xa7j9ENDZBm7Ypok1+m+wfM2SzVOwAAAABJRU5ErkJggg=="
+                alt="">
+        </div>
+        <div class="info-list">
+            <div class="info-item">
+                <img src="https://tfbook-1251592799.file.myqcloud.com/cover/4de329445e0abb2228fb071a09c9b5fe.jpg"
+                    alt="">
+                <span class="title">暴君爹爹的团宠小娇包</span>
+                <span class="intro">白桃甜粥</span>
+            </div>
+            <div class="info-item">
+                <img src="https://bookcover.yuewen.com/qdbimg/349573/c_7036260604114001/180" alt="">
+                <span class="title">财阀小娇妻你要宠坏我了！</span>
+                <span class="intro">花惊鹊</span>
+            </div>
+            <div class="info-item">
+                <img src="https://tfbook-1251592799.file.myqcloud.com/cover/96f4c68151d44781f23b9298668c89cb.jpg"
+                    alt="">
+                <span class="title">陆先生，撩一下命给你！</span>
+                <span class="intro">如鱼得水</span>
+            </div>
+            <div class="info-item">
+                <img src="https://tfbook-1251592799.file.myqcloud.com/cover/b9971c7a2d003b62d99740b4bf30b934.jpg"
+                    alt="">
+                <span class="title">偏执上瘾：顾爷，好威猛！</span>
+                <span class="intro">翡初初</span>
+            </div>
+            <div class="info-item">
+                <img src="https://tfbook-1251592799.file.myqcloud.com/cover/871e1321e4848e96202d1ecd15908026.jpg"
+                    alt="">
+                <span class="title">一胎六宝：团宠妈咪不好撩</span>
+                <span class="intro">红帽子</span>
+            </div>
+            <div class="info-item">
+                <img src="	https://tfbook-1251592799.file.myqcloud.com/cover/d6fe9cb6d4aea49cf5efc5a69ab4162e.jpg"
+                    alt="">
+                <span class="title">表哥万福宠妈咪不不好撩</span>
+                <span class="intro">犹似</span>
+            </div>
+            <div class="info-item">
+                <img src="https://tfbook-1251592799.file.myqcloud.com/cover/cff78e44247144aefd076abc9c370bc8.jpg"
+                    alt="">
+                <span class="title">穿越农家锦鲤小福女</span>
+                <span class="intro">缺无暇</span>
+            </div>
+            <div class="info-item">
+                <img src="https://tfbook-1251592799.file.myqcloud.com/cover/3f67b266f3ee1c2ed15d86a0b3a7df5c.jpg"
+                    alt="">
+                <span class="title">重生后我嫁给了渣男的死对头</span>
+                <span class="intro">程小澄</span>
+            </div>
+            <div class="info-item">
+                <img src="https://tfbook-1251592799.file.myqcloud.com/cover/aba307517d2fa3d60b05c84ee6aac19c.jpg"
+                    alt="">
+                <span class="title">首辅娇妻有空间</span>
+                <span class="intro">鱼小桐</span>
+            </div>
+        </div>
+        <div class="rank">
+            <i></i>
+            <h2>风向热门</h2>
+            <p>查看更多</p>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAZCAYAAAABmx/yAAAAAXNSR0IArs4c6QAAAeNJREFUOBGNk8lKw1AUhpvbCYoVtQsXIs4TiguhsfZdXPoAnbt117nPILjxPawdfAFRwVnBWkFEaEsH/1NyQhJjmsDlJrnnv99/zzlXKhQKm/1+/0wIEU4kEj8Om4+A6GQ4HO72er27crm8bFPnEC6X6xDBrcFgMNVut2v5fH7JjljEYrFrj8cTcjqd36BPY9RAXhwnFhQQjUZvccYQ6F+wPNPpdOo4+4KVWNIu5nK5NViuQ+yHg5YkSXI6nX7UxvD7iMgfyWTyBsEHIJPtAJLWKBaL87yunXVEXqASgVrFmMAmH9gsmEqlnnmdZh2RF+Lx+BWCw0SGOAD7jVKpNMfrNJsSOSCbzW7BbhW2fThzE9mXkciXsUIKyGQy25gqLFZsv1oSSUgPmmIHwnNF/O71eoO2hCRWyJd49YB6aktoRjTNKhH4IZLGZhM0ORKJvFkSOasoiY/qiawGOav/EhVRhUQohU5EbkyF1Dmo3wVEfpBauABq/fgIf6yCtEFFJxE1OtnD1XtiAc86Ihp6nUl8O8xEJFaJypWqgTQJe58YMnr2gQnGeUREA6+ikVUROmPfSkSbCJBWut2uKoLFEOp0byQYv1040xF+BmDNgUTscZ2MgcZv4Xa7j9ENDZBm7Ypok1+m+wfM2SzVOwAAAABJRU5ErkJggg=="
+                alt="">
+        </div>
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media goods">
+                <img src="	https://tfbook-1251592799.file.myqcloud.com/cover/d4a1cf3963f55f2b44c0c8a579b459ce.jpg"
+                    alt="">
+                <div class="mui-media-body item">
+                    <h2>江三爷的心尖宠</h2>
+                    <p class=''>江家三爷克妻,与他订婚的几任未婚妻都没能幸免于难。顾湘更倒霉，连婚都没订，直接就领了证。却...</p>
+                    <div class="tell">
+                        <div class="left">
+                            <span>
+                                无尽相思
+                            </span>
+                        </div>
+                        <div class="right">
+                            <span>120万字</span>
+                            <span>现代言情</span>
+                            <span>完结</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-media goods">
+                <img src="https://tfbook-1251592799.file.myqcloud.com/cover/f056ab0a095135f482efad8db37c83e1.jpg"
+                    alt="">
+                <div class="mui-media-body item">
+                    <h2>致命偏宠</h2>
+                    <p class=''>【已签出版】黎家团宠的小千金黎俏，被退婚了。黎家人揭竿而起，黎家团全城讨伐，誓要对方好看...</p>
+                    <div class="tell">
+                        <div class="left">
+                            <span>
+                                漫西
+                            </span>
+                        </div>
+                        <div class="right">
+                            <span>266万字</span>
+                            <span>现代言情</span>
+                            <span>完结</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-media goods">
+                <img src="https://bookcover.yuewen.com/qdbimg/349573/c_19538845708570004/180" alt="">
+                <div class="mui-media-body item">
+                    <h2>绝世双宝：鬼医娘亲又美又飒</h2>
+                    <p class=''>【全本免费】云染，末世的佣兵女王，竟意外穿成了东洲国丞相府又丑又傻的二小姐，还1附带了两...</p>
+                    <div class="tell">
+                        <div class="left">
+                            <span>
+                                桃三枝
+                            </span>
+                        </div>
+                        <div class="right">
+                            <span>108万字</span>
+                            <span>穿越奇情</span>
+                            <span>完结</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-media goods">
+                <img src="https://bookcover.yuewen.com/qdbimg/349573/c_19538845708570004/180" alt="">
+                <div class="mui-media-body item">
+                    <h2>绝世双宝：鬼医娘亲又美又飒</h2>
+                    <p class=''>【全本免费】云染，末世的佣兵女王，竟意外穿成了东洲国丞相府又丑又傻的二小姐，还1附带了两...</p>
+                    <div class="tell">
+                        <div class="left">
+                            <span>
+                                桃三枝
+                            </span>
+                        </div>
+                        <div class="right">
+                            <span>108万字</span>
+                            <span>穿越奇情</span>
+                            <span>完结</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-media goods">
+                <img src="https://bookcover.yuewen.com/qdbimg/349573/c_19538845708570004/180" alt="">
+                <div class="mui-media-body item">
+                    <h2>绝世双宝：鬼医娘亲又美又飒</h2>
+                    <p class=''>【全本免费】云染，末世的佣兵女王，竟意外穿成了东洲国丞相府又丑又傻的二小姐，还1附带了两...</p>
+                    <div class="tell">
+                        <div class="left">
+                            <span>
+                                桃三枝
+                            </span>
+                        </div>
+                        <div class="right">
+                            <span>108万字</span>
+                            <span>穿越奇情</span>
+                            <span>完结</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <script src="./js/mui.min.js"></script>
+
+    <script>
+        var slider = mui("#slider");
+        slider.slider({
+            interval: 1000//自动轮播周期，若为0则不自动播放，默认为0；
+        });
+    </script>
+
+</body>
+
+</html>

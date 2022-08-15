@@ -1,0 +1,22 @@
+#app p {
+  width: 100%;
+  height: 500px;
+  float: right;
+  color: #666;
+  background: skyblueright;
+  border-right: 1.2px solid #ccc;
+  margin-right: 240px; }
+#app span {
+  color: #666; }
+
+ul li {
+  color: #666;
+  margin: 50px 0 0 50px; }
+  ul li:hover {
+    color: blue; }
+  ul li p {
+    color: aqua; }
+  ul li span {
+    color: red; }
+
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,9 @@
+div {
+  width: 300px;
+  height: 300px; }
+  div ul {
+    padding: 0; }
+    div ul li:nth-of-child(2) {
+      color: yellow; }
+
+/*# sourceMappingURL=test.css.map */

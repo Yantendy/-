@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="container">
+            <div class="nav">
+                <div class="left">
+                    <div class="img">
+                        <i></i>
+                    </div>
+                    <ul class="pos">
+                        <li class="item active" style="margin-left: 5px;">发现</li>
+                        <li class="item">频道
+                            <ul class="nav-info">
+
+                            </ul>
+                            <i id="after"></i>
+                        </li>
+                        <li class="item">电台</li>
+                        <li class="tag"></li>
+                    </ul>
+                    <div class="input">
+                        <input type="text" placeholder="专辑/声音/主播">
+                        <button>搜索</button>
+                    </div>
+                </div>
+                <ul class="right">
+                    <li class="item">
+                        <span class="iconfont icon-shangchuan"></span>
+                        <p>上传</p>
+                        <div class="info">
+                            <div class="tags"></div>
+                            <ul class="top">
+                                <li class="items">
+                                    <span class="iconfont color icon-jianji"></span>
+                                    <p>音频剪辑</p>
+                                </li>
+                                <li class="items">
+                                    <span class="iconfont icon-jianji"></span>
+                                    <p>音频剪辑</p>
+                                </li>
+                                <li class="items">
+                                    <span class="iconfont icon-jianji"></span>
+                                    <p>音频剪辑</p>
+                                </li>
+                                <li class="items">
+                                    <span class="iconfont icon-jianji"></span>
+                                    <p>音频剪辑</p>
+                                </li>
+                            </ul>
+                            <div class="imgs">
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <span class="iconfont icon-kongzhizhongxin"></span>
+                        <p>创作中心</p>
+                    </li>
+                    <li class="item">
+                        <span class="iconfont icon-vip"></span>
+                        <p>有声出版</p>
+                    </li>
+                    <li class="item">
+                        <span class="iconfont icon-dianshiji"></span>
+                        <p>客户端</p>
+                        <div class="info" style="height: 55px;">
+                            <div class="tags"></div>
+                            <div class="imgs"></div>
+                        </div>
+                        <div class="xixi">
+                            送VIP
+                        </div>
+                    </li>
+                    <div id="img" class="item img">
+                        <img src="https://s1.xmcdn.com/yx/ximalaya-web-static/last/dist/images/default_9c0f537.png"
+                            alt="">
+                        <div class="info desc">
+                            <div class="tags"></div>
+                            <div class="log"></div>
+                            <div class="login">
+                                <h3>快速登录</h3>
+                                <ul class="logins">
+                                    <li class="item">
+                                        <span class="iconfont icon-qq"></span>
+                                        <p>账户</p>
+                                    </li>
+                                    <li class="item">
+                                        <span class="iconfont icon-qq"></span>
+                                        <p>账户</p>
+                                    </li>
+                                    <li class="item">
+                                        <span class="iconfont icon-qq"></span>
+                                        <p>账户</p>
+                                    </li>
+                                    <li class="item">
+                                        <span class="iconfont icon-qq"></span>
+                                        <p>账户</p>
+                                    </li>
+                                    <li class="item">
+                                        <span class="iconfont icon-qq"></span>
+                                        <p>账户</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var nav = document.querySelector('.nav-info')
+        for (let i = 0; i < 24; i++) {
+            nav.innerHTML += `
+            <li class="items">小说</li>
+            `
+        }
+        var pos = document.querySelectorAll('.pos .item')
+        var tag = document.querySelector('.pos .tag')
+        var navInfo = document.querySelector('.nav-info')
+        var rightItem = document.querySelectorAll('.right>li')
+        var icon = document.querySelectorAll('.right>.item>.iconfont')
+        var info = document.querySelectorAll('.info')
+        var img = document.getElementById('img')
+        var navItem = document.querySelectorAll('.nav-info .items')
+        var after = document.querySelector('#after')
+        var infos = document.querySelector('.info')
+        console.log(infos)
+        console.log(pos[1])
+
+        navItem.forEach((val, index) => {
+            val.onmouseover = () => {
+                navItem.forEach((t, j) => {
+                    t.classList.remove('colors')
+
+                })
+                val.classList.add('colors')
+            }
+        })
+        pos[1].onmouseover = () => {
+            tag.classList.add('lefts')
+            navInfo.classList.add('show')
+            after.style.transform = 'rotate(-44deg)'
+            after.style.transition = ' all .5s'
+        }
+        pos[1].onmouseout = () => {
+            tag.classList.remove('lefts')
+            navInfo.classList.remove('show')
+             navInfo.style.transition = ' all .5s ease-in-out'
+            after.style.transform = 'rotate(135deg)'
+        }
+
+        pos[2].onmouseover = () => {
+            tag.classList.add('left1')
+        }
+        pos[2].onmouseout = () => {
+            tag.classList.remove('left1')
+        }
+
+        rightItem.forEach((val, index) => {
+            val.onmouseover = () => {
+                rightItem.forEach((t, j) => {
+
+                    icon[j].classList.remove('color')
+                })
+                icon[index].classList.add('color')
+            }
+            val.onmouseout = () => {
+                rightItem.forEach((t, j) => {
+                    icon[j].classList.remove('color')
+                })
+                icon[index].classList.remove('color')
+            }
+        })
+
+        rightItem[0].onmouseover = () => {
+            icon[0].classList.add('color')
+            info[0].style.display = 'block'
+        }
+        rightItem[0].onmouseout = () => {
+            info[0].style.display = 'none'
+            icon[0].classList.remove('color')
+        }
+        rightItem[3].onmouseover = () => {
+            icon[3].classList.add('color')
+            info[1].style.display = 'block'
+        }
+        rightItem[3].onmouseout = () => {
+            info[1].style.display = 'none'
+            icon[3].classList.remove('color')
+        }
+        img.onmousemove = () => {
+            info[2].style.display = 'block'
+        }
+        img.onmouseout = () => {
+            info[2].style.display = 'none'
+        }
+        infos.onmouseover = () => {
+            icon[0].classList.remove('color')
+        }
+    </script>
+</body>
+
+</html>

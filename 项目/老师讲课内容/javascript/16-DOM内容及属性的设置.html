@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        dom内容及属性的设置
+            操作元素节点的属性
+                原生属性
+                    元素.属性名=属性值
+
+                自定义属性   相加什么就加什么
+                    定义: 不是标签原生自带的属性 是我们定义的属性
+
+                    元素.setAttribute('自定义属性名','属性值')
+
+                data-自定义名   h5新标签属性   自定义属性  
+                主要用来通过js操作当前dom
+
+                格式
+                    <元素标签 data-自定义名1="值1" data-自定义名2="值2" ...></元素标签>
+
+                获取data-自定义名的值
+                    通过  元素.dataset.自定义名 获取
+
+
+            原生操作处理类名
+                元素.className='新值'
+
+                可以获取当前元素 所有的类名列表
+                元素.classList
+                
+            使用原生
+                添加类名
+                    元素.classList.add('类名')
+                删除类名
+                    元素.classList.remove('类名')
+                替换类名
+                    元素.classList.replace('被替换的类名','新的类名')
+                切换类名
+                    元素.classList.toggle('类名')
+
+            DOM获取内容
+                1 innerHTML
+                在js有双向功能：获取对象的内容或者向对象中插入内容
+
+                2 innerText
+                不推荐使用 存在兼容性问题  
+                获取元素内容所有文本内容
+
+                3 获取表单内容
+                value
+
+
+     -->
+     <!-- <div id="app" style="color: red;" data-item="hello" data-index="100" class="demo active app">11111</div>
+     <button onclick="toggle()">显示/隐藏</button> -->
+     <!-- <p>这是一个标题</p> -->
+     <input type="text" value="123">
+     <script>
+        var ipt=document.querySelector('input').value
+        console.log(ipt)
+        // var p=document.querySelector("p")
+        // console.log(p.innerHTML,p.innerText)
+        // p.innerHTML='新值'
+        // p.innerText='hello world'
+
+        // var app=document.querySelector('#app')
+        // function toggle() {
+        //     app.classList.toggle('active')
+        // }
+        // app.classList.add('test')
+        // app.classList.add('test1')
+        // app.classList.remove('demo')
+        // app.classList.replace('active','item')
+        // app.className='demo001'
+        // console.log(app.classList)
+        // app.setAttribute('class','demo active app test')
+        // app.setAttribute('class','demo1')
+        // console.log(app.dataset.item, app.dataset.index)
+        // app.id='demo'
+        // app.style="color: blue; font-size: 25px"
+        // app.setAttribute('a1','234')
+
+     </script>
+</body>
+</html>

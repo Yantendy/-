@@ -1,0 +1,17 @@
+.circle {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: white;
+    top: 105px;
+    left: 110px;
+}
+.demo {
+    width: 1000px;
+    height: 500px;
+    background-image: radial-gradient(ellipse,red 20%, orange 30%, blue 50%);
+    /* background-image: linear-gradient(to top right, red, orange, yellow, green, Cyan, blue, purple); */
+    /* border-top-left-radius: 5000px;
+    border-top-right-radius: 5000px; */
+}

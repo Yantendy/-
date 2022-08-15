@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            /* flex-wrap: wrap; */
+            flex-flow: column-reverse nowrap;
+        }
+        li {
+            width: 300px;
+            border: 1px solid #ccc;
+            /* flex:1 */
+            /* flex: 1;
+            text-align: center; */
+            /* float: left; */
+            /* display: inline-block; */
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+        }
+        .right {
+            display: flex;
+        }
+        .test {
+            display: flex;
+            height: 100vh;
+            align-items: flex-end;
+            /* flex-wrap: wrap; */
+            /* align-content: stretch; */
+            /* align-content: center; */
+            /* align-content: space-between; */
+            /* align-items: baseline; */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* align-items: stretch; */
+            /* justify-content: center; */
+        }
+        .test div {
+            /* margin-right: 50px; */
+            margin-bottom: 20px;
+            height: 200px;
+            /* flex-grow: 2; */
+            /* flex-shrink: 1; */
+        }
+        .test div:first-child {
+            height: 80px;
+            /* flex-shrink: 0;
+            flex-grow: 1; */
+        }
+        .test div:nth-of-type(2) {
+            height: 100px;
+            /* flex-shrink: 1;
+            flex-grow: 1; */
+        }
+        .test div:nth-of-type(3) {
+            height: 180px;
+            align-self: flex-start;
+            /* margin: 0 auto; */
+            /* flex-shrink: 1;
+            flex-grow: 1; */
+        }
+        .test div:nth-of-type(4) {
+            height: 120px;
+            align-self: center;
+            /* flex-shrink: 1;
+            flex-grow: 2; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        flex介绍
+            flex是一种新的布局方式
+            该布局方式称为flexbox 弹性布局 流式布局
+            可以取代传统float
+
+            传统盒模型中 对元素进行布局需要使用 display position float来实现元素的定位布局
+            我们有了弹性布局 我们就可以使用flex布局实现页面的布局
+
+            flex相关属性
+                display: flex
+                    代表给当前元素添加flex弹性布局  一般该属性添加给父元素
+
+            容器属性
+                flex-direction
+                    元素排列的方向
+                    row(默认值) | row-reverse | column | column-reverse;
+                    横着排  横着反向排  纵向排  纵向反着排
+
+                flex-wrap
+                    元素换行
+                    nowrap(默认值) | wrap | wrap-reverse;
+                    不换行|换行|反向换行
+
+                flex-flow
+                    相当于direction wrap复合属性
+                    flex-flow: direction wrap;
+
+                justify-content
+                    水平方向对齐方式
+                    flex-start | flex-end | center | space-between | space-around
+                    开始方向对齐  尾部对齐  居中对齐  两端对齐  两端环绕对齐
+
+
+                align-items
+                    垂直方向对齐方式
+                        flex-start | flex-end | center | baseline | stretch 如果想要两端拉伸 我们的子元素不应该设置高度或者只能为auto;
+                        顶部对齐   底部对齐   剧中对齐   文本底部对齐  两端拉伸
+
+
+                align-content
+                    水平和垂直方向对齐方式
+                        flex-start | flex-end | center | space-between | space-around | stretch;
+
+                order
+                    对当前的元素进行排序
+                        属性值是一个整数  可以写负数  值越大越靠后
+
+                flex-grow
+                    定义项目的放大比例，默认为0 不能写负值
+
+                flex-shrink
+                    定义项目缩小比例 默认为1 不能写负值
+
+                flex-basis
+                    在x轴对当前空间进行分配前  元素宽度定义
+                    值 可以是我们px em rem %
+                    flex-basis: 300px;
+
+                flex
+                   none | flex-grow flex-shrink flex-basis 符合属性
+                   flex: 0 1 宽度
+                   flex: none
+                   flex: 1
+                   flex: 0 1
+
+                align-self
+                    控制子元素的某一个进行垂直方向的对齐方式
+                    auto | flex-start | flex-end | center | baseline | stretch;
+
+
+                注意：
+                    flex弹性布局属性有很多
+                    常用的: 
+                        flex-direction
+                        flex-wrap
+                        justify-content
+                        flex: flex-grow flex-shrink flex-basis
+                        align-items
+
+
+
+     -->
+
+     <!-- <ul>
+        <li>11111</li>
+        <li>222</li>
+        <li>3333</li>
+        <li>11111</li>
+        <li>222</li>
+        <li>3333</li>
+        <li>11111</li>
+        <li>222</li>
+        <li>3333</li>
+     </ul> -->
+     <!-- <div class="title">
+        <h2>为您推荐</h2>
+        <div class="right">
+            <p>二手房</p>
+            <p>新房</p>
+            <p>租房</p>
+        </div>
+     </div> -->
+     <style>
+        /* .test {
+            display: flex;
+            padding: 2%;
+            box-sizing: border-box;
+        }
+        img {
+            flex: 0 1 120px;
+            width: 120px;
+            height: auto;
+        } */
+        .text {
+            /* flex: 1;   */
+            /*  flex-grow: 1  表示填充剩余所有的空间 */
+        }
+     </style>
+     <div class="test">
+        <!-- <img src="https://image1.ljcdn.com/110000-inspection/pc1_wJswbvRGE_1.jpg!m_fill,w_210,h_164,lg_north_west,lx_0,ly_0,l_rorate_logo,f_jpg,ls_50" alt="">
+        <div class="text">满五唯一 没有差额  电梯小高层 采光无影响 看房方便</div> -->
+        <div style="width: 300px; padding-top: 50px;  background: red;">测试1</div>
+        <div style="width: 300px; padding-top: 100px;  background: green;">测试2</div>
+        <div style="width: 300px; padding-top: 120px;  background: blue;">测试3</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <!-- <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div>
+        <div style="width: 300px; padding-top: 50px; background: pink;">测试4</div> -->
+
+        
+     </div>
+</body>
+</html>

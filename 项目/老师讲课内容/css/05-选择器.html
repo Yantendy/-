@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        css选择器
+            id选择器
+                #id名 {
+
+                }
+            标签选择器
+                标签名 {
+
+                }
+            类选择器
+                .类名 {
+
+                }
+            群组选择器
+                选择器1, 选择器2, ... {
+
+                }
+            后代选择器
+                父元素 子元素 {
+
+                }
+            兄弟选择器 +
+                兄弟元素1 + 兄弟元素2 {
+                    只能选中与之相邻最近的下一个兄弟元素
+                }
+            后续兄弟选择器 ~
+                兄弟元素~后续兄弟元素 {
+
+                }
+            属性选择器
+                元素标签[属性名=属性值] {
+
+                }
+            行内样式
+                <元素标签 style="属性名: 属性值"></元素标签>
+
+            注意：
+                相同的类选择器一个页面可以出现多次  而id选择器一个页面只能出现一次
+                一般进行样式编写时候都使用类选择器 
+                id选择器一般用于js代码的dom元素获取 进行使用
+
+            选择器的权重
+                !important>行内样式>id选择器>类选择器>标签选择器
+     -->
+     <style>
+        /* .demo {
+            color: red;
+        } */
+        /* #demo {
+            color: blue;
+        } */
+        /* div {
+            color: yellow;
+        } */
+        /* [data-a="123"], [data-b="456"] {
+            color: red;
+            font-size: 30px;
+        } */
+        /* .test p {
+            color: red;
+        } */
+        /* .test span+p {
+            color: blue;
+        } */
+        /* .test span~p {
+            color: blue;
+        } */
+        .p {
+            color: aqua;
+        }
+        #p {
+            color: blue!important
+        }
+        p {
+            color: red
+        }
+        
+        
+     </style>
+
+     <!-- <div class="demo" id="demo" data-a="123" data-b="456">123</div>
+     <p class="demo" a="123" b="456">11111</p> -->
+     <!-- <input type="text" name="" id="" a="123" value="test">
+     <textarea name="" id="" cols="30" rows="10" a="123">111111</textarea>
+     <select name="" id=""></select> -->
+
+     <!-- <div class="test">
+        <p>
+            <span>7777</span>
+        </p>
+        <p style="font-size: 25px;" id="p" class="p">234</p>
+        <span>456</span>
+        <p>789</p>
+        <p>0000</p>
+     </div> -->
+     <!-- <script>
+        var p=document.querySelector('p')
+        var p=document.getElementById('p')
+        var p=document.querySelectorAll('p')
+        var p=document.getElementsByClassName('p')
+        var p=document.getElementsByTagName('p')
+     </script> -->
+
+     <div class="app">
+        <p id="p" class="p" style="color: purple">123</p>
+     </div>
+</body>
+</html>

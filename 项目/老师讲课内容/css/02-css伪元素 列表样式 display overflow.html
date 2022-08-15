@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div::before {
+            content: "123";
+            color: red;
+            margin-right: 10px;
+        }
+        div::after {
+            content: "world";
+        } */
+        /* .demo::after {
+            overflow: hidden;
+            height: 53px;
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .demo p {
+            float: left;
+        } */
+        ul {
+            /* list-style: none; */
+            /* list-style-type: disc; */
+            display: flex;
+            list-style-type: none;
+            /* list-style-image: url('1.png'); */
+        }
+        /* li {
+            flex: 1
+        } */
+        input {
+            display: block;
+        }
+        div, p {
+            display: inline-block;
+        }
+
+        /* .lists {
+            display: flex;
+        }
+        img {
+            flex: 0 0 300px;
+            width: 300px;
+        }
+        .text {
+            flex: 1;
+            word-break: break-all;
+        } */
+        textarea {
+            width: 300px;
+            height: 60px;
+            /* overflow-x: hidden; */
+            overflow-y: auto;
+            white-space: wrap;
+        }
+        /* body {
+            
+            scrollbar-face-color:pink;
+        } */
+        /*滚动条区域*/
+
+        body::-webkit-scrollbar{
+            width:10px;
+            background-color:#fff;
+        }
+
+        /*滚动条*/
+
+        body::-webkit-scrollbar-thumb{
+            background-color:#f196c4b3;
+        }
+
+        /*滚动条外层轨道*/
+        body::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 1px ;
+            background-color:pink;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        dom元素
+            dom(document object model)文档对象模型
+            bom(broswer object model)浏览器对象模型
+        伪元素
+            可以模拟真实元素节点的存在
+            before
+                当前元素前边添加伪元素
+            after
+                当前元素后边添加伪元素
+
+            格式：
+                <div>hello</div>
+
+                div::before {
+                    content: "world"
+                }
+                div::after {
+                    content: "world"
+                }
+
+        列表样式
+           list-style
+                指的是当前列表选项前边的样式 如小圆点 正方形 数字等等
+                none   没有样式     以后写项目 用到的最多的
+                decimal 数值  123
+                circle  圆形
+                ...
+
+                该属性可以分拆为三个属性  了解
+                    list-style-type
+                        列表前边的符号类型
+
+                    list-style-position
+                        列表前边的符号所在位置 
+                            inside      在内容里边
+                            outside     在内容的外边
+
+                    list-style-image
+                        列表可以自定义符号图片
+                            url('图片路径')
+
+        display
+            用于控制布局  属性规定元素应该生成的框的类型
+                none                隐藏
+                block               转化为块级元素
+                inline-block        转化为行内块元素
+                inline              转化为行内元素
+                flex                使用flex弹性布局
+                ...
+
+            html元素分类
+
+                块级元素
+                    div p h1-h6 ul li ol li table td tr form
+
+                    特点
+                        每个元素独自占一行
+                        可以设置宽高以及内边距和外边距
+
+                行内元素
+                    span i a b strong em sub sup label br
+
+                    特点
+                        元素都是在一行显示
+                        不支持宽高
+                        支持margin-left margin-right  padding-left  padding-right设置 
+                        不支持margin-top margin-bottom  padding-top  padding-bottom设置
+
+                行内块元素
+                    img textarea input
+
+                    特点
+                        元素都在一行显示
+                        但是可以设置宽高  margin padding都可以正常使用
+
+            overflow
+                控制溢出元素的显示方式
+                    auto        自动显示(内容超出时候 会自动显示滚动条 没有超出时候不显示)
+                    hidden      溢出元素会被隐藏
+
+            overflow-x    在水平方向如果元素超出会显示 横向滚动条  或者可以执行元素隐藏或者自动
+                auto        自动显示(内容超出时候 会自动显示滚动条 没有超出时候不显示)
+                hidden      溢出元素会被隐藏
+
+            overflow-y    在垂直方向如果元素超出会显示 纵向滚动条  或者可以执行元素隐藏或者自动
+                auto        自动显示(内容超出时候 会自动显示滚动条 没有超出时候不显示)
+                hidden      溢出元素会被隐藏
+
+     -->
+
+    <!-- <div>hello</div> -->
+
+    <!-- <div class="demo">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <div style="clear: both;"></div>
+    </div> -->
+
+    <!-- <ul>
+        <li>标题一</li>
+        <li>标题一</li>
+        <li>标题一</li>
+        <li>标题一</li>
+    </ul> -->
+
+    <!-- <span style="width: 1000px; margin-left: 100px; margin-top: 100px; padding-left: 1000px;">111111</span>
+    <span>111111</span> -->
+    <!-- <input type="text">
+    <input type="text">
+    <div>123</div>
+    <p>345</p> -->
+
+        <!-- <ul>
+            <li>111</li>
+            <li>111</li>
+            <li>111</li>
+            <li>111</li>
+            <li>111</li>
+            <li>111</li>
+        </ul> -->
+
+
+        <!-- <div class="lists">
+            <img src="https://image1.ljcdn.com/110000-inspection/pc1_zInA0nLbb_1.jpg!m_fill,w_210,h_164,lg_north_west,lx_0,ly_0,l_rorate_logo,f_jpg,ls_50" alt="">
+            <div class="text">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+        </div> -->
+
+
+        <textarea name="" id="" cols="30" rows="10">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</textarea>
+
+
+
+        <div style="width: 2800px; height: 1500px; border: 1px solid red"></div>
+    <!-- <button onclick="show()">显示input</button> -->
+    <script>
+        // var ipt=document.querySelector("input")
+        // var a=false
+        // function show() {
+        //     a=!a
+        //     if(a) {
+        //         ipt.style.display="block"
+        //     }else {
+        //         ipt.style.display="none"
+                
+        //     }
+        // }
+
+        // var show=function() {
+
+        // }
+
+        // var show=()=> {
+
+        // }
+    </script>
+</body>
+</html>

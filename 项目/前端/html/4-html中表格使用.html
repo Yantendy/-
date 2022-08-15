@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            text-align: center;
+            /* border: 1px solid #333 */
+            border-top: 1px solid #cb3232;
+            border-right: 1px solid #cb3232;
+        }
+        td,th {
+            border-left: 1px solid #cb3232;
+            border-bottom: 1px solid #cb3232;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        表格
+            table
+                编写表格
+                border     给表格添加边框  建议使用样式替换
+                width      设置表格宽度
+                height     设置表格高度
+                align      表格位置 left  right  center
+                cellspacing 单元格之间的空白
+                cellpadding 单元边沿与其内容之间的空白
+                bgcolor     表格背景颜色
+            td
+                表格中单元格
+                colspan   合并列
+                rowspan   合并行
+            tr
+                表格中的行
+            th
+                表格中的顶部标题
+            tbody
+                表格的内容
+            thead
+                表格表头
+            tfoot
+                表格底部
+     -->
+
+     <table width="800" height="400" align="center" cellspacing="0" cellpadding="10">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>电话</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td colspan="2">1</td>
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+     </table>
+</body>
+</html>

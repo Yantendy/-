@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        input,
+        select,
+        option {
+            outline: none;
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .form {
+            background-color: #fff;
+            width: 350px;
+            margin: 200px auto;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 5px 10px;
+        }
+
+        .info {
+            margin-top: 10px;
+        }
+
+        .text {
+            width: 250px;
+            height: 30px;
+        }
+
+        .left {
+            margin-left: 2em;
+        }
+
+        .lef {
+            margin-left: 1em;
+        }
+
+        .info .yzm {
+            color: blue;
+            font-size: 14px;
+            margin-left: 5em;
+            cursor: pointer;
+        }
+
+        .captcha {
+            width: 100px;
+            height: 30px;
+        }
+
+        .button {
+            width: 180px;
+            height: 40px;
+            margin-left: 4em;
+            font-size: 18px;
+            background-color: #89b007;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .jl {
+            margin-right: 10px;
+        }
+
+        .position {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .corner {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 20px solid #fff;
+            border-left: 20px solid #89b007;
+            border-bottom: 20px solid #fff;
+            border-right: 20px solid #fff;
+            right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="form">
+        <div class="info">
+        <span class="lef">我现在:</span>
+        <select>
+            <option value="">请选择身份</option>
+            <option value="">老板</option>
+            <option value="">老板</option>
+            <option value="">老板</option>
+        </select>
+        <span style="font-size: 10px;">(非常重要)</span>
+        <div class="yzm ">
+            <img class="name" width="100" src="./img/ma.png" alt="">
+            <span style="margin-left: 8px; cursor: pointer;" onclick="change()">看不清楚换一张?</span>
+        </div>
+    </div>
+    </form>
+    
+
+    <script>
+        function change(){
+            var img = document.querySelector('img')
+            boller = true
+        if(boller){
+            console.log(111)
+            img.src=''
+        }else{
+            img.src='./img/ma.png'
+            boller = false
+        }
+        }
+        
+
+    </script>
+</body>
+</html>

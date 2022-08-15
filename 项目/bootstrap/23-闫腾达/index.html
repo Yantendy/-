@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-nav">
+                <div class="left">
+                    <h1>BOOTSTRAP 优站精选</h1>
+                </div>
+                <div class="right">
+                    <span class="iconfont icon-kefu"></span>
+                    提交站点
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bodys">
+    </div>
+    <div class="bodys-list">
+        <div class="container containers">
+            <ul class="boot-list">
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://fastly.jsdelivr.net/npm/@bootcss/www.youzhan.org@1.0.5/dist/img/ad11.png"
+                            alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/9/4d/277b9fb5b3a0c97e49ce1d3c3d335.jpg!md" alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/a/03/772cec53ab290841dd99c8d74b332.jpg!md" alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/8/f4/d8ece1342920b4388c8174d349925.jpg!md" alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/8/34/102a079ba7c2d66ba4f1abbd0fdbd.jpg!md" alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/d/9a/6b638248ca769019615b630b17645.jpg!md" alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/d/20/8305a1ae99bc794dafca1df04f9e6.jpg!md" alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/2/78/c20a2eb2088577b7f4c29a00a2df3.jpg!md" alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/ad51-10.png" alt="">
+                    </div>
+                </li>
+                <li class="boot-item">
+                    <div class="boot-img">
+                        <img src="https://assets.youzhan.org/img/5/54/c203ca2c5c3fe7bb55e02dc9e9020.jpg!md" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pagesize">
+        <ul class="page-list">
+            <li class="page-item">
+                < </li>
+            <li class="page-item active">
+                1
+            </li>
+            <li class="page-item">
+                2
+            </li>
+            <li class="page-item">
+                3
+            </li>
+            <li class="page-item">
+                4
+            </li>
+            <li class="page-item">
+                5
+            </li>
+            <li class="page-item">
+                >
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="container footer-con">
+            <div class="top">
+                <div class="left">
+                    <h2>提交你的站点</h2>
+                    <p>如果你的网站基于<span>Bootstrap</span> 构建、并且用心的设计，那就请提交给我们并在这里展示吧！</p>
+                </div>
+                <div class="right">
+                    <div>
+                        <span class="iconfont icon-kefu"></span>
+                        提交站点
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div class="bottom">
+                <div class="left">
+                    © 2022 Bootstrap 优站精选
+                </div>
+                <div class="right">
+                    <span>关于</span>
+                    <span>广告合作</span>
+                    <span>京ICP备15031610号-1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var header = document.querySelector('.header')
+
+        window.onscroll = function () {
+            var scroll = document.documentElement.scrollTop
+            console.log(scroll)
+            console.log(header)
+            if (scroll > 100) {
+                header.style.position = 'fixed'
+                header.style.top = '0'
+                header.style.zIndex = '1'
+                header.style.background = '#172b4d'
+                header.style.boxShadow = '0 1px 10px rgb(130 130 134 / 10%)'
+            } else {
+                header.style = ''
+            }
+
+        }
+    </script>
+</body>
+
+</html>

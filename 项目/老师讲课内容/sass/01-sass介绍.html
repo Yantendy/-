@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="a.css">
+    <title>Document</title>
+    <style>
+        /* ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .demo li {
+            color: red;
+            font-size: 14pc;
+        }
+        .demo img {
+
+        } */
+        /* sass语法等同以上语法 */
+        /* .demo {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                color: red;
+                font-size: 14pc;
+                img {
+                    
+                }
+                p {
+
+                }
+            }
+        } */
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        sass
+            css预处理/预编译语言
+            sass语法典型：
+                嵌套
+                继承
+                mixin
+                变量
+                逻辑判断
+                ...
+            sass语言文件是以sass或者scss结尾
+            sass文件不能直接使用 需要使用ruby编译生成css文件  再次进行引入
+
+            sass使用
+                前提：
+                    window电脑需要下载安装ruby  如果mac可以直接使用
+                    下载地址
+                        https://rubyinstaller.org/downloads/
+
+                下载安装完成之后 打开命令行工具
+                输入命令 安装sass到本地电脑
+                    gem install sass
+
+            sass文件的编译
+                语法：
+                    sass demo.scss 自定义名.css
+
+                sass提供四种样式编译格式：
+                    nested：嵌套缩进的css代码，它是默认值。
+
+                　　expanded：没有缩进的、扩展的css代码。   一般选择当前选项
+
+                　　compact：简洁格式的css代码。
+
+                　　compressed：压缩后的css代码。
+
+                    格式：  
+                        sass --style compressed test.sass test.css
+
+                sass监听编译  watch
+                    格式：
+                        sass --watch demo.scss demo.css
+
+                    可以对一整个文件进行监听编译
+                        sass --watch 被监听的文件夹相对路径 生成css文件夹文件路径
+
+
+                
+
+     -->
+     <ul class="demo">
+        <li>这是一段测试文字
+            <img src="" alt="">
+            <p>111111</p>
+        </li>
+     </ul>
+     <ul class="test">
+        <li>这是一段测试文字</li>
+     </ul>
+</body>
+</html>

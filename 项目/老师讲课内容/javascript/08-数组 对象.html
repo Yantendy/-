@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        数组
+            数组就是一组数据的集合 其中每个数据被称之为元素  在数组中可以存放任意数据类型的元素
+
+            数组的声明：
+               1 直接通过常量赋值  后期使用最多的
+               var arr=[1,2,3]
+
+               2 使用new运算符创建数组
+               var arr=new Array(1,2,3)
+
+               3 省略new运算符创建数组
+               var arr=Array(1,2,3)
+
+        数组具有长度
+            数组长度通过arr.length来进行获取
+
+        每个数组中元素都有下标
+            下标又称为索引  即元素的序号  下标索引是从0开始   下标最大取值是: 数组的长度 length-1
+
+        数组元素的访问
+            arr[下标索引]
+
+
+        数组的循环遍历
+            使用for实现循环(普通)
+
+            for in也可以循环遍历
+
+            两者区别在于
+                for in不需要每次都判断
+                但是在遍历的过程中  数组发生变化 则可能会出现问题
+
+
+        数组方法：
+            push
+                给数组的末尾添加元素
+
+            pop
+                删除数组最后一位
+
+            shift()
+                删除数组的第一位
+
+            unshift()
+                给数组的第一位添加一个元素
+
+            concat()
+                合并数组
+
+            slice()
+                获取当前数组的指定区域的元素  截取数组
+                slice(start, end)
+                start  下标的起始位置
+                end    下标的结束位置  但是不包含当前下标位置
+
+            splice()
+                删除或者添加数组中某一个元素
+                splice(start,length,数值1,...)
+
+                splice如果有两个值时候 表示删除数组的某一位
+                    start  表示删除元素的下标起始位置
+                    length 表示从起始位置往后删除的数组长度
+
+                如果有多个值 表示添加或者替换数组的某一位
+                    start  表示添加或者替换元素的下标起始位置
+                    length 要被替换元素的个数
+                    数值1  要添加或者替换的内容
+
+            join()
+                将数组的元素按照某种形式 拼接成一个字符串
+
+            reverse()
+                用来反转数组
+
+            sort
+                数组中元素进行排序
+                数组.sort()
+                默认为从小到大排序
+
+            indexOf()
+                在数组中查找第一次出现元素的下标位置  并且返回  返回值: -1 没有查到  >=0 查找到了下标索引
+
+                格式：
+                    数组.indexOf(要查找的元素)
+
+                    如果当前数组查询到当前元素 返回对应的下标
+                    如果没有 则返回-1
+
+            forEach()
+                对当前的数组进行循环遍历
+                格式：
+                    数组.forEach(function(item, index, array) {
+                        // 要执行的代码
+                        item 表示原数组每一个元素
+                        index 表示下标索引
+                        array 表示原数组
+                    })
+
+                我们认为只要for循环能够实现的 forEach都可以实现
+     -->
+
+
+     <script>
+        // var arr=[1,2,3]
+        // var arr1=new Array(1,2,3)
+        // var arr2=Array('你好',null, false, [1,2,3], function demo() {
+        //     console.log(11111)
+        // })
+        // console.log(typeof arr2)
+        // console.log(arr2[arr2.length-1])
+        // var arr=[5,2,24,18,300,7]   // [8,12]   [2,4,6,8,10,12,'123','456']
+        var num=10;
+        // var arr1=['123','456']
+
+    //    console.log(arr.push(num))
+        // arr.pop()
+        // arr.shift()
+        // arr.unshift(num)
+        // arr.slice(1,2)
+        // arr.splice(3,2)
+        // arr.splice(2,2,100,200)
+        // arr.splice(6,1,50)
+        // arr=arr.slice(3)
+        // arr.splice(1,1)
+        // arr=arr.concat(num)
+        // arr.push(arr1)
+        // arr=arr.concat(arr1)
+        // arr=arr.join('0');
+        // arr.reverse()
+        // arr=arr.sort()
+        // arr.sort(function(value1, value2) {
+        //     return value1-value2
+        // })
+        // arr[0]=24
+        // arr[1]=7
+        var arr=[2,124,2,2,17,100,17,100,25]   // [2,124,17,100]
+        // var i=arr.indexOf(27)
+        // console.log(i)
+        // 使用indexof实现数组去重
+
+        // arr.forEach(function(item, index, array) {
+        //     console.log(item, index, array)
+        // })
+
+
+        var arr1=[]
+        for(var i=0; i<arr.length; i++) {
+            // if(arr1.indexOf(arr[i])==-1) {
+            //     arr1.push(arr[i])
+            // }
+            console.log(i,1111)
+            for(var j=i+1; j<arr.length; j++) {
+                // console.log(arr[j])
+                if(arr[i]==arr[j]) {
+                    console.log(222,j)
+                    // 2
+                    arr.splice(j,1,null)
+                }
+            // }
+
+            // var bool=true 
+            // for(var j=0; j<arr1.length; j++) {
+            //     if(arr[i]==arr1[j]) {
+            //         bool=false
+            //     }
+            // }  
+            // if(bool) {
+            //     arr1.push(arr[i])
+            // } 
+            }
+            
+        }
+        for(var a=0; a<arr.length; a++) {
+            if(arr[a]!=null) {
+                arr1.push(arr[a])
+            }
+        }
+        
+        console.log(arr1)
+        // 冒泡排序
+        // for(var i=0; i<arr.length; i++) {
+        //     for(var j=1; j<arr.length-i; j++) {
+        //         if(arr[j]>arr[j+1]) {
+        //             var arr1=arr[j]
+        //             arr[j]=arr[j+1]
+        //             arr[j+1]=arr1
+        //         }
+        //     }
+        // }
+        // console.log(arr)
+
+        // 选择排序
+        // for(var i=0; i<arr.length-1; i++) {
+        //     for(var j=i+1; j<arr.length; j++) {
+        //         if(arr[i]>arr[j]) {
+        //             var arr1=arr[i]
+        //             arr[i]=arr[j]
+        //             arr[j]=arr1
+        //         }
+        //     }
+        // }
+        
+        // console.log(arr,1111)
+        // console.log(arr.slice(3,5))  // [4]
+     </script>
+</body>
+</html>

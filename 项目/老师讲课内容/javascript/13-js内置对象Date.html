@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        日期对象Date
+            日期类型使用UTC（国际协调时间）1970年1月1日零时 开始经过的毫秒数来保存日期
+            Date类型保存的日期
+            能够精确到1970年1月1日以后或者以前285616年
+
+            创建对象
+                var date=new Date()
+
+                在国外月份是从0开始 0-11
+
+            对象方法
+                Date.parse()
+                格式：
+                    Date.parse(日期对象)
+                    可以将日期对象转化为毫秒数
+
+                getTime()
+                    将当前日期对象转化为毫秒数
+                    格式
+                        日期对象.getTime()
+
+                getDate()
+                    从Date对象中返回一个月中的某一天
+
+                getDay()
+                    返回一周中的某一天(0-6)
+
+                getFullYear()
+                    以四位数返回年份
+
+                getMonth()
+                    返回月份(0-11)
+
+                getHours()
+                    返回小时(0-23)
+                
+                getMinutes()
+                    返回分钟(0-59)
+
+                getSeconds()
+                    返回秒数(0-59)
+
+                getMilliseconds()
+                    返回毫秒数
+                
+                
+     -->
+     <div id="app"></div>
+     <script>
+
+        // var time=new Date('2015/06/02')
+        // var time=new Date()
+        // console.log(time.getTime())
+        // console.log(time.getDate())
+        // console.log(time.getDay())
+        // console.log(time.getFullYear())
+        // console.log(time.getMonth())
+        // console.log(time.getFullYear()+"-"+(time.getMonth()+1)+"-"+time.getDay()+' '+time.getHours()+':'+time.getMinutes()+':'+time.getSeconds()+':'+time.getMilliseconds())
+
+        // 以当前时间返回xxxx-xx-xx hh:mm:ss
+        var app=document.getElementById("app")
+        var a=setInterval(() => {
+            var date=new Date()
+            var date1=new Date('2022,08,05,10:58:00')
+
+            var d=Date.parse(date)
+            var d1=Date.parse(date1)
+            var t=Math.floor((d1-d)/1000%60)
+            // 算小时
+            var h=Math.floor((d1-d)/1000/60/60)
+            // 算分钟
+            var m=Math.floor(((d1-d)/1000/60)%60)
+            app.innerHTML=(h<10?('0'+h):h) + ":" + (m<10?('0'+m):m) +':'+(t<10?('0'+t):t)
+            if(d1-d==0) {
+                clearInterval(a)
+                app.innerHTML="00:00:00"
+            }
+        }, 1000);
+        
+
+        // var date=new Date('2015/8/12')
+
+        // var date=new Date("2018,07,06,13:14:15")
+
+        // console.log(date)  // Fri Aug 05 2022 09:45:27 GMT+0800 (中国标准时间)
+
+
+     </script>
+</body>
+</html>

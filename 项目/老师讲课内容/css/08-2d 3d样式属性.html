@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./iconfont.css"> -->
+    <title>Document</title>
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+            perspective: 500px;
+        }
+        /* @font-face {
+            font-family: 'demo';
+            src: url('./font/iconfont.ttf'),
+                 url('./font/iconfont.woff'),
+                 url('./font/iconfont.woff2');
+        }
+        p {
+            font-family: 'demo';
+        } */
+        .cartoon {
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            background: url('./1.png') center center/100% no-repeat;
+            
+            /* transform: scale(5,2); */
+            /* transform: scale(10); */
+            /* transform: rotateX(720deg); */
+            /* transform: rotate(0deg) translate(100px,150px); */
+            /* transform: translate(150px,100px);
+            -moz-transform: translate(150px,100px);
+            -webkit-transform: translate(150px,100px); */
+
+            /* transform: translateX(150px); */
+            /* transform: translateY(350px); */
+            /* margin: auto; */
+        }
+        /* .cartoon:hover {
+            width: 400px;
+            height: 400px;
+            transform: translate(200px,250px);
+            transition: all 1s;
+        } */
+        .cartoon:hover {
+            /* transform: rotateY(720deg);
+            transform: skew(0,60deg); */
+            /* transform: rotateZ(300deg); */
+            /* transform: rotate3d(0,0,1, 60deg); */
+            /* transform: translate(100px, 150px); */
+            /* transform: translateZ(100px); */
+            /* transform: translateZ(300px); */
+            /* transform: translate3d(100px,350px,200px); */
+            /* transform: scale3d(2,4,3); */
+            /* transform: scale3d(2,4,3); */
+            transition: all 1.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        @font-face
+            自定义字体
+
+                1使用unicode编写
+                    1 下载字体
+                    @font-face: "自定义字体名",
+                    src: url('字体路径.ttf'),
+                         url('字体路径.woff');
+
+                    2 使用字体 在页面中引入字体
+                    body {
+                        font-family: '自定义字体名'
+                    }
+
+                    <元素表签 class="自定义字体名">unicode编码</元素标签>
+
+                2使用font class
+                    1 下载iconfont.css文件
+                    在页面最上部通过link引入iconfont.css文件 同时需要将字体图标一并下载下来(ttf woff woff2)
+
+                    2 在需要使用字体图标的位置  直接引入对应的class类名
+                    <元素标签 class="iconfont class类名"></元素标签>
+
+
+        css属性私有前缀
+            在属性的前边添加浏览器前缀 为了解决css3属性在不同浏览器兼容问题
+                -webkit- 苹果或者谷歌浏览器 edge浏览器
+                -moz-   火狐浏览器
+                -ms-    ie浏览器
+                -o-     欧朋浏览器
+
+            建议大家在以后编写css3属性的时候 加上私有前缀  一般使用-webkit-  -moz-这两种私有前缀
+        2d
+            transform
+                定义了2d 3d转化
+                属性值：
+                    translate
+                    rotate
+                    scale
+                    skew
+
+            translate
+                平移(水平,垂直)
+                translate(150px,200px)   // 如果为正值 x表示往右平移 y表示往下平移  反之x表示向左 y表示向上
+                允许里边的数值可以是负值
+                translateX
+                    只控制x轴平移
+                translateY
+                    只控制y轴平移
+
+            rotate
+                旋转
+                格式：
+                    rotate(30deg)   deg表示旋转度数单位
+                    正值表示顺时针旋转
+                    负值表示逆时针旋转
+                    rotateX()  围绕x轴进行旋转
+                    rotateY()  围绕y轴进行旋转
+
+            scale
+                缩放
+                    scale(2.5)   // 数值允许写正整数 或者 小数
+                    数值1 表示正常大小
+                    不要去写负值 没有意义
+                
+                    如果里边只写一个值 表示宽度高度 都放大或者缩小多少倍
+
+                    scale(1,2)
+                        x轴放大或者缩小
+                        y轴放大或者缩小
+
+                    scaleX() x轴放大或者缩小
+                    scaleY() y轴放大或者缩小
+
+            skew
+                倾斜
+                   skew(x,y)
+                   skewX(30deg)   表示垂直方向与元素之间倾斜的夹角 
+                   skewY(60deg)   表示水平方向与元素之间倾斜的夹角
+
+    
+        3d
+            translate3d(x,y,z)
+                3d平移
+                translate3d(100px,200px,300px)
+
+            translateZ()
+                z轴平移
+
+            rotate3d(x,y,z,旋转角度)
+                3d旋转
+                x,y,z 范围0-1之间
+                如果值为0 表示当前轴不旋转
+                如果值为1 表示当前轴进行旋转
+
+            rotateZ()
+                围绕着z轴进行旋转
+
+            scale3d(x,y,z)
+                3d缩放
+                    scale3d(1.5,2.5,3.5)
+                    三个值表示
+                        x放大或者缩小
+                        y放大或者缩小
+                        z放大或者缩小
+
+            scaleZ()
+                z轴进行缩放
+
+            perspective
+                视角
+                    元素与视图之间的距离
+                    视角越紧 所呈现的视图越大
+                    反之  所呈现的试图越小
+
+                    给其父元素添加视角
+
+            backface-visibility 
+                控制元素背面是否可见
+                    hidden  不可见
+                    visible 背面可见
+
+     -->
+     <!-- <p class="iconfont icon-shouye"></p> -->
+     <!-- <div class="cartoon"></div> -->
+     <style>
+        .rotate {
+            position: relative;
+            width: 180px;
+            height: 277px;
+            margin: auto;
+            
+        }
+        .img1 {
+            position: absolute;
+            width: 180px;
+            height: 277px;
+            border: 1px solid #333;
+            background: url(./2.png) -9px -13px/113% no-repeat;
+            border-radius: 16px;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+        .img2 {
+            position: absolute;
+            width: 180px;
+            height: 277px;
+            border: 1px solid #333;
+            background: url(./10.png) -9px -17px/113% no-repeat;
+            border-radius: 16px;
+            backface-visibility: hidden;
+        }
+        .rotate:hover .img1 {
+            transform: rotateY(0deg);
+            transition: all 2s;
+        }
+        .rotate:hover .img2 {
+            transform: rotateY(180deg);
+            transition: all 2s;
+        }
+        
+     </style>
+     <div class="rotate">
+        <div class="img1"></div>
+        <div class="img2"></div>
+     </div>
+</body>
+</html>

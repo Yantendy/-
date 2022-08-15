@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            padding: 0;
+            margin: 0 0 20px 0;
+            list-style: none;
+            display: flex;
+        }
+        li {
+            margin-right: 20px;
+        }
+        p {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        DOM基础
+            DOM是什么
+                文档对象模型  （Document Object Model）
+                定义了访问和处理html文档标准
+
+            html文档中每一个元素都可以称为一个节点
+            html中所有的节点组成节点树
+            html每一个元素 属性 文本都代表着树中的节点
+            html根节点 是html标签元素
+
+         能做什么
+            获取元素节点  
+            设置元素的属性值 
+            设置元素的样式
+            动态创建和删除元素
+            事件的触发响应: 事件源 事件 事件驱动程序
+
+
+        元素分类
+            元素节点 Element
+                是组成文档数最重要的部分 
+                例如
+                    div p span ul  li  img input ...
+
+            属性节点 Attr
+                代表元素的属性  
+                例如
+                    id  class  style等等 属性节点
+
+            文本节点 Text
+                是只包含文本内容的节点
+                    元素中所写的文本内容
+
+            注释节点
+                表示注释的内容
+
+            文档节点 Document
+                是文档树的根节点
+                    <!DOCTYPE html> html作为Document(文档节点)的子节点出现
+
+            
+     -->
+     <!-- <h1 id="app" class="app">1111</h1>
+     <p>
+        222
+        <span>333</span>
+     </p> -->
+
+     <!-- <ul>
+        <li data-index="0">标题1</li>
+        <li data-index="1">标题2</li>
+        <li data-index="2">标题3</li>
+     </ul>
+     <p class="show">内容1</p>
+     <p>内容2</p>
+     <p>内容3</p> -->
+
+
+     <script>
+        // var ul=document.querySelector("ul")
+        // var p=document.querySelectorAll("p")
+        
+        // ul.onclick=function() {
+        //     console.log(event.target.dataset.index)
+        //     console.log(p)
+        //     for(var i=0; i<p.length; i++) {
+        //         p[i].removeAttribute('class')
+        //     }
+        //     p[event.target.dataset.index].setAttribute('class','show')
+        // }
+
+
+        // var h1=document.getElementById("app")
+        // h1.onmouseenter=function() {
+        //     alert(1111)
+        // }
+        // h1.style="color: red"
+        // h1.setAttribute('class','test')
+     </script>
+</body>
+</html>

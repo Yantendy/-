@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        DOM获取
+            DOM获取基础方式
+                1 通过id获取
+                document.getElementById('id名')
+
+                2 通过标签名获取
+                document.getElementsByTagName('标签名')   // 结果是一个数组集合
+
+                3 通过class类名获取
+                document.getElementsByClassName('class名')  // 结果是一个数组集合
+
+                4 通过name属性获取
+                document.getElementsByName('name名')  // 结果是一个数组集合
+
+                5 通过选择器获取
+                document.querySelector('选择器')   // 选择器 指的是 id选择器  类选择器  标签选择器  后代选择器  群组选择器
+                只能选一个
+
+                6 通过选择器获取多个元素
+                document.querySelectorAll('选择器')
+
+
+                注意：
+                    后期我们经常会使用到是id   选择器
+
+
+         2 通过节点关系获取节点
+            DOM节点并不是单独存在的 节点间存在相互的关系
+            父子关系
+            非父子关系
+                兄弟关系
+
+            节点关系获取节点的相关方法：
+            
+            获取兄弟节点
+            1 获取下一个兄弟元素节点|获取下一个节点
+            nextElementSibling: 下一个元素节点
+            nextSibling: 包含换行符 空格  
+
+            2 获取上一个兄弟节点|获取上一个节点
+            previousElementSibling  上一个元素节点
+            previousSibling    包含换行符 空格  
+
+        获取子节点
+            firstChild:   获取第一个子节点
+            firstElementChild     获取第一个元素子节点
+
+            lastChild   获取最后一个子节点
+            lastElementChild   获取最后一个元素子节点
+
+            childNodes  获取所有的子节点（包含换行符 空格 ）
+            children 返回指定元素的子元素节点的集合
+
+            parentNode
+                获取指定元素的父元素
+
+     -->
+     <!-- <div id="app">
+        hello world
+        <p id="p">111</p>
+     </div>
+     <span>11111</span>
+     <span>2222</span>
+     <span>5555</span>
+
+     <div class="demo">测试</div>
+     <div class="demo">测试1</div>
+     <div class="demo">测试2</div>
+     <div class="demo">测试3</div>
+     <div class="demo">测试4</div> -->
+     <!-- <input type="text" name="input" value="1111">
+     <input type="text" name="input" value="2222"> -->
+     <!-- <div>11111</div>
+     <div class="app">2222</div>
+     <div id="demo">
+        <span>11111</span>
+        <p>2222
+            <span>3333</span>
+        </p>
+     </div>
+     <span>2222</span>
+     <span>3333</span>
+     <div class="demo">测试</div>
+     <div class="demo">测试1</div>
+     <div class="demo">测试2</div>
+     <div class="demo">测试3</div> -->
+     <!-- <p>1111</p>
+     <span>2222</span> -->
+     <ul>
+
+        <li>
+            <span>6666</span>
+            <span>3333</span>
+            <p class="p">11111</p>
+            <span>4444</span>
+        </li>
+
+        <li>
+            <p>222</p>
+        </li>
+
+     </ul>
+     <script>
+        var p=document.querySelector(".p")
+        console.log(p.parentNode.parentNode.parentNode.parentNode)
+        // var ul=document.querySelector('ul li:first-child')
+        // console.log(ul.childNodes, ul.children)
+        // console.log(ul.lastElementChild.firstElementChild)
+        // console.log(ul.firstChild)
+        // console.log(ul.firstElementChild.nextElementSibling.firstElementChild)
+        // var p=document.querySelector('li:nth-child(1) p')
+        // console.log(p.nextElementSibling)
+        // console.log(p.previousSibling)
+        // console.log(p.previousElementSibling.previousElementSibling)  // 链式调用
+        // var p=document.querySelector('p')
+        // console.log(p.nextSibling.nextSibling)
+        // console.log(p.nextElementSibling)
+
+        // var p=document.querySelector("p:nth-child(2)")
+        // console.log(p)
+        
+        // var span=document.querySelector('.demo')
+        // document.qu
+        // console.log(span)
+        // var div=document.querySelector('div')
+        // var app=document.querySelector('.app')
+        // var span=document.querySelector('#demo span')
+        // var span=document.querySelector("span:first-child")
+        // console.log(span)
+        // var app=document.getElementById('p')
+        // console.log(app)
+        // var span=document.getElementsByTagName('span')
+        // console.log(span[2])
+        // var demo=document.getElementsByClassName('demo')
+        // console.log(demo)
+
+        // var ipt=document.getElementsByName('demo')
+        // console.log(ipt)
+     </script>
+</body>
+</html>

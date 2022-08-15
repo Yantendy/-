@@ -1,0 +1,13 @@
+@import './extend.scss';
+
+@mixin app($width: 1px, $color: lighten(#cc3, 15%), $w: 200px, $h: 200px) {
+    width: $w;
+    height: $h;
+    border: $width solid $color;
+}
+.app {
+    @include app(2px);
+}
+.test {
+    @include app(10px,blue, 300px, 500px)
+}

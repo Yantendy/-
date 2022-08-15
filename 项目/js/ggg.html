@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 2rem;
+            height: 2rem;
+
+            top: 0;
+            left: 0;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/xx.png">
+    <span class="1" onclick="change()">点我</span>
+
+
+    <script>
+    var img = document.querySelector('img')
+    var span = document.querySelector('span')
+
+        function change(e){
+           if(e){
+            img.src=''
+           }
+        }
+        span.onclick=function(e){
+            if(e){
+                change(true)
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          var img =  document.querySelector('img')
+        document.onmousemove = function(e){
+            var x =e.clientX
+            var y =e.clientY
+
+            img.style.left = x + 15 +'px'
+            img.style.top = y + 15 + 'px'
+        }
+
+      
+
+
+    </script>
+</body>
+</html>

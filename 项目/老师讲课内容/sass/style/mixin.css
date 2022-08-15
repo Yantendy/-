@@ -1,0 +1,37 @@
+.app, .child, .child1 {
+  width: 150px;
+  height: 150px;
+  border: 1px solid red;
+}
+
+.app a, .child a, .child1 a {
+  color: pink;
+}
+
+.child, .child1 {
+  background: blue;
+}
+
+.m, .child1 {
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.child1 {
+  color: yellow;
+  background: red;
+}
+
+.app, .child, .child1 {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #dbdb70;
+}
+
+.test {
+  width: 300px;
+  height: 500px;
+  border: 10px solid blue;
+}
+
+/*# sourceMappingURL=mixin.css.map */

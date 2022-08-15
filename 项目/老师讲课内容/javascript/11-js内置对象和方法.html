@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        内置对象和方法
+            Math对象
+                在js中 很多关系数学运算的函数 直接提供一个Math对象
+
+                Math.random()
+                返回0-1之间随机数  返回小数
+
+                Math.max(num1,num2,...) 
+                返回最大值
+
+                Math.min(num1,num2,...)
+                返回最小数
+
+                Math.abs(num)
+                绝对值
+
+                Math.round()  
+                四舍五入   只看小数点后一位
+
+                Math.ceil(19.3)
+                向上取整    
+                
+                Math.floor(19.3)
+                向下取整
+
+                Math.pow(x,y)
+                x的y次方
+
+                Math.sqrt(num)
+                开平方
+
+                Math.PI
+                180弧度
+
+                Math.sin()
+                正弦
+
+                Math.cos()
+                余弦
+
+                Math.tan()
+                正切
+
+                Math.cot()
+                余切
+     -->
+     <div></div>
+     <script>
+        // var max=Math.max(11,25,60,120,115)
+        // var arr=[-11,-25,-60,-120,-115]
+
+
+        var arr=['张三','李四','王五','马六']
+        var div=document.querySelector('div')
+        
+
+        var t=setInterval(() => {
+            num=parseInt(Math.random()*arr.length)
+            div.innerHTML=arr[num]
+        }, 100);
+
+        setTimeout(()=> {
+            clearInterval(t)
+        }, 10000)
+
+        
+
+        // var min=Math.min(-11,-25,-60,-120,-115)
+        // console.log(min)
+
+        // var abs=Math.abs(1.2)
+        // var round=Math.floor(-1.56)
+        // var round=Math.pow(-2,13)
+        // var round=Math.sqrt(625,2)
+        // var round=Math.PI*Math.pow(3,2)
+        // console.log(round)
+
+        // for(var i=0; i<arr.length-1; i++) {
+        //     for(var j=i+1; j<arr.length; j++) {
+        //         if(arr[i]>arr[j]) {
+        //             var arr1=arr[i]
+        //             arr[i]=arr[j]
+        //             arr[j]=arr1
+        //         }
+        //     }
+        // }
+
+        // console.log(arr[arr.length-1])
+
+       
+        // var max=Math.max()
+        // console.log(max)
+
+        // 生成一个随机数
+        // var num=Math.random()*10
+        // console.log(Math.round(num))
+
+        // 生成一个16进制随机颜色
+        // var str="#"
+        // var arr=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+        // // var num=Math.random()*16
+
+        // for(var i=0; i<6; i++) {
+        //     var num=parseInt(Math.random()*16)
+        //     str+=arr[num]
+        // }
+        // var body=document.querySelector('body')
+        // body.style.background=str
+        // console.log(str)
+
+
+        // for(var i=0; i<6; i++) {
+
+        // }
+
+     </script>
+</body>
+</html>

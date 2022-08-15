@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+    <style>
+        /* 标签选择器 */
+        /* div {
+            font-size: 30px;
+        } */
+        /* p {
+            font-size: 18px;
+        } */
+        /* 类选择器 */
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        css介绍
+            层叠样式表
+            作用：
+                对html标签进行样式的设置
+            特性：
+                继承性
+                    子元素可以继承父元素的样式
+                层叠性
+                    相同元素设置样式  会被覆盖  后边的样式前边样式
+                优先级
+                    css当中不同的选择器拥有不同的权重 谁的权重高就会执行谁的样式
+                    选择器
+                        标签选择器
+                        类选择器
+                        id选择器
+                        群组选择器
+                        后代选择器
+                        兄弟选择器
+                        伪类选择器
+
+                        行内样式
+                        !important   最高权重
+
+            格式：
+                所有的样式都应该存放在style标签中 除了行内样式
+                <style>
+                    // 推荐使用该形式
+                    选择器 {
+                        属性名1: 属性值1;
+                        属性名2: 属性值2;
+                        ...
+                    }
+
+                    选择器 {属性名1: 属性值1; 属性名2: 属性值2; ...}
+                </style>
+
+            样式使用：
+                1 直接使用style标签 写在html页面的head标签中
+                <head>
+                    <style></style>
+                </head>
+
+                2 使用外部链接的形式引入css样式表  推荐外部引入需要写在html最上边head标签中  优先保证页面样式正常渲染
+                <head>
+                    <link rel="stylesheet" href="样式表.css">
+                </head>
+
+                3 行内样式
+                <标签名 style="属性名1:属性值1; 属性名2:: 属性值;">
+
+            文本属性
+                font-size
+                    字体大小
+                        单位
+                            px 
+                                像素单位
+                            em
+                                相对于父元素的单位
+                            rem
+                                相对于根元素body单位
+                            %
+                                相对于父元素单位
+                            vw
+                                相对视口viewport width宽度
+                            vh
+                                相对视口高度
+
+
+                    注意：
+                        如果写的是pc端项目 我们建议使用px或者%
+                        如果写移动端 我们建议使用rem % vw vh
+                        em一般情况下不建议使用 
+
+                font-weight
+                    字重  文字粗细
+                        100-900
+                        bold   加粗
+                        bolder 更粗
+                        lighter 更细
+                        normal 正常
+
+                font-style
+                    字体样式
+                        normal   正常
+                        italic   斜体
+
+                line-height
+                    字体行高
+                        px
+                        %         表示当前数值乘以字体大小
+                        number    表示当前数值乘以字体大小
+                        em 
+                        vh     
+                        
+                text-indent
+                    段落首行缩进
+                        px
+                        %
+                        em
+                        rem
+                        vw
+
+                text-decoration
+                    修饰文本
+                        none	    默认。定义标准的文本。
+                        underline	定义文本下的一条线。
+                        overline	定义文本上的一条线。
+                        line-through	定义穿过文本下的一条线。
+                        blink	    定义闪烁的文本。
+
+                text-align
+                    文本对齐
+                        left    左对齐
+                        right   右对齐
+                        center  居中对齐
+                        justify 两端对齐
+
+                color
+                    文本颜色
+                        rgb
+                            0-255
+                            rgb(0,0,0)
+                            rgb(255,255,255)
+                        rgba
+                            a表示透明度
+                                0.0-1.0
+                            rbga(0,0,0,.5)
+                        十六进制
+                            #000000   #000
+                            #cb3232
+                            #fff
+                            #333
+                            #666
+                            #999
+                            #efefef
+                        red white black yellow orange blue green .... 
+
+                font-family
+                    设置字体
+                        font-family: '华文仿宋','微软雅黑'  // 系统会首先引入微软雅黑  如果电脑上边没有微软雅黑 会依次往后进行字体的引入
+
+                
+                letter-spacing
+                    文字间间隙
+                        px
+                        rem
+                        em
+                        %
+
+                word-spacing
+                    单词间间隙  
+                        px
+                        rem
+                        em
+                        %
+
+                word-wrap
+                    文字折行   长单词或 URL 地址换行到下一行
+                        属性值
+                            normal	只在允许的断字点换行（浏览器保持默认处理）。
+                            break-word	在长单词或 URL 地址内部进行换行。
+
+                word-break
+                    文字折行 规定自动换行的处理方法
+                    normal	使用浏览器默认的换行规则。
+                    break-all	允许在单词内换行。
+                    keep-all	只能在半角空格或连字符处换行
+
+                注意：
+                    以上两个属性都可以控制文字(单词)折行
+                    需要重点掌握word-break  break-all属性
+
+            
+
+     -->
+     <!-- <div>
+        标题
+        <h1>标题</h1>
+    </div> -->
+    <!-- <div style="width: 1000px; margin: auto; font-size: 14px"> -->
+        <!-- <p class="p1 style">这是一段测试内容</p>
+        <p class="p2 style">这是一段测试内容</p>
+        <p class="p3" style="font-style: normal;">这是一段测试内容</p>
+        <p class="p4">这是一段测试内容</p>
+        <p class="p5">这是一段测试内容</p>
+        <p class="p6">这是一段测试内容</p> -->
+
+        <!-- <p >这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容</p> -->
+    <!-- </div> -->
+    <!-- <div class="nav">
+        <div class="container">
+           <ul>
+                <li>首页</li>
+                <li>新手入门</li>
+                <li>API</li>
+                <li>关于</li>
+                <li>注册</li>
+                <li>登录</li>
+            </ul> 
+        </div>
+    </div> -->
+    <div class="artical">
+        <h1>文章标题</h1>
+        <p style="text-align: right; color: #cb3232; font-family: '隶书','华文仿宋','微软雅黑';">这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容这是一段测试内容</p>
+        <p style=" color: blue; word-break: normal; width: 800px; border: 1px solid red">This paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.This paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next lineThis paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next lineThis paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next lineThis paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next lineThis paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next lineThis paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next lineThis paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next lineThis paragraph contains a very long word thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line</p>
+    </div>
+</body>
+</html>

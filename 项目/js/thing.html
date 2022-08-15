@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .outer{
+            margin: 100px auto;
+            padding: 50px;
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            cursor: pointer;
+        }
+        .center{
+padding: 40px;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            cursor: pointer;
+        }
+        .inner{
+            padding: 50px;
+
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="center">
+            <div class="inner"></div>
+        </div>
+    </div>
+
+    <script>
+        var outer = document.querySelector('.outer')
+        var center = document.querySelector('.center')
+        var inner = document.querySelector('.inner')
+
+        outer.onclick = function(){console.log('我是outer')}
+        center.onclick = function(){console.log('我是center')}
+        inner.onclick = function(){console.log('我是inner')}
+
+    </script>
+</body>
+</html>

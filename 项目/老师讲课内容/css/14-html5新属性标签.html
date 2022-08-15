@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* ul {
+            list-style: none;
+        }
+        header {
+            height: 50px;
+            line-height: 50px;
+            background: #444;
+        }
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .left {
+            
+            display: flex;
+        }
+        img {
+            width: 120px;
+            padding: 3px 20px;
+            height: 34px;
+            line-height: 34px;
+            color: #ccc;
+            font-weight: 700;
+        }
+        input {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            background: url(https://static2.cnodejs.org/public/images/search.e53b380a.hashed.png) 4px 4px no-repeat #888;
+            padding: 3px 5px 3px 22px;
+            color: #666;
+            border: 0;
+            height: 28px;
+            margin-top: 11px;
+            transition: all .5s;
+            margin-bottom: 0;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+        nav {
+            float: right;
+        }
+        ul {
+            display: flex;
+        }
+        footer {
+            height: 450px;
+            background-color: red;
+        } */
+     </style>
+</head>
+<body>
+    <!-- 
+        header
+            定义当前html页面的头部
+        footer
+            定义当前html页面的底部
+
+        nav
+            定义当前页面导航
+
+        article
+            定义文章模块
+            仅仅比div 或者 p 多了一层新的语义
+
+        aside
+            定义其他内容模块
+
+        video
+            视频
+                属性
+                src     视频的路径 本地路径或者线上路径
+                width   视频的宽度
+                height  视频的高度
+                controls 显示视频的控制按钮(播放 暂停 进度条 全屏显示等等)
+                autoplay 视频自动播放
+                loop     视频自动播放角度 视频循环播放
+                muted    视频静音播放
+                poster   可以对视频显示默认封面(图片)
+                preload  预加载
+
+        audio
+            音频
+                src  音频的路径  本地路径或者是线上路径
+                controls 显示音频的控制按钮(播放 暂停 进度条 播放速度等等)
+                autoplay 音频自动播放
+                muted    音频静音播放
+                preload  预加载
+                loop     音频自动播放角度 音频循环播放
+
+
+        input 新属性
+            type
+                date   选取年月日
+                week   选取第几周
+                month  选取月份
+                time   获取时间
+                range  进度条
+                email  验证邮箱格式
+                search 可以给input输入框添加清空按钮
+                url    验证链接域名的合法性
+                number 输入框可以选择输入整数值
+
+            required
+                必填项  如果在提交表单时侯没有写 则会提示
+
+            autofocus
+                自动获取焦点
+
+            placeholder
+                文字提示信息
+
+            svg
+
+            canvas
+
+
+     -->
+     
+     <div class="app">
+        <form action="">
+            <input type="date" name="" id="">
+            <input type="week" name="" id="">
+            <input type="month" name="" id="">
+            <input type="time" name="" id="">
+            <input type="range" name="" id="">
+            <input type="email" name="" id="" required  placeholder="请输入邮箱地址" autofocus>
+            <input type="search" id="ipt" oninput="getVal()">
+            <input type="url">
+            <input type="number">
+            <input type="submit">
+        </form>
+        <p>11111</p>
+        
+        <!-- <button onclick="scan()">显示密码</button> -->
+        <!-- <audio src="http://dl.stream.qqmusic.qq.com/C4000002zHdf4YCGgo.m4a?guid=3916808384&vkey=9B40790090569D8B8916BE24772AF4A0495EAE764E6BEC8824A0D690A183EE3EC74360D83F7D8F0EA06593F9560CEB29168AB70501FC05C7&uin=&fromtag=120032" controls autoplay muted preload></audio>
+        <button onclick="run()">播放/暂停</button> -->
+        <!-- <button onclick="stop()"></button> -->
+        <!-- <video id="video" src="https://vd2.bdstatic.com/mda-ngc9n8y6ztuvfapr/720p/h264/1657695051991322903/mda-ngc9n8y6ztuvfapr.mp4?v_from_s=hkapp-haokan-nanjing&auth_key=1657868699-0-0-84b4f8a120976db89e04ef5ff38f53a1&bcevod_channel=searchbox_feed&cd=0&pd=1&pt=3&logid=2099034399&vid=9442783440039723753&abtest=103525_2&klogid=2099034399" poster="https://f7.baidu.com/it/u=1064943137,1780907016&fm=222&app=108&f=JPEG@s_0,w_660,h_370,q_80" width="500" height="250" muted ></video> -->
+        <!-- <button onclick="go()">播放</button>
+        <button onclick="stop()">暂停</button> -->
+        <!-- <p>：在任何框架中，div始终是div，不管你是什么，都可以使用div，咱的功能就是自成个钩子方便添加样式。
+
+            section:当然既然可以用section,那这部分内容就一定也可以使用section,section中文就是：节，部分的意思，文章的目录，大纲最适合使用。section里一般都会有一个标题。
+            
+            article:article是section的升级版，一段内容已具备section中的标题时，如果这段内容可以独立存在表达一个意思，讲一个故事，说清楚一件事，那么这段内容就可以用article.article里面一般可以包括header,section</p>
+
+        <article>：在任何框架中，div始终是div，不管你是什么，都可以使用div，咱的功能就是自成个钩子方便添加样式。
+
+            section:当然既然可以用section,那这部分内容就一定也可以使用section,section中文就是：节，部分的意思，文章的目录，大纲最适合使用。section里一般都会有一个标题。
+            
+            article:article是section的升级版，一段内容已具备section中的标题时，如果这段内容可以独立存在表达一个意思，讲一个故事，说清楚一件事，那么这段内容就可以用article.article里面一般可以包括header,section</article>
+        <div>：在任何框架中，div始终是div，不管你是什么，都可以使用div，咱的功能就是自成个钩子方便添加样式。
+
+            section:当然既然可以用section,那这部分内容就一定也可以使用section,section中文就是：节，部分的意思，文章的目录，大纲最适合使用。section里一般都会有一个标题。
+            
+            article:article是section的升级版，一段内容已具备section中的标题时，如果这段内容可以独立存在表达一个意思，讲一个故事，说清楚一件事，那么这段内容就可以用article.article里面一般可以包括header,section</div> -->
+
+
+            <!-- <h1>标题</h1>
+            <p>文本段落</p>
+            <aside>其他内容</aside> -->
+        <!-- <header>
+            <div class="container">
+                <div class="left">
+                    <img src="https://static2.cnodejs.org/public/images/cnodejs_light.svg" alt="">
+                    <input type="text">
+                </div>
+                <nav>
+                    <ul>
+                        <li>首页</li>
+                        <li>首页</li>
+                        <li>首页</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <footer>
+            <div class="footer"></div>
+        </footer> -->
+     </div>
+     <!-- <script>
+        var video=document.getElementById("video")
+        function go() {
+            video.play()
+        }
+        function stop() {
+            video.pause()
+        }
+     </script> -->
+     <!-- <script>
+        var video=document.getElementById("video")
+        video.onmouseover=function() {
+            video.play()
+        }
+        video.addEventListener('timeupdate', function() {
+            console.log(Math.floor(this.currentTime))
+            // if()
+            if(Math.floor(this.currentTime)>=10) {
+                this.pause()
+                alert('免费观看10s,请充值会员')
+            }
+        })
+     </script> -->
+     <script>
+        // var p=document.querySelector('p')
+        // function getVal() {
+        //     var ipt=document.getElementById("ipt").value
+        //     console.log(ipt)
+        //     if(ipt.length>0) {
+        //         p.style.display="none"
+        //     }else {
+        //         p.style.display="block"
+        //     }
+        // }
+        // var audio=document.querySelector('audio')
+        // var tag=false
+        // function run() {
+        //     // audio.play()
+        //     tag=!tag
+        //     if(tag) {
+        //         audio.play()
+        //     }else {
+        //         audio.pause()
+        //     }
+        // }
+        // function stop() {
+        //     audio.pause()
+        // }
+        // var ipt=document.querySelector('input')
+        // var tag=false
+        // function scan() {
+        //     tag=!tag
+        //     if(tag) {
+        //         ipt.setAttribute('type','text')
+        //     }else {
+        //         ipt.setAttribute('type','password')
+        //     }
+            
+        // }
+     </script>
+</body>
+</html>

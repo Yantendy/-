@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .shape:hover {
+            
+            transform: rotate3d(1,1,1,720deg);
+            transition: all 10s;
+        }
+        .shape {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 150px auto;
+            transform: rotate3d(1,1,1,-30deg);
+            transform-style: preserve-3d;
+        }
+        .shape div {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            /* opacity: 0.5; */
+            text-align: center;
+            line-height: 150px;
+            opacity: .5;
+        }
+        .shape div:first-child {
+            background-color: red;
+            z-index: 99;
+        }
+        .shape:hover div:first-child {
+            transform: translateZ(100px);
+            transition: all 2s;
+            background-color: red;
+            z-index: 99;
+        }
+
+        .shape div:nth-child(2) {
+            background-color: yellow;
+            transform: translateZ(-150px);
+        }
+
+        .shape:hover div:nth-child(2) {
+            transform: translateZ(-250px);
+            transition: all 2s;
+            background-color: yellow;
+        }
+        .shape div:nth-child(3) {
+            background-color: blue;
+            transform: rotateX(90deg) translateY(-75px) translateZ(-75px);
+        }
+        .shape:hover div:nth-child(3) {
+            transform: rotateX(90deg) translateY(-75px) translateZ(-175px);
+            transition: all 2s;
+            background-color: blue;
+        }
+        .shape div:nth-child(4) {
+            background-color: green;
+            transform: rotateX(90deg) translateY(-75px) translateZ(75px);
+        }
+
+        .shape:hover div:nth-child(4) {
+            transform: rotateX(90deg) translateY(-75px) translateZ(175px);
+            transition: all 2s;
+            background-color: green;
+        }
+        .shape div:nth-child(5) {
+            background-color: purple;
+            transform: rotateY(-90deg) translateX(-75px) translateZ(75px);
+        }
+        .shape:hover div:nth-child(5) {
+            transform: rotateY(-90deg) translateX(-75px) translateZ(175px);
+            transition: all 2s;
+            background-color: purple;
+        }
+        .shape div:nth-child(6) {
+            background-color: pink;
+            transform: rotateY(-90deg) translateX(-75px) translateZ(-75px);
+        }
+
+        .shape:hover div:nth-child(6) {
+            transform: rotateY(-90deg) translateX(-75px) translateZ(-175px);
+            transition: all 2s;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="shape">
+        <div class="front">front</div>
+        <div class="behind">behind</div>
+        <div class="top">top</div>
+        <div class="bottom">bottom</div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+</head>
+
+<body onload="clock(43200)">
+
+    <div class="header">
+        <div class="bodys-top">
+            <div class="container topbar">
+                <ul class="top-left-list">
+                    <li class="item" style="padding-left: 0;">首页</li>
+                    <li class="item none">|</li>
+                    <li class="item">华为官网</li>
+                    <li class="item none">|</li>
+                    <li class="item">花粉俱乐部</li>
+                    <li class="item none">|</li>
+                    <li class="item">V码(优购码)</li>
+                    <li class="item none">|</li>
+                    <li class="item">企业购</li>
+                    <li class="item none">|</li>
+                    <li class="item">Select Region</li>
+                    <li class="item none">|</li>
+                    <li class="item display">
+                        更多精彩
+                        <span class="iconfont icon-xiajiantou"></span>
+                    </li>
+                </ul>
+                <ul class="top-right-list">
+                    <li class="item" style="padding-left: 0;">请登录</li>
+                    <li class="item">注册</li>
+                    <li class="item none">|</li>
+                    <li class="item">我的订单</li>
+                    <li class="item none">|</li>
+                    <li class="item">客服
+                        <span class="iconfont icon-xiajiantou"></span>
+                    </li>
+                    <li class="item none">|</li>
+                    <li class="item">网站导航
+                        <span class="iconfont icon-xiajiantou"></span>
+                    </li>
+                    <li class="item none">|</li>
+                    <li class="item">手机版
+                        <span class="iconfont icon-xiajiantou"></span>
+                    </li>
+                    <li class="item none">|</li>
+                    <li class="item cart">
+                        <span class="iconfont icon-gouwugouwuchedinggou"></span>
+                        <span class="carts">购物车(0)</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="container top">
+            <img src="https://res.vmallres.com/portal/1.11.5.300/h5/images/logo_app.png" alt="" class="log">
+            <div class="right">
+                <ul class="header-list">
+                    <li class="item">华为专区</li>
+                    <li class="item">鸿蒙智联</li>
+                    <li class="item">莫塞尔</li>
+                    <li class="item">华为智轩</li>
+                    <li class="item">HarmonyOS</li>
+                    <li class="item">特惠企采</li>
+                    <li class="item">教育购</li>
+                </ul>
+                <span class="serch iconfont icon-sousuo"></span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="header-middle">
+        <div class="middle-img">
+            <ul class="back-img">
+                <li class="active">
+                    <img src="https://res.vmallres.com/uomcdn/CN/cms/202207/7F60525215BEEB55C09BA40DA70AC4DC.jpg" alt=""
+                        class="rotation ">
+                </li>
+                <li>
+                    <img src="https://res.vmallres.com/uomcdn/CN/cms/202206/69AE856E525F66C39DB244B8C3BCF2E3.jpg" alt=""
+                        class="rotation">
+                </li>
+                <li>
+                    <img src="https://res.vmallres.com/uomcdn/CN/cms/202207/281105F03B518A9EB5C563141563DAFA.jpg" alt=""
+                        class="rotation">
+                </li>
+                <li>
+                    <img src="https://res.vmallres.com/uomcdn/CN/cms/202207/ED0617CAB42476846697DE17CC06CED5.png" alt=""
+                        class="rotation">
+                </li>
+                <li>
+                    <img src="https://res.vmallres.com/uomcdn/CN/cms/202207/C3C44C04A20226CE224B8C7BE281C53F.jpg" alt=""
+                        class="rotation">
+                </li>
+                <div class="middle-gooslist">
+                    <div class="position-list">
+                        <ul class="list">
+                            <li class="item">
+                                <span class="foods">手机</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">电脑</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">平板</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">智慧屏</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">穿戴</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">耳机音箱</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">门锁路由</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">配件</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">生态产品</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">家用电器</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">美酒饮食</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                            <li class="item">
+                                <span class="foods">增值服务/企业商用</span>
+                                <span class="tags iconfont icon-xiangyoujiantou"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="circle-list">
+                        <p data-i="0" data-name="switch" class="circle active"></p>
+                        <p data-i="1" data-name="switch" class="circle"></p>
+                        <p data-i="2" data-name="switch" class="circle"></p>
+                        <p data-i="3" data-name="switch" class="circle"></p>
+                        <p data-i="4" data-name="switch" class="circle"></p>
+                    </div>
+                    <div class="about-left">
+                        &lt;
+                    </div>
+                    <div class="about-right">
+                        &gt;
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </div>
+    <div class="body">
+        <div class="container">
+            <div class="magin body-top">
+                <ul class="top-list">
+                    <li class="item">
+                        <img src="https://res.vmallres.com/uomcdn/CN/cms/202201/FED4FA21CCED53EE303E43FC98DB4422.png.webp"
+                            alt="" class="icon">
+                        <span class="title">智能家居</span>
+                    </li>
+                    <li class="item">
+                        <img src="https://res.vmallres.com/uomcdn/CN/cms/202206/CAF1A18B3E42583A54391C2B15C2E564.png.webp"
+                            alt="" class="icon">
+                        <span class="title">影音娱乐</span>
+                    </li>
+                    <li class="item">
+                        <img src="https://res.vmallres.com/uomcdn/CN/cms/202207/3BA8B05CB77FAF077B2F45BD75E56EBA.png.webp"
+                            alt="" class="icon">
+                        <span class="title">AITO汽车</span>
+                    </li>
+                    <li class="item">
+                        <img src="https://res.vmallres.com/uomcdn/CN/cms/202108/96D51B483F18498112E94114B4AC7C7A.png.webp"
+                            alt="" class="icon">
+                        <span class="title">超新计划</span>
+                    </li>
+                    <li class="item">
+                        <img src="https://res.vmallres.com/uomcdn/CN/cms/202104/9B354D128BBE68DFA79995FD6AC73D00.webp"
+                            alt="" class="icon">
+                        <span class="title">以旧换新</span>
+                    </li>
+                    <li class="item">
+                        <img src="https://res.vmallres.com/uomcdn/CN/cms/202104/D772246BE15940855B040BF640B87809.webp"
+                            alt="" class="icon">
+                        <span class="title">会员频道</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="magin body-second">
+                <ul class="second-list">
+                    <li class="item">
+                        <img width="290"
+                            src="https://res.vmallres.com/uomcdn/CN/cms/202207/A43D94E25F31DB5B55DE12890B9E3802.jpg.webp"
+                            alt="">
+                    </li>
+                    <li class="item">
+                        <img width="290"
+                            src="https://res.vmallres.com/uomcdn/CN/cms/202207/3466E7368238FF1C17CA6C074D9C3BAD.png.webp"
+                            alt="">
+                    </li>
+                    <li class="item">
+                        <img width="290"
+                            src="https://res.vmallres.com/uomcdn/CN/cms/202207/441C960F70EBA974C0482E77A8C00216.jpg.webp"
+                            alt="">
+                    </li>
+                    <li class="item">
+                        <img width="290"
+                            src="https://res.vmallres.com/uomcdn/CN/cms/202204/E5DAC361612D5EFD575099A42927EDC6.png.webp"
+                            alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="magin body-third">
+                <div class="third-header">
+                    <span class="third-left">秒杀</span>
+                    <div class="third-right">
+                        <span>限时秒杀</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="item color">
+                            <img class="clock" width="48"
+                                src="https://res.vmallres.com/portal/1.11.5.300/h5/images/timeCount.png" alt="">
+                            <p class="time">00:00场</p>
+                            <p class="over">距离结束还有</p>
+                            <div class="reciprocal">
+                                <span class="sign">00</span><span class="background">:</span>
+                                <span class="sign sign1">00</span><span class="background">:</span>
+                                <span class="sign sign2">44</span>
+                            </div>
+                        </li>
+                        <li class="item colors">
+                            <div class="imgs"><img width="142"
+                                    src="https://res.vmallres.com/pimages//uomcdn/CN/pms/202205/gbom/6945878328853//428_428_F9EE03F17D211D9AFA1F3DF93435E682mp.png"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="red">超级秒杀</p>
+                                <p class="title">美的滚筒洗衣机 全自动10公斤家用大容量MG100T10WDQCY 巴赫银（支持鸿蒙智联）</p>
+                                <p class="money">限时降价2360元</p>
+                                <p class="moneys">￥2549<span class="del">￥3799</span></p>
+                            </div>
+
+                        </li>
+                        <li class="item colors">
+                            <div class="imgs"><img width="142"
+                                    src="https://res.vmallres.com/pimages//product/6955269901718//428_428_1562825245883mp.png"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="red">超级秒杀</p>
+                                <p class="title">凯优台式速热净饮机</p>
+                                <p class="money">限时降价1000元</p>
+                                <p class="moneys">￥1399<span class="del">￥2300</span></p>
+                            </div>
+
+                        </li>
+                        <li class="item colors">
+                            <div class="imgs"><img width="142"
+                                    src="https://res.vmallres.com/pimages//FssCdnProxy/vmall_bop_server/BopMaterialCenter//428_428_9B3CB56675091C8B7D2FF701631E8795.png"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="red">超级秒杀</p>
+                                <p class="title">OGAWA奥佳华家用按摩椅 OG7306</p>
+                                <p class="money">限时降价4700元</p>
+                                <p class="moneys">￥8299<span class="del">￥12000</span></p>
+                            </div>
+
+                        </li>
+                        <li class="item colors">
+                            <div class="imgs"><img width="142"
+                                    src="https://res.vmallres.com/pimages//FssCdnProxy/vmall_bop_server/BopMaterialCenter//428_428_07DD46A6D0991924337EC3206BB46E76.png"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="red">超级秒杀</p>
+                                <p class="title">臻邦（ZHENBANG）智能家居驱蚊器（支持鸿蒙智联）</p>
+                                <p class="money">限时降价10元</p>
+                                <p class="moneys">￥129<span class="del">￥130</span></p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-firth">
+                <div class="firth-top">
+                    <div class="left">
+                        <span class="title">限时购</span>
+                        <span class="end">距结束</span>
+                        <span class="red sign3">00</span>
+                        <span class="spot">:</span>
+                        <span class="red sign4">00</span>
+                        <span class="spot">:</span>
+                        <span class="red sign5">00</span>
+                    </div>
+                    <div class="right">
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                        <span>限时购</span>
+                    </div>
+                </div>
+                <div class="firth-bottom">
+                    <ul class="bottom-list">
+                        <li class="item colors">
+                            <div class="imgs"><img width="177"
+                                    src="https://res.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487255092/428_428_CD14ACEE1DBD4E04C65BC2380BC9989Bmp.png"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="title">华为畅享 50</p>
+                                <p class="money">限时直降50元</p>
+                                <p class="moneys">￥2549<span class="del">￥3799</span></p>
+                            </div>
+
+                        </li>
+                        <li class="item ">
+                            <div class="imgs"><img width="177"
+                                    src="https://res.vmallres.com/pimages/uomcdn/CN/pms/202112/gbom/6941487262038/428_428_F5608DB88FB841A47DFCE5A1E057CF0Amp.png"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="title">HUAWEI MateBook D 14 12代酷睿版</p>
+                                <p class="money">限时省300丨12代酷睿</p>
+                                <p class="moneys">￥2549<span class="del">￥3799</span></p>
+                            </div>
+
+                        </li>
+                        <li class="item ">
+                            <div class="imgs"><img width="177"
+                                    src="https://res.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487249428/428_428_0B7D0FADDF7D370331559EE1D39A8CEBmp.jpg"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="title">HUAWEI WATCH GT 3 Pro</p>
+                                <p class="money">限时优惠50 | 享3期免息</p>
+                                <p class="moneys">￥2549<span class="del">￥3799</span></p>
+                            </div>
+
+                        </li>
+                        <li class="item ">
+                            <div class="imgs"><img width="177"
+                                    src="https://res.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6971943680441/428_428_5A41CAE8618FBCAB81B7F8EE1BC0DDA1mp.png"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="title">华为智选 海雀智能摄像头Pro 4K版 800万像素 白色</p>
+                                <p class="money">限时降价20元</p>
+                                <p class="moneys">￥2549<span class="del">￥3799</span></p>
+                            </div>
+
+                        </li>
+                        <li class="item ">
+                            <div class="imgs"><img width="177"
+                                    src="https://res.vmallres.com/pimages/product/6925662234010/428_428_61EA04A3BE69816F6FA41BA889D8C73682C3F70245AA7237mp.png"
+                                    alt=""></div>
+
+                            <div class="artical">
+                                <p class="title">OGAWA奥佳华家用按摩椅 OG7306</p>
+                                <p class="money">限时直降5000</p>
+                                <p class="moneys">￥2549<span class="del">￥3799</span></p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-fourth">
+                <div class="fourth-header">
+                    <p class="iphone">爆款推荐</p>
+                </div>
+                <div class="fourth-middle">
+                    <ul class="middle-list">
+                        <li class="tag ">
+                            <img width="472"
+                                src="https://res.vmallres.com/uomcdn/CN/cms/202206/571BFF3926774855C40A2ABF317F904A.jpg.webp"
+                                alt="">
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res4.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487266968/428_428_BC55BA791569F5292571F6745B10A3EFmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="price">￥2949</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res5.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487266005/428_428_CDF9647B8842CEA9FF41DE8FBDB7D27Amp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10pro</p>
+                                <p class="price">￥2949</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res7.vmallres.com/pimages/uomcdn/CN/pms/202207/gbom/6941487257157/428_428_5C221D0E9BF0596EAD61AC11964467DFmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>WATCH FIT 2</p>
+                                <p class="price">￥2949</p>
+                            </div>
+
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res1.vmallres.com/pimages/uomcdn/CN/pms/202207/gbom/6941487270200/428_428_3E4214E2939C2DF27687FB3AB43C2905mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>华为儿童手表4 Pro</p>
+                                <p class="price">￥2949</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res7.vmallres.com/pimages/uomcdn/CN/pms/202207/gbom/6941487270880/428_428_1142FAB7EA4DCBDD8C64BF54486A7D4Bmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>HUAWEI P50 Pocket</p>
+                                <p class="price">￥2949</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res8.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487261161/428_428_04C23C7E52BADA84FBDFEACBBE07C6C9mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title">HUAWEI FreeBuds 5i</p>
+                                <p class="price">￥2949</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res4.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487235780/428_428_13F0DCAEF75D98517492F714F0B9A177mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title">HUAWEI P50</p>
+                                <p class="price">￥2949</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202112/gbom/6941487262038/428_428_F5608DB88FB841A47DFCE5A1E057CF0Amp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title">MateBook D 14 12代酷睿版</p>
+                                <p class="price">￥2949</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fourth-bottom">
+                    <img width="1200"
+                        src="https://res.vmallres.com/uomcdn/CN/cms/202207/38B9DB6686EBB4E656299A49E457829E.jpg" alt="">
+                </div>
+            </div>
+            <div class="magin body-fifth">
+                <div class="fifth-header">
+                    <div class="left">
+                        <p class="iphone">手机</p>
+                        <ul class="company-list">
+                            <li class="item">企业购专区</li>
+                        </ul>
+                    </div>
+                    <div class="fifth-right">
+                        <span class="more">更多</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+                </div>
+                <div class="fifth-bottom">
+                    <ul class="bottom-list">
+                        <li class="item">
+                            <img width="180"
+                                src="https://res4.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487266968/428_428_BC55BA791569F5292571F6745B10A3EFmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res5.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487266005/428_428_CDF9647B8842CEA9FF41DE8FBDB7D27Amp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202207/gbom/6941487270880/428_428_1142FAB7EA4DCBDD8C64BF54486A7D4Bmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487255092/428_428_CD14ACEE1DBD4E04C65BC2380BC9989Bmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res4.vmallres.com/pimages/uomcdn/CN/pms/202204/gbom/6941487261369/428_428_7A92945BBD883E9D61A9606C7CEDC778mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res7.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487235773/428_428_0CDE1D66587B3446E435A815610D75F9mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res8.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487236916/428_428_53E36B288448D607976FA443D1E71BB3mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487236541/428_428_D9B1C6A3E5322F92EEE367B79945F17Emp.jpg"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-fifth">
+                <div class="fifth-header">
+                    <div class="left">
+                        <p class="iphone">电脑</p>
+                        <ul class="company-list">
+                            <li class="item">笔记本</li>
+                            <li class="item">精品平板</li>
+                            <li class="item">台式机</li>
+                            <li class="item">显示器</li>
+                            <li class="item">电脑配件</li>
+                        </ul>
+                    </div>
+                    <div class="fifth-right">
+                        <span class="more">更多</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+                </div>
+                <div class="fifth-bottom">
+                    <ul class="bottom-list">
+                        <li class="item">
+                            <img width="180"
+                                src="https://res8.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487264230/428_428_E86BC86B2E85F8D00E18620B55C8AD87mp.jpg"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res4.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487264292/428_428_F415CCB087EEF7E038D8F13467956C13mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487263011/428_428_A07A635204E4B226AF9AB0F6CAB58612mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202112/gbom/6941487262038/428_428_F5608DB88FB841A47DFCE5A1E057CF0Amp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487239375/428_428_2E1FA5E7765C6A97B4636A0CFDFBE4A9mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487243563/428_428_C341573C94BAEB18069835528FE7C0A3mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res4.vmallres.com/pimages/product/6941487210565/428_428_0586DDD43A796BB8F9DCE0CF38A3C248212C18CA891A2AB9mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res7.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487239511/428_428_E0AFB3C16007C7DC5B495D8E071D159Dmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-fifth">
+                <div class="fifth-header">
+                    <div class="left">
+                        <p class="iphone">平板</p>
+                        <ul class="company-list">
+                            <li class="item">平板配件</li>
+                        </ul>
+                    </div>
+                    <div class="fifth-right">
+                        <span class="more">更多</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+                </div>
+                <div class="fifth-bottom">
+                    <ul class="bottom-list">
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/product/6941487228096/428_428_DFC8B2710C0583A9A22365D67F5B012324DC728241760ADCmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res2.vmallres.com/pimages/product/6941487227624/428_428_5B52FE52A204DB8F572BB1B5B84B024991A392D7AD812FFFmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res5.vmallres.com/pimages/uomcdn/CN/pms/202203/gbom/6941487263912/428_428_015BEFA5E89F8BC6B0DD8F6707137F09mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6901443248285/428_428_AE8E5AE2C368EBF1B26B21E95A36CD0Fmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res6.vmallres.com/pimages/product/6941487238972/428_428_FEB761E6839DF3963B1084F150485BAE3A0CEF5E8589B0AAmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res6.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487226245/428_428_E9D08E8E07A2B2558A4D2873D4BC562Bmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res5.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6901443447244/428_428_898BECDBEC73BEC485CDF1B28CBD3689mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res5.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487248278/428_428_36CD2F126EA06A926689B5AFDC806CB3mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-fifth">
+                <div class="fifth-header">
+                    <div class="left">
+                        <p class="iphone">智能穿戴</p>
+                        <ul class="company-list">
+                            <li class="item">智能手表</li>
+                            <li class="item">智能手环</li>
+                            <li class="item">儿童手表</li>
+                            <li class="item">VR&体脂秤</li>
+                        </ul>
+                    </div>
+                    <div class="fifth-right">
+                        <span class="more">更多</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+                </div>
+                <div class="fifth-bottom">
+                    <ul class="bottom-list">
+                        <li class="item">
+                            <img width="180"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202207/gbom/6941487257164/428_428_F4485F7A0D1F056A44187E36B9BC4677mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res5.vmallres.com/pimages/uomcdn/CN/pms/202207/gbom/6941487270200/428_428_3E4214E2939C2DF27687FB3AB43C2905mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487249336/428_428_D17C9CBCC2BCBE4F7FC7FC99195BB494mp.jpg"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/uomcdn/CN/pms/202202/gbom/6941487220687/428_428_A317C546F298036E9BE20B8D30378A3Dmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res4.vmallres.com/pimages/uomcdn/CN/pms/202206/gbom/6941487266968/428_428_BC55BA791569F5292571F6745B10A3EFmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res4.vmallres.com/pimages/uomcdn/CN/pms/202202/gbom/6941487214921/428_428_F97868B124B91DB759E822F748AAF767mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res7.vmallres.com/pimages/uomcdn/CN/pms/202204/gbom/6941487260522/428_428_98F4C26BB746ABFA1687C9ED26E63E8Amp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res6.vmallres.com/pimages/product/6972453165985/428_428_93BCD651C90D2B5EFD779DB353F1A2E36DFAE529FA49026Emp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-fifth">
+                <div class="fifth-header">
+                    <div class="left">
+                        <p class="iphone">耳机</p>
+                        <ul class="company-list">
+                            <li class="item">智能音箱</li>
+                            <li class="item">智能眼镜</li>
+                        </ul>
+                    </div>
+                    <div class="fifth-right">
+                        <span class="more">更多</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+                </div>
+                <div class="fifth-bottom">
+                    <ul class="bottom-list">
+                        <li class="item">
+                            <img width="180"
+                                src="https://res8.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487261161/428_428_04C23C7E52BADA84FBDFEACBBE07C6C9mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/uomcdn/CN/pms/202203/gbom/6941487245598/428_428_0ABBFBB98E1EFAE7C169337A48FA1E28mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res6.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487215034/428_428_CCF470FEC607724CCE257C0FA4E880CDmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487234776/428_428_78EB4C0867A729146EF735BA7A0F2684mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res7.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487207756/428_428_EA411A51C41BB3D62157326F24646FA1mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res8.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6972453168870/428_428_BA397DBF7F9FB9097BAA943B397D94DBmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res7.vmallres.com/pimages/product/6941487222148/428_428_BAEE1AAA07861869306F96959585D5F88FDEC6B32DDDAE74mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res5.vmallres.com/pimages/product/6941487230808/428_428_F3D8CBF88D0160D05FE5730342CF735DD5F57C75C2E320A2mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-fifth">
+                <div class="fifth-header">
+                    <div class="left">
+                        <p class="iphone">智慧屏</p>
+                        <ul class="company-list">
+                            <li class="item">智能路由</li>
+                            <li class="item">智能门锁</li>
+                        </ul>
+                    </div>
+                    <div class="fifth-right">
+                        <span class="more">更多</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+                </div>
+                <div class="fifth-bottom">
+                    <ul class="bottom-list">
+                        <li class="item">
+                            <img width="180"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487233342/428_428_703C5377E6C17B3C7639B50CD236F5E0mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res8.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487233328/428_428_377A883BEF8846E33089A10191655077mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487210169/428_428_DCA9929CCA8B17006663DFF9596765B3mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487217007/428_428_8BD0A5A1BEA7E2C90B92724240BFD351mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res6.vmallres.com/pimages/uomcdn/CN/pms/202204/gbom/6941487264940/428_428_6E8DA488DAD823854834589C10745B78mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487224142/428_428_338AF1445F12DD9C81784B094710EBA4mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res7.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487211173/428_428_601FD8B22DC814A48D6E944C1A28B575mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res4.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6941487217014/428_428_AFDFF6955E372A89187A0029FCB13EBEmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"><span class="red">新品上市</span>nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-fourth">
+                <div class="fourth-header">
+                    <div class="left">
+                        <p class="iphone">生态精品</p>
+                        <ul class="company-list">
+                            <li class="item">净化器</li>
+                            <li class="item">智能门锁</li>
+                            <li class="item">扫地清洁</li>
+                            <li class="item">智能水杯</li>
+                            <li class="item">影音娱乐</li>
+                            <li class="item">厨电卫浴</li>
+                            <li class="item">灯饰照明</li>
+                            <li class="item">摄像头</li>
+                        </ul>
+                    </div>
+                    <div class="fifth-right">
+                        <span class="more">更多</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+
+                </div>
+                <div class="fourth-middle">
+                    <ul class="middle-list">
+                        <li class="tag ">
+                            <img width="472"
+                                src="https://res.vmallres.com/uomcdn/CN/cms/202203/E1BC1EF04FDEA4ED19D7871CD959C67F.jpg"
+                                alt="">
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res8.vmallres.com/pimages/product/6937942636285/428_428_F419436B5BEF0AE2EF6D91ACB802CFE4769C8A4C68847A6Fmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title">nova 10</p>
+                                <p class="price">￥2949</p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res5.vmallres.com/pimages/product/6971943680243/428_428_7ADFC5D91E13992EF30F5BCFEF968C5A5CC1F996F30B4229mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title">nova 10</p>
+                                <p class="price">￥2949</p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res4.vmallres.com/pimages/FssCdnProxy/vmall_bop_server/BopMaterialCenter/428_428_D9F34BE2F996319F8922D6EFE494C56F.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="price">￥2949</p>
+                                <p class="desc">
+                                    <span class="red">秒杀</span>
+
+                                </p>
+                            </div>
+
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res5.vmallres.com/pimages/uomcdn/CN/pms/202205/sbom/3602010000201/428_428_95422636C04C2799A7B6A4D61118659Amp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="price">￥2949</p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res6.vmallres.com/pimages/uomcdn/CN/pms/202112/gbom/6930506074400/428_428_DED2CCE0D1C7DEA61A32E8211D9EAAAEmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="price">￥2949</p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res7.vmallres.com/pimages/product/6925662234010/428_428_61EA04A3BE69816F6FA41BA889D8C73682C3F70245AA7237mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="price">￥2949</p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                    <span class="red">分期免息</span>
+                                    <span class="red">赠送积分</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res2.vmallres.com/pimages/FssCdnProxy/vmall_bop_server/BopMaterialCenter/428_428_DE2337F2A5FB1F218D8AC63408949B69.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="price">￥2949</p>
+                                <p class="desc">
+
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="142"
+                                src="https://res3.vmallres.com/pimages/FssCdnProxy/vmall_bop_server/BopMaterialCenter/428_428_FB98F333E29A3088568875AA956567CC.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="price">￥2949</p>
+                                <p class="desc">
+                                    <span class="red">限时特惠</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magin body-fifth">
+                <div class="fifth-header">
+                    <div class="left">
+                        <p class="iphone">美食酒饮</p>
+                        <ul class="company-list">
+                            <li class="item">甄选美酒</li>
+                            <li class="item">健康轻食</li>
+                            <li class="item">咖啡茗茶</li>
+                            <li class="item">精选米油</li>
+                            <li class="item">精选好物</li>
+                        </ul>
+                    </div>
+                    <div class="fifth-right">
+                        <span class="more">更多</span>
+                        <span class="iconfont icon-xiangyoujiantou"></span>
+                    </div>
+                </div>
+                <div class="fifth-bottom">
+                    <ul class="bottom-list">
+                        <li class="item">
+                            <img width="180"
+                                src="https://res8.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/6901382097777/428_428_362D669C5978DA2ED9331D9CA3EEF3A2mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res4.vmallres.com/pimages/FssCdnProxy/vmall_bop_server/BopMaterialCenter/428_428_365AF5EC37A891A7A351611D27C442DD.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">分期免息</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/uomcdn/CN/pms/202205/sbom/3102150242301/428_428_CD227E08341CB8F99354212E10BF7C5Cmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+                                    <span class="red">分期免息</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202109/gbom/7239010163/428_428_4AAC4AEEB81253CAED4C7B2ACB66C056mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res5.vmallres.com/pimages/uomcdn/CN/pms/202205/gbom/7239010173/428_428_4046FEBD8442F412F2AAC5FAD8744051mp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/FssCdnProxy/vmall_bop_server/BopMaterialCenter/428_428_F79E24C72E9A78841267A1C1E891C2DF.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res1.vmallres.com/pimages/FssCdnProxy/vmall_bop_server/BopMaterialCenter/428_428_F79E24C72E9A78841267A1C1E891C2DF.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <img width="180"
+                                src="https://res3.vmallres.com/pimages/uomcdn/CN/pms/202201/gbom/6972596160649/428_428_7D8E1E5B0379BE1A3948A86BF1CF576Fmp.png"
+                                alt="" class="goods">
+                            <div class="artical">
+                                <p class="title"> nova 10</p>
+                                <p class="money">新品优惠50元 | 6期免息</p>
+                                <p class="price">￥3949 <span class="del"></span></p>
+                                <p class="desc">
+
+                                </p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <ul class="footer-top">
+                <li class="item">
+                    <img width="24"
+                        src="https://res.vmallres.com/uomcdn/CN/cms/202203/35029C2650265248A5C45BC46E0D7578.png" alt="">
+                    <span class="title">百强企业 品质保证</span>
+                </li>
+                <li class="item">
+                    <img width="24"
+                        src="https://res.vmallres.com/uomcdn/CN/cms/202203/848285C26D6B91405D84D71CC8D738F2.png" alt="">
+                    <span class="title">7天退货 15天换货</span>
+                </li>
+                <li class="item">
+                    <img width="24"
+                        src="https://res.vmallres.com/uomcdn/CN/cms/202203/09CE412E94E10830D00A2487756EBEE4.png" alt="">
+                    <span class="title">48元起免运费</span>
+                </li>
+                <li class="item">
+                    <img width="24"
+                        src="https://res.vmallres.com/uomcdn/CN/cms/202203/EABCAA990C477793FB6F09658BF80B82.png" alt="">
+                    <span class="title">2000家服务店 全国联保</span>
+                </li>
+            </ul>
+            <div class="footer-bottom">
+                <ul class="footer-list">
+                    <li class="item">
+                        <p class="title">购物指南</p>
+                        <span class="desc">
+                            免息分期
+                        </span>
+                        <span class="desc">
+                            以旧换新
+                        </span>
+                        <span class="desc">
+                            众测活动
+                        </span>
+                        <span class="desc">
+                            企业购
+                        </span>
+                        <span class="desc">
+                            O2O采购
+                        </span>
+                    </li>
+                    <li class="item">
+                        <p class="title">购物指南</p>
+                        <span class="desc">
+                            免息分期
+                        </span>
+                        <span class="desc">
+                            以旧换新
+                        </span>
+                        <span class="desc">
+                            众测活动
+                        </span>
+                        <span class="desc">
+                            企业购
+                        </span>
+                        <span class="desc">
+                            O2O采购
+                        </span>
+                    </li>
+                    <li class="item">
+                        <p class="title">购物指南</p>
+                        <span class="desc">
+                            免息分期
+                        </span>
+                        <span class="desc">
+                            以旧换新
+                        </span>
+                        <span class="desc">
+                            众测活动
+                        </span>
+                        <span class="desc">
+                            企业购
+                        </span>
+                        <span class="desc">
+                            O2O采购
+                        </span>
+                        <span class="desc">
+                            O2O采购
+                        </span>
+                        <span class="desc">
+                            O2O采购
+                        </span>
+                    </li>
+                    <li class="item">
+                        <p class="title">购物指南</p>
+                        <span class="desc">
+                            免息分期
+                        </span>
+                        <span class="desc">
+                            以旧换新
+                        </span>
+                        <span class="desc">
+                            众测活动
+                        </span>
+                        <span class="desc">
+                            企业购
+                        </span>
+                        <span class="desc">
+                            O2O采购
+                        </span>
+                    </li>
+                    <li class="item">
+                        <p class="title">购物指南</p>
+                        <span class="desc">
+                            免息分期
+                        </span>
+                        <span class="desc">
+                            以旧换新
+                        </span>
+                        <span class="desc">
+                            众测活动
+                        </span>
+                        <span class="desc">
+                            企业购
+                        </span>
+                        <span class="desc">
+                            O2O采购
+                        </span>
+                    </li>
+                    <li class="item">
+                        <p class="title">购物指南</p>
+                        <span class="desc">
+                            免息分期
+                        </span>
+                        <span class="desc">
+                            以旧换新
+                        </span>
+                        <span class="desc">
+                            众测活动
+                        </span>
+                        <span class="desc">
+                            企业购
+                        </span>
+                        <span class="desc">
+                            O2O采购
+                        </span>
+                    </li>
+                    <li class="item items">
+                        <p class="tel">950805</p>
+                        <span class="tel-desc">
+                            7 × 24小时客服在线(仅收市)
+                        </span>
+                        <p class="customer">
+                            <span></span>
+                            <span>在线客服</span>
+                        </p>
+                       <div class="official">
+                        <span class="title">关注VMALL：</span>
+                        <ul class="img-list">
+                            <li class="item"></li>
+                            <li class="item"></li>
+                            <li class="item"></li>
+                            <li class="item"></li>
+                        </ul>
+                       </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var sign = document.querySelector('.sign')
+        var sign1 = document.querySelector('.sign1')
+        var sign2 = document.querySelector('.sign2')
+        var sign3 = document.querySelector('.sign3')
+        var sign4 = document.querySelector('.sign4')
+        var sign5 = document.querySelector('.sign5')
+
+        var swit = document.querySelectorAll('.circle-list>p')
+
+        var cilck = document.querySelector('.middle-gooslist')
+
+
+        console.log(cilck)
+
+
+        var imgs = document.querySelectorAll('.back-img>li')
+        var index = 0
+        console.log(imgs)
+
+        function change(bool) {
+            imgs[index].className = ''
+            swit[index].className = ''
+            if (bool === true) {
+                index++
+            } else if (bool === false) {
+                index--
+            } else {
+                index = bool
+            }
+
+
+            if (index >= imgs.length) {
+                index = 0
+            }
+            if (index < 0) {
+                index = imgs.length - 1
+            }
+
+            imgs[index].className = 'active'
+            swit[index].className = 'active'
+
+        }
+        cilck.onclick = function (e) {
+            if (e.target.className === 'about-left' || e.target.className === 'about-left>span') {
+                change(false)
+            }
+            if (e.target.className === 'about-right') {
+                change(true)
+            }
+            if (e.target.dataset.name === 'switch') {
+                var i = e.target.dataset.i - 0
+                change(i)
+            }
+        }
+        setInterval(function () {
+            change(true)
+        }, 4000)
+
+
+
+        function clock(times) {
+            var hour = parseInt(times / 3600);
+            var min = parseInt((times % 3600) / 60);
+            var second = (times % 3600) % 60;
+
+            var hours = hour < 10 ? "0" + hour : hour
+            var mins = min < 10 ? "0" + min : min
+            var sen = second < 10 ? "0" + second : second
+
+            sign.innerHTML = hours
+            sign1.innerHTML = mins
+            sign2.innerHTML = sen
+
+            sign3.innerHTML = hours
+            sign4.innerHTML = mins
+            sign5.innerHTML = sen
+            if (times > 0) {
+                times = times - 1;
+                setTimeout(function () {
+                    clock(times);
+                }, 1000);
+            } else {
+                alert("倒计时结束");
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

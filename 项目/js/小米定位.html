@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./h5/掘金/css/reset.css">
+    <style>
+        .banner {
+            width: 1226px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .list {
+            width: 234px;
+            padding: 20px 0;
+            font-size: 14px;
+            color: #fff;
+            background-color: #69656599;
+            position: absolute;
+            top:0;
+        }
+
+        .list .item {
+            height: 42px;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            cursor: pointer;
+
+        }
+        .list .item:hover{
+           background-color: #ff6700;;
+        }
+        .sub-list{
+            width:992px;
+            background-color: #ff6700;
+            height: 460px;
+            display: none;
+            position: absolute;
+            left: 234px;
+            top: 0;
+        }
+        .list .item:hover .sub-list{
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="img">
+            <img width="100%" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1b02013e822d8235cad4d8dc1b7ff4b5.jpg?thumb=1&w=1226&h=460&f=webp&q=90" alt="">
+        </div>
+        <ul class="list">
+            <li class="item">手机<div class="sub-list">
+                </div>
+            </li>
+            <li class="item">电视<div class="sub-list">
+            </div></li>
+            <li class="item">笔记本 平板<div class="sub-list">
+            </div></li>
+            <li class="item">出行 穿戴<div class="sub-list">
+            </div></li>
+            <li class="item">耳机 音响<div class="sub-list">
+            </div></li>
+            <li class="item">家电<div class="sub-list">
+            </div></li>
+            <li class="item">智能路由器<div class="sub-list">
+            </div></li>
+            <li class="item">电源 配件<div class="sub-list">
+            </div></li>
+            <li class="item">健康 儿童<div class="sub-list">
+            </div></li>
+            <li class="item">生活 箱包<div class="sub-list">
+            </div></li>
+        </ul>
+    </div>
+</body>
+
+</html>
