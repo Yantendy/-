@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Hello world!</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <style type="text/css">
+
+    </style>
+
+</head>
+<body>
+
+    <div class="app">
+        <div id="container"></div>
+        <div class="serch">
+            <input type="text">
+            <button>搜索</button>
+        </div>
+        <ul class="list" style="display: none;">
+        </ul>
+        <div class="desc">
+            <p>酒店</p>
+            <p>网吧</p>
+            <p>学校</p>
+        </div>
+        <ul class="info" style="display: none;">
+
+        </ul>
+    </div>
+
+    <script src="https://webapi.amap.com/loader.js"></script>
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=2.0&key=bb96c6b7acc0b655174b29f0a2fa3b00"></script>
+    <script>
+
+        var map = new AMap.Map('container', {
+            zoom: 14,//级别
+            center: [113.6249, 34.7472],//中心点坐标
+        });
+        var ipt = document.querySelector('.serch input')
+        var list = document.querySelector('.list')
+        var info = document.querySelector('.info')
+        var p = document.querySelectorAll('.desc p')
+        ipt.oninput = () => {
+            for (let i = 0; i < p.length; i++) {
+                p[i].classList.remove('color')
+
+            }
+            if (ipt.value.trim().length > 0) {
+                map.clearMap();
+                p.forEach((val) => {
+                    val.onclick = () => {
+                        p.forEach((t, j) => {
+                            t.classList.remove('color')
+                        })
+                        val.classList.add('color')
+                    }
+                })
+                list.style.display = 'block'
+                info.style.display = 'none'
+                fetch('https://restapi.amap.com/v3/place/text?key=9c9e349ffc7aeede91ebc08ce1cdfa4d&keywords=' + ipt.value + '&types=高等院校&city=郑州&children=1&offset=20&page=1&extensions=all').then(res => {
+                    return res.json()
+                }).then(res1 => {
+
+                    list.innerHTML = ''
+                    for (let i = 0; i < res1.pois.length; i++) {
+                        list.innerHTML += `
+                    <li data-loca ='${res1.pois[i].location}'>${res1.pois[i].name}</li>
+                    `
+                    }
+                }).catch(err => {
+                    console.log(err)
+                })
+            } else {
+                list.style.display = 'none'
+            }
+
+        }
+
+        list.onclick = (e) => {
+            map.clearMap();
+            ipt.value = e.target.innerHTML
+            list.style.display = 'none'
+            loca = e.target.dataset.loca
+            var point = new AMap.LngLat(loca.split(",")[0], loca.split(",")[1])
+            console.log(point)
+            map = new AMap.Map('container', {
+                zoom: 14,//级别
+                center: [loca.split(",")[0], loca.split(",")[1]],//中心点坐标
+            });
+
+            var marker = new AMap.Marker({
+                position: new AMap.LngLat(point.lng, point.lat),
+            });
+            map.add(marker);
+        }
+        var desc = document.querySelector('.desc')
+        desc.onclick = (e) => {
+
+            var point = new AMap.LngLat(loca.split(",")[0], loca.split(",")[1])
+            console.log(point)
+            fetch('https://restapi.amap.com/v3/place/around?key=9c9e349ffc7aeede91ebc08ce1cdfa4d&location=' + point.lng + ',' + point.lat + '&keywords=' + e.target.innerHTML + '&radius=2000&offset=10&page=1&extensions=all').then(res => {
+                return res.json()
+            }).then(res1 => {
+                if (e.target) {
+                    info.style.display = 'block'
+                }
+                info.innerHTML = ''
+                map.clearMap();
+                console.log(res1)
+                for (let i = 0; i < res1.pois.length; i++) {
+                    let mark = []
+                    let point = []
+                    let loca = []
+                    let infoWindow = []
+                    infoWindow[i] = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -30) });
+                    loca[i] = res1.pois[i].location
+                    mark[i] = new AMap.Marker({
+                        position: new AMap.LngLat(loca[i].split(',')[0], loca[i].split(',')[1])
+                    });
+                    map.add(mark[i]);
+                    mark[i].content = `${i + 1}、` + res1.pois[i].name
+                    mark[i].on('click', markerClick);
+                    function markerClick(e) {
+                        infoWindow[i].setContent(e.target.content);
+                        infoWindow[i].open(map, e.target.getPosition());
+                    }
+                    map.setFitView();
+                    info.innerHTML += `
+                        <li><span>${i + 1}、</span>${res1.pois[i].name}</li>
+                    `
+                }
+            }).catch(err => {
+                console.log(err)
+            })
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
