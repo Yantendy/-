@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="min">
+            <a href="./mine.html">我的</a>
+            <a href="./set.html">设置</a>
+        </div>
+        
+    </div>
+    <script>
+        var pwd = document.querySelector('.psw input')
+        var user = document.querySelector('.user input')
+        var btn = document.querySelector('.btn')
+        var min = document.querySelectorAll('.min a')
+        // console.log(user.value, pwd.value)
+        // console.log(min)
+        // btn.onclick = () => {
+        //     if (user.value == 'admin' && pwd.value == '123') {
+        //         alert('登录成功')
+        //         localStorage.setItem('user', 'admin')
+        //     } else {
+        //         alert('账号或者密码错误，请重新登录')
+        //     }
+        // } 
+
+        //不传参数
+        min.forEach((val)=>{
+            val.onclick=(e)=>{
+                if(localStorage.getItem('user') != 'admin'){
+                    event.preventDefault();
+                    alert('请您登录后在查看')
+                    window.location.href='index.html?Url='+val.href
+                }
+            }
+        })
+
+        var arr = [{
+            name :'Zhangsan',
+            age:20
+        },{
+            name:'lisi',
+            age:30
+        }]
+        localStorage.setItem('arr',JSON.stringify(arr))
+        
+        
+        console.log(JSON.parse(localStorage.getItem('arr')))
+        
+
+        //传参数
+        // function tab(url) {
+        //     if (localStorage.getItem('user') != 'admin') {
+        //         event.preventDefault();
+        //         console.log(window)
+        //         alert('cuowu' )
+        //         window.location.href='index.html?Url='+url
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

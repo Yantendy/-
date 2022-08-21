@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-size: 20px;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  span{
+    font-size: .7rem;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+ul{
+    list-style: none;
+}
+.app{
+    .fix{
+        position: fixed;
+        right: 3%;
+        z-index: 11;
+        top: 2%;
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: .75rem;
+            animation: rotating 1.2s linear infinite;
+            @keyframes rotating {
+                0%{
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+    }
+    .tag{
+        position: fixed;
+        bottom: 2%;
+        z-index: 111;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    // display: flex;
+    height: 100%;
+    .swiper-container{
+        .swiper-slide{
+            position: relative;
+            background: url('https://asset.eqh5.com/FpAI4wPahKcBBQ-bH_AaxeCqCzxv?imageMogr2/auto-orient/thumbnail/450x626%3E/format/webp/quality/80!/strip') repeat;
+            background-size: 100%;
+            width: 100%;
+            .colo{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .list{
+                display: flex;
+                flex-wrap: wrap;
+                padding: .5rem 1rem;
+                position: absolute;
+                top: 3.45rem;
+                .item2{
+                    font-size: .8rem;
+                    border-bottom: 1px solid #115599;
+                    margin-top: 10px;
+                    padding: 0 0 3px 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    span{
+                        margin-bottom: .15rem;
+                    }
+                    .iconfont{
+                        color:#115599 ;
+                    }
+                }
+                .items{
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: .5rem;
+                    margin-top: .5rem;
+                    .lefts{
+                        overflow: hidden;
+                        height: 100%;
+                        img{
+                            width: 7.35rem;
+                            // height: 110.25px;
+                            border: 1px solid rgb(17, 85, 153);
+                        }
+                        
+                    }
+                    .rights{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        margin-left: .5rem;
+                        p{
+                            color: rgb(17, 85, 153);
+                            font-family: hanyi_qh50;
+                            font-size: 13px;
+                            border-bottom: 1px solid rgb(17, 85, 153);
+                            display: flex;
+                            justify-content: flex-start;
+                        }
+                        div{
+                            display: flex;
+                            span{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                font-size: .6rem;
+                                border-radius: 100%;
+                                background-color: #4953a1;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .item{
+                    width: 46%;
+                    overflow: hidden;
+                    margin-bottom: .5rem;
+                    h3{
+                        background-color: #115599;
+                        font-size: .6rem;
+                        color: #fff;
+                    }
+                    p{
+                        font-family: hanyi_qh50;
+                        font-size: 12px;
+                        color: rgb(0, 0, 0);
+                        border: 1px solid rgb(0, 0, 0);;
+                    }
+                }
+                img{
+                    border: 1px solid rgb(17, 85, 153);;
+                }
+            }
+            .artical{
+                font-family: fangzheng_zht;
+                position: absolute;
+                font-size: .6rem;
+                line-height: 2;
+                top: 3.5rem;
+                text-align: justify;
+                letter-spacing: .1255rem;
+                width: 14rem;
+            }
+            .title-in{
+                color: rgb(36, 33, 110);
+                font-family: hanyi_wh65;
+                font-size: 16px;
+                position: absolute;
+                top: .325rem;
+                left: 50%;
+                transform: translateX(-50%);
+                span{
+                    position: absolute;
+                    width:  9.8rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: .85rem;
+                }
+            }
+            .jing{
+                position: absolute;
+                top: 4rem;
+                width: 14.381rem;
+                border: 1px solid rgb(17, 85, 153);;
+            }
+            .title2{
+                position: absolute;
+                top: .325rem;
+                width: 10.25rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .left{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 1.25rem;
+            }
+            .right{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 1.5rem;
+            }
+            .animal{
+                position: absolute;
+                right: 0;
+                bottom: 2%;
+            }
+            .bg1{
+                position: absolute ;
+                bottom: -1rem;
+                width: 100%;
+            }
+            .log{
+                position: absolute;
+                width: 4.8rem;
+                top: 1.075rem;
+            }
+            .title1{
+                position: absolute;
+                width: 7.7rem;
+                top: 3rem;
+            }
+            .title{
+                position: absolute;
+                top: 3.35rem;
+
+            }
+            .box1{
+                position: absolute;
+                top: 8.9rem;
+                z-index: 12;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .titles{
+                    color: rgb(0, 0, 0);
+                    font-family: fangzheng_xbsjt;
+                    font-size: 18px;
+                    padding: 0.3em 15px;
+                }
+                p{
+                    margin-top: .5rem;
+                    font-family: hanyi_qh50;
+                    color: rgb(209, 87, 54);
+                    font-size: 12px;
+                    letter-spacing: .5em;
+                    &:nth-child(3){
+                        color: rgb(0, 0, 0);
+                        font-family: hanyi_qh50;
+                        background-color: initial;
+                        font-size: 14px;
+                        padding: 0.3em 15px;
+                    }
+                }
+                .desc{
+                    display: flex;
+                    margin: 10px 0;
+                    span{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: rgb(0, 0, 0);
+                        font-family: hanyi_qh50;
+                        background-color: initial;
+                        font-size: 12px;
+                        border: 1px solid #7c7c79;
+                        border-radius: .25rem ;
+                        padding: 0 4px;
+                    }
+                }
+            }
+            .light{
+                position: absolute;
+                right: 6%;
+                bottom: 30%;
+            }
+        }
+        
+    }
+}
