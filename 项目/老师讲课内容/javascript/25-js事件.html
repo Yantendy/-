@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div {
+            display: none;
+        } */
+        .active {
+            display: block;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            margin-right: 25px;;
+        }
+        .show {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        js事件
+            鼠标事件
+                click
+                    单击事件
+                dblclick
+                    双击事件
+                mouseenter
+                    鼠标进入
+                mouseleave
+                    鼠标离开
+                mouseover
+                    鼠标移入
+                mouseout
+                    鼠标移除
+                mouseup
+                    鼠标松开
+                mousedown
+                    鼠标按下
+                contextmenu 了解
+                    鼠标右键
+
+            键盘事件
+                keydown
+                    键盘按下
+                keyup
+                    键盘松开
+                keypress
+                    键盘点击
+                    
+
+            表单事件
+                只能用在表单元素
+                    单行文本输入框
+                    多行文本输入筐
+                    select option 选项框
+                    单选 复选
+                change
+                    表单元素中的内容改变时候 失去焦点触发
+                input
+                    表单元素内容改变德时候触发
+                blur
+                    失去焦点
+                focus
+                    获取焦点
+
+            鼠标滚动
+                scroll
+                    当鼠标滚动(中间的滚轮键)的时候 触发
+                    前提：
+                        会滚动(被绑定的元素需要有滚动条)
+                        谁有滚动条给谁添加scroll
+
+                    格式：
+                        元素.onscroll=function() {
+                            // 执行的代码块
+                        }
+
+
+            窗口事件
+                resize
+                    元素的尺寸改变时候 可以触发
+
+                格式：
+                    window.resize=function() {
+                        // 执行代码块
+                    }
+
+                    
+
+
+        一个元素可以绑定多个事件
+
+
+        数组方法  es6
+            some   
+                只要数组元素 其中一个元素 满足条件 返回为true
+                否则返回false
+                必须有返回值  
+                    返回值为布尔值
+
+                格式
+                    数组.some(function(item, index, array) {   // item表示数组的每一项  index表示数组的下标索引  array表示原数组
+                        return 条件
+                    })
+
+
+
+     -->
+     <!-- <div id="app">点击</div> -->
+     <!-- <ul style="display: flex;">
+        <li data-index="0">
+            标题1
+        </li>
+        <li data-index="1">
+            标题2
+        </li>
+        <li data-index="2">
+            标题3
+        </li>
+     </ul>
+     <div class="active">
+        内容1
+     </div>
+     <div>
+        内容2
+     </div>
+     <div>
+        内容3
+     </div> -->
+     <!-- <div class="app">导航</div>
+     <input type="text"> -->
+     <!-- <div class="show">显示元素</div> -->
+     <!-- <input type="text" name="" id="admin"> -->
+     <!-- 密  码:<input type="password" id="psw"> -->
+     <!-- <button>登录</button> -->
+     <!-- <select name="" id="">
+        <option value="郑州">郑州</option>
+        <option value="开封">开封</option>
+        <option value="洛阳">洛阳</option>
+        <option value="安阳">安阳</option>
+     </select>
+     <ul>
+
+     </ul> -->
+
+     <!-- <select name="" id="provinces"></select>
+     <select name="" id="cities"></select> -->
+     <!-- <input type="text" name="" id=""> -->
+     <!-- <div class="list">
+        <div class="item">
+            <label for="boy">
+                <input type="checkbox" id="boy" name="sex" value="男">商品1  
+            </label>
+            <p>800.00</p>
+            <div>
+                <p>-</p>
+                <input type="text" value="1">
+                <p>+</p>
+            </div>
+        </div>
+        
+        <div class="item">
+            <label for="girl">
+                <input type="checkbox" id="girl" name="sex" value="女">商品2
+            </label>
+            <p>600.00</p>
+        </div>
+        
+     </div>
+     <input type="checkbox" id="selectAll">全选 -->
+
+     <!-- <div class="app" style="height: 100vh; overflow: auto;">
+        <div class="lists" style="height: 8000px;">111</div>
+     </div> -->
+     <div class="app" style="width: 100%"></div>
+     <textarea name="" id="" cols="30" rows="10"></textarea>
+
+     <!-- <p>暂无评论</p> -->
+     <script>
+
+        // console.log(window)
+        // var txt=document.querySelector('textarea')
+        // txt.onresize=function() {
+        //     console.log('尺寸改变了')
+        // }
+        // var app=document.querySelector('.app')
+        // var lists=document.querySelector('.lists')
+        // app.onscroll=function() {
+        //     console.log(app.scrollTop)
+        // }
+        // var arr=[1,2,3,4]
+
+        // var arr=[true, true, true, true]
+
+        // var txt=arr.some(function(item, index, array) {
+        //     console.log(item, index, array)
+        //     return item==false
+        // })
+
+
+        // var bool=arr.some(function(item) {
+        //     return item>0
+        // })
+
+        // console.log(bool)
+
+        // var ipt=document.querySelectorAll(".list input")
+        // var div=document.querySelector("div")
+        // var selectAll=document.querySelector("#selectAll")
+
+        // // 全选 全不选
+        // selectAll.onchange=function() {
+            
+        //     for(var i=0; i<ipt.length; i++) {
+        //         if(selectAll.checked) {
+        //             ipt[i].checked=true
+        //         }else {
+        //             ipt[i].checked=false
+        //         }
+                
+        //     }
+        // }
+
+        // div.onchange=function() {
+        //     // box=[]
+        //     for(var i=0; i<ipt.length; i++) {
+        //         // box.push(ipt[i].checked)
+        //         // 选中元素 获取其价格 及 数量
+        //         // if(ipt[i].checked) {
+        //         //     console.log(ipt[i].parentNode.nextElementSibling.innerHTML)       
+        //         // }
+        //         for(var j=i-1; j>=0; j--) {
+        //             if(ipt[j].checked==true && ipt[i].checked==true)
+        //             {
+        //                 selectAll.checked=true
+        //             } else {
+        //                 selectAll.checked=flause
+
+        //             }
+        //         }
+        //     }
+        // }
+        // // 只要有一个元素没有被选中 取消全选
+        // var box=[]
+        // div.onchange=function() {
+        //     box=[]
+        //     for(var i=0; i<ipt.length; i++) {
+        //         box.push(ipt[i].checked)
+        //         // 选中元素 获取其价格 及 数量
+        //         if(ipt[i].checked) {
+        //             console.log(ipt[i].parentNode.nextElementSibling.innerHTML)
+        //         }
+        //     }
+
+        // //     // 全选
+        // //     if(box.indexOf(false)>=0) {
+        // //         selectAll.checked=false
+        // //     }else {
+        // //         selectAll.checked=true
+        // //     }
+        //     t=box.some(function(item) {
+        //         return item==false
+        //     })
+        //     if(t==true) {
+        //         selectAll.checked=false
+        //     }else {
+        //         selectAll.checked=true
+        //     }
+
+        // }
+
+
+        // div.onchange=function() {
+        //     // console.log(event.target.value)
+        //     console.log(event.target.checked)
+        // }
+        // ipt.onfocus=function() {
+        //     console.log(event)
+        // }
+        // var select=document.querySelector("select")
+        // select.onchange=function() {
+        //     console.log(event.target.value)
+        // }
+
+
+        // var ipt=document.querySelector("input")
+        // ipt.onfocus=function() {
+        //     console.log('获取焦点')
+        // }
+
+        // ipt.onblur=function() {
+        //     console.log('失去焦点')
+        // }
+
+        // var provinces=['河南省','河北省','湖北省']
+        // var cities=[
+        //     ['郑州市','开封市'],
+        //     ['石家庄','邯郸','沧州','衡水'],
+        //     ['武汉','黄冈','襄阳','咸宁']
+        // ]
+
+        
+
+        // var pro=document.querySelector('#provinces')
+        // var city=document.querySelector("#cities")
+
+        // for(var i=0; i<provinces.length; i++) {
+        //     pro.innerHTML+=`
+        //         <option value="${provinces[i]}">${provinces[i]}</option>
+        //     `
+        // }
+        // pro.onchange=function() {
+        //     city.innerHTML=''
+        //     for(var i=0; i<cities[event.target.options.selectedIndex].length; i++) {
+        //         city.innerHTML+=`
+        //             <option value="${cities[event.target.options.selectedIndex][i]}">${cities[event.target.options.selectedIndex][i]}</option>
+        //         `
+        //     }
+        // }
+        // for(var i=0; i<cities[0].length; i++) {
+        //     city.innerHTML+=`
+        //         <option value="${cities[0][i]}">${cities[0][i]}</option>
+        //     `
+        // }
+
+        
+
+
+
+
+
+        // var admin=document.querySelector('#admin')
+        // var psw=document.querySelector("#psw")
+        // var btn=document.querySelector('button')
+        // var ul=document.querySelector('ul')
+        // var p=document.querySelector('p')
+
+        // btn.onclick=function() {
+        //     console.log(admin.value)
+        //     ul.innerHTML+=`
+        //         <li>${admin.value}</li>
+        //     `
+        // }
+
+
+        // var arr=[]
+        // admin.onchange=function() {
+        //     txt=admin.value
+        // }
+        // btn.onclick=function() {
+        //     console.log(222,txt)
+        //     arr.push(txt)
+        //     ul.innerHTML=''
+        //     getList()
+        // }
+
+        // function getList() {
+        //     for(var i=0; i<arr.length; i++) {
+        //         ul.innerHTML+=`
+        //             <li onclick="del(${i})">${arr[i]}</li>
+        //         `
+        //     }
+        //     if(arr.length>0) {
+        //         p.style.display='none'
+        //     }else {
+        //         p.style.display='block'
+        //     }
+        // }
+
+        // function del(i) {
+        //     console.log(i)
+        //     arr.splice(i,1)
+        //     console.log(arr)
+        //     ul.innerHTML=''
+        //     getList()
+        // }
+
+        // admin.onchange=function() {
+        //     console.log(admin.value)
+        // }
+        // admin.oninput=function() {
+        //     console.log(admin.value)
+        // }
+        // btn.onclick=function() {
+        //     console.log(admin.value)
+        // }
+        // btn.onclick=function() {
+        //     // window.location.href="https://www.baidu.com"
+        //     // console.log()
+        // }
+
+        // console.log(document)
+        // 使用enter键实现登录
+        // document.onkeypress=function() {
+        //     console.log(event)
+        //     if(event.keyCode==13) {
+        //         window.location.href="https://www.baidu.com"
+        //     }
+        // }
+
+
+
+
+        // var app=document.querySelector('.app')
+        // var show=document.querySelector('.show')
+        // var ipt=document.querySelector('input')
+        // app.oncontextmenu=function() {
+        //     console.log('右键触发')
+        // }
+        // ipt.onkeypress=function() {
+        //     console.log('键盘被点击')
+        // }
+        // ipt.onkeydown=function() {
+        //     console.log('键盘被按下')
+        // }
+        // ipt.onkeyup=function(){
+        //     console.log('键盘被松开')
+        // }
+        
+        // app.onclick=function() {
+        //     console.log('鼠标点击')
+        // }
+        // app.onmousedown=function() {
+        //     console.log('鼠标按下')
+        //     t=setInterval(function() {
+        //         console.log(1111)
+        //     },100)
+        // }
+        // app.onmouseup=function() {
+        //     console.log('鼠标松开')
+        //     clearInterval(t)
+        // }
+        
+        // app.onmouseover=function() {
+        //     show.style.display='block'
+        // }
+        // app.onmouseout=function() {
+        //     show.style.display='none'
+        // }
+        // var li=document.querySelectorAll('li')
+        // var div=document.querySelectorAll('div')
+        // for(var i=0; i<li.length; i++) {
+        //     li[i].onmouseenter=function() {
+        //         for(var j=0; j<div.length; j++) {
+        //             div[j].classList.remove('active') 
+        //         }
+        //         div[event.target.dataset.index].classList.add('active')
+        //     }
+        // }
+
+        
+        
+        // var app=document.getElementById('app')
+        // app.onclick=function() {
+        //     console.log('该元素被点击')
+        // }
+        // app.ondblclick=function() {
+        //     console.log('该元素被双击')
+        // }
+        // app.onmouseenter=function() {
+        //     console.log('鼠标进入')
+        // }
+        // app.onmouseleave=function() {
+        //     console.log('鼠标离开')
+        // }
+     </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://3.swiper.com.cn/dist/css/swiper.min.css">
+    <title>Document</title>
+    <style>
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+            <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="">
+                    <a href="#home" id="home-tab" role="tab" data-toggle="tab"
+                        aria-controls="home" aria-expanded="false">热门</a>
+                </li>
+                <li role="presentation" class="active">
+                    <a href="#profile" role="tab" id="profile-tab" data-toggle="tab"
+                        aria-controls="profile" aria-expanded="true">进口狗粮</a>
+                </li>
+                <li role="presentation" class="">
+                    <a href="#dropdown" id="myTabDrop1" class="dropdown-toggle"  data-toggle="tab"
+                        aria-controls="myTabDrop1-contents" aria-expanded="true">国际狗粮</a>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div role="tabpanel" class="tab-pane fade" id="home" aria-labelledby="home-tab">
+                    <ul style="display: flex">
+                        <li>
+                            <img src="https://img1.epetbar.com/common/upload/commonfile/2020/010/15/184933_785355.jpg@!200w-c" alt="">
+                        </li>
+                        <li>
+                            <img src="https://img1.epetbar.com/common/upload/commonfile/2020/010/15/184933_785355.jpg@!200w-c" alt="">
+                        </li>
+                        <li>
+                            <img src="https://img1.epetbar.com/common/upload/commonfile/2020/010/15/184933_785355.jpg@!200w-c" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade active in" id="profile" aria-labelledby="profile-tab">
+                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                        Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four
+                        loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk
+                        aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore
+                        aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente
+                        labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard
+                        ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher
+                        vero sint qui sapiente accusamus tattooed echo park.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="dropdown" aria-labelledby="myTabDrop1">
+                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+                        retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft
+                        beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR
+                        banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever
+                        gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you
+                        probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu
+                        synth chambray yr.</p>
+                </div>
+            </div>
+        </div> -->
+        <!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left"
+            title="Tooltip on left">Tooltip on left</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top"
+            title="Tooltip on top">Tooltip on top</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+            title="Tooltip on bottom">Tooltip on bottom</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+            title="Tooltip on right">Tooltip on right</button>
+
+            <div class="bs-example bs-example-padded-bottom">
+                <button type="button" class="btn btn-lg btn-danger bs-docs-popover" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Popover title">点我弹出/隐藏弹出框</button>
+              </div> -->
+              <!-- <div class="bs-example popover-demo" style="position: relative">
+                <div class="bs-example-popovers">
+                  <button id="pop1" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+                    Popover on right
+                  </button>
+                  <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on top
+                  </button>
+                  <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+                    Popover on bottom
+                  </button>
+                  <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+                    Popover on left
+                  </button>
+                </div>
+                <div class="popover bottom" id="example">
+                    <div class="arrow"></div>
+                    <h3 class="popover-title">Popover 顶部</h3>
+              
+                    <div class="popover-content">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                    </div>
+                  </div>
+              </div> -->
+
+
+              <!-- <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+              </div>
+
+              <div class="alert alert-danger fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p>123456</p>
+              </div> -->
+
+              <!-- <div class="bs-example">
+                <p>
+                  <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                    Link with href
+                  </a>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                    Button with data-target
+                  </button>
+                </p>
+                <div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+                  <div class="well">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                  </div>
+                </div>
+              </div> -->
+              
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://m15.360buyimg.com/mobilecms/s1062x420_jfs/t1/214309/30/9926/212128/61d3a663E061f9640/09ab0fd159edda28.jpg!cr_1053x420_4_0!q70.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://m15.360buyimg.com/mobilecms/s1062x420_jfs/t1/214309/30/9926/212128/61d3a663E061f9640/09ab0fd159edda28.jpg!cr_1053x420_4_0!q70.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://m15.360buyimg.com/mobilecms/s1062x420_jfs/t1/214309/30/9926/212128/61d3a663E061f9640/09ab0fd159edda28.jpg!cr_1053x420_4_0!q70.jpg" alt="">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        
+
+
+              <div class="bs-example" data-example-id="collapse-accordion">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                          Collapsible Group Item #1
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                        <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          Collapsible Group Item #2
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="true" style="">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Collapsible Group Item #3
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://3.swiper.com.cn/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+    </script>
+    <script>
+        // $(function () {
+        //     $('[data-toggle="tooltip"]').tooltip()
+        // })
+        // $("#pop1").click(function() {
+        //     $('#example').toggle()
+        // })
+        
+        // $(document).ready(function() {
+        //     $("#pop1").click(function() {
+        //         $("p").toggle(2000)
+        //     })
+        // })
+    </script>
+</body>
+
+</html>

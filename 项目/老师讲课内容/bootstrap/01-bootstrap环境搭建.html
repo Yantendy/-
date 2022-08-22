@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            background: #e1e1e1 !important;
+        }
+        .naver {
+            background-color: #444;
+            padding: 10px 0;
+        }
+        .naver img {
+            width: 120px;
+            height: auto;
+        }
+        .right {
+            display: flex;
+            justify-content: flex-end;
+            color: #ccc;
+            align-items: center;
+        }
+        ul {
+            height: 28px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .right li {
+            margin-left: 20px;
+        }
+        @media (min-width: 1400px) {
+            .container {
+                width: 1400px !important;
+            }
+            .left-list {
+                width: 1095px !important;
+            }
+            .right-text {
+                width: 290px !important;
+            }
+        }
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            .container {
+                width: 100% !important;
+            }
+            .left-list {
+                width: 1095px !important;
+            }
+            .right-text {
+                width: 290px !important;
+            }
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .right {
+                justify-content: flex-start;
+                margin-top: 10px;
+            }
+            .right li {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            .right {
+                justify-content: flex-start;
+                margin-top: 10px;
+            }
+            .right li {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+        }
+        .white {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        bootstrap
+            推荐使用3.4.1版本
+            一个可以执行在多端(移动端 pc端)上边的响应式ui框架 
+            一套代码 多段运行 移动端优先
+            
+            使用：
+                下载安装包
+                直接在官网下载bootstrap压缩包
+
+                使用npm安装
+                npm install bootstrap@3
+
+            在页面中我们需要引入bootstrap.min.css文件  bootstrap.min.js
+
+
+            注意:
+                写bootstrap时候我们需要添加容器 最外层编写container类名
+
+
+            栅格系统
+                当前页面布局形式 一行分为最多12列 如果超过的部分会自动换行
+                分为四个尺寸
+
+                                        col-lg-n         col-md-n        col-sm-n       col-xs-n
+                                        >=1200           >=992           >=768          <768
+                container尺寸           1170             970             750            自动
+
+                里边所写的n表示 1-12 正整数
+
+                我们控制当前的元素往前或者往后平移
+                    往前 
+                        col-lg-pull-n
+                        col-md-pull-n
+                        ...
+
+                    往后
+                        col-lg-push-n     
+                        col-md-push-n
+                        ...
+
+                        col-lg-offset-n
+                        ...
+
+                    push执行 一直后移 而不会掉落下来
+                    offset平移 如果超过12列 会自动换行
+
+
+     -->
+     <div class="naver">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+                    <img src="https://static2.cnodejs.org/public/images/cnodejs_light.svg" alt="">
+                </div>
+                <ul class="col-lg-4 col-md-6 col-sm-12 col-xs-12 right">
+                    <li>首页</li>
+                    <li>新手入门</li>
+                    <li>API</li>
+                    <li>关于</li>
+                    <li>注册</li>
+                    <li>登录</li>
+                </ul>
+            </div>
+        </div>
+     </div>
+     <div class="container" style="margin-top: 15px">
+        <div class="row">
+            <div class="col-lg-9 left-list">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <ul class="nav nav-pills">
+                            <li role="presentation" class="active"><a href="#">Home</a></li>
+                            <li role="presentation"><a href="#">Profile</a></li>
+                            <li role="presentation"><a href="#">Messages</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel-body">
+                      Panel content
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 white right-text" style="height: 500px"></div>
+        </div>
+     </div>
+</body>
+</html>

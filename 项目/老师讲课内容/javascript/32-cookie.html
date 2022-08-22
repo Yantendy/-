@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        cookie
+            cookie是用来保存相关变量数据
+            cookie是为了解决如何记住用户信息而发明
+            1 当用户访问网页时 他的名字可以存储在cookie中
+            2 下次访问该页面的时候 cookie会记住他的名字
+
+            如何设置和读取cookie数据
+                前提：
+                    想要使用或者操作cookie 页面必须在服务器中打开
+
+            设置cookie
+                格式
+                    document.cookie="key=value"
+
+                例如：
+                    document.cookie="username=zhangsan"
+
+
+                一次只能设置一条cookie
+                在设置的时候 每一条的后边可以书写对本条cookie的描述
+                    1 过期时间 expires
+                      默认是会话级别的时效性
+                      修改方式进行倒计时存储：
+                         七天免登录
+                            expires=时间对象
+                    2 存储路径 path
+                        默认按照目前的目录结构进行存储
+                        修改路径: 
+                            key=value;path=你要存储的路径
+
+                    3 在你设置cookie时候 不管存储的数据类型是什么 都会自动转化为字符串
+
+            读取cookie
+                document.cookie
+
+            修改cookie
+                在设置时候，如果设置同名的cookie就是修改
+
+            删除cookie
+                在设置一个cookie时候，如果设置的cookie过期时间比当前的时间早就删除了
+                document.cookie="username= ;expires= "
+     -->
+     <div>
+        用户名:<input type="text" id="admin">
+        密码: <input type="password" id="psw">
+     </div>
+     
+     <label for="">
+        <input type="checkbox" onchange="getState()" id="ipt">
+        七天免登录
+     </label>
+     <button onclick="login()">登录</button>
+     <script>
+        // document.cookie='username=zhangsan;expires=Thu, 18 Dec 2043 12:00:00 GMT;path=/'
+        // document.cookie="password=1236"
+        // console.log(new Date())
+        // document.cookie = "username=; expires=Thu Aug 18 2022 12:22:02 GMT";
+
+        //七天免登录
+        var admin=document.querySelector("#admin")
+        var psw=document.querySelector("#psw")
+        var ipt=document.querySelector('#ipt')
+
+        // 点击复选框获取当前选中状态
+        function getState() {
+            console.log(event.target.checked)
+            // 获取当前时间
+            var t=new Date()
+            // 当前时间加七天
+            var date=new Date(t.getTime()+7*24*60*60*1000)
+            if(event.target.checked) {
+                document.cookie=`admin=${admin.value}; expires=${date}`
+                document.cookie=`password=${psw.value}; expires=${date}`
+            }else {
+                document.cookie=`admin=; expires=Thu Aug 18 2021 12:22:02 GMT`
+                document.cookie=`password=; expires=Thu Aug 18 2021 12:22:02 GMT`
+            }
+        }
+
+        // 选择了七天免登录 下次进去用户名密码直接填入
+        if(document.cookie) {
+            admin.value=document.cookie.split(';')[0].split("=")[1]
+            psw.value=document.cookie.split(';')[1].split("=")[1]
+            ipt.checked=true
+        }
+
+        // 登录
+        function login() {
+            if(admin.value=='zhangsan'&&psw.value=='123456') {
+                window.location.href='https://www.baidu.com'
+            }
+        }
+
+
+
+     </script>
+</body>
+</html>

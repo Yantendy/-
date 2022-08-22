@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        什么是事件
+            事件是发生并得到处理的操作
+
+
+        事件三要素
+            事件源 事件类型 事件处理
+
+        事件绑定
+            方式：
+                1 内嵌式
+                    元素.on事件名=function() {
+
+                    }
+
+                2 行内式
+                    <元素 on事件名="函数名()"></元素>
+
+                3 事件监听
+                    1 addEventListener
+                        格式：
+                            DOM.addEventListener('事件名', function() {
+                                // 执行代码
+                            })
+                    2 attachEvent
+                        格式：
+                            DOM.attachEvent('on事件名',function() {
+                                // 执行代码
+                            })
+
+                    addEventListener
+                        1 在标准的浏览器使用
+                        2 可以同时给一个事件类型绑定多个事件处理函数
+                        3 多个事件处理函数的时候，执行顺序按照绑定的先后顺序执行
+
+                    attachEvent
+                        1 ie低版本中使用
+                        2 可以同时给一个事件类型绑定多个事件处理函数
+                        3 多个事件处理函数的时候，执行顺序按照绑定的先后顺序执行
+
+
+            事件解绑
+                1 非监听形式的事件解绑
+                    因为绑定事件是赋值行为 所以直接再次给元素进行赋值 为null
+                    这个时候就可以把之前事件的函数覆盖掉
+
+                2 监听形式的事件解绑
+                    removeEventListener('事件类型',要解绑的事件处理函数)
+                    ie8：
+                        detachEvent('on事件类型',要解绑的事件处理函数)
+
+
+
+                
+
+     -->
+
+     <div id="app">
+        11111
+     </div>
+     <!-- <button onmouseenter="move()">关闭</button> -->
+     <button id="btn">关闭</button>
+
+     <script>
+        var app=document.querySelector('#app')
+        // app.onclick=function() {
+        //     console.log(1111)
+        // }
+        // var btn=document.querySelector('button')
+        var btn=document.getElementById('btn')
+        var fun=function() {
+            alert(1111)
+        }
+        btn.addEventListener('click',fun)
+        app.addEventListener('click',function() {
+            btn.removeEventListener('click',fun)
+        })
+
+
+        // 事件绑定
+        // app.onclick=function() {
+        //     btn.onclick=null
+        // }
+        // btn.onclick=function() {
+        //     alert(111)
+        //     // btn.onclick=null
+        // }
+        // btn.attachEvent('onclick', function() {
+        //     // console.log('当前元素被点击')
+        //     alert('1111')
+        // })
+        // btn.addEventListener('mouseenter',function() {
+        //     console.log('鼠标进入')
+        // })
+        // btn.addEventListener('mouseleave',function() {
+        //     console.log('鼠标离开')
+        // })
+        // btn.onmouseenter=function() {
+        //     console.log('鼠标进入')
+        // }
+        // btn.onmouseleave=function() {
+        //     console.log('鼠标离开')
+        // }     
+
+        // function move() {
+        //     console.log(1111)
+        // }
+        
+     </script>
+</body>
+</html>

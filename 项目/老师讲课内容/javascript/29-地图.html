@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        地图
+            1 使用原生js
+                navigator  定位
+                    navigator.geolocation.getCurrentPosition(success,fail,options)
+                    success  成功回调函数
+                    fail    失败回调函数
+                    options  地图请求配置项
+
+                    获取当前所在经纬度 地理位置
+
+            2 使用地图插件
+                百度地图
+                    1 注册百度账号
+                    2 申请成为开发者
+                    3 获取密钥
+                    4 引入js文件 并且填入你的密钥
+                    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=您的密钥">
+                腾讯地图
+                高德地图
+     -->
+
+
+     <script>
+        function success(pos) {
+            console.log(pos.coords)
+            console.log('经度'+pos.coords.longitude)
+            console.log('纬度'+pos.coords.latitude)
+        }
+        function error(err) {
+            console.log(err)
+        } 
+        var options={
+            enableHighAccurary: true,
+            timeout: 5000
+        }
+        navigator.geolocation.getCurrentPosition(success,error,options)
+     </script>
+</body>
+</html>

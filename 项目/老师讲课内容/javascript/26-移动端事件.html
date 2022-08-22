@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: #efefef;
+            
+        }
+        #app {
+            position: relative;
+            background: #fff;
+            height: 50px;
+            line-height: 50px;
+            text-align: left;
+            padding-left: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .delete {
+            position: absolute;
+            width: 80px;
+            height: 50px;
+            right: -80px;
+            top: 0;
+            line-height: 50px;
+            background: red;
+            color: #fff;
+            text-align: center;
+        }
+        .shape {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: #fff;
+            background: red;
+            text-align: center;
+            line-height: 50px;
+            font-size: 12px;
+            right: 15px;
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        移动端事件
+            touchstart
+                当按下手指时，触发ontouchstart
+            touchmove
+                当移动手指时，触发ontouchmove
+            touchend
+                当移走手指时，触发ontouchend
+
+            以上事件是专门针对于移动端的事件
+            但是之前我们学习的相关pc事件 是可以正常在移动端执行
+     -->
+     <!-- <div id="app">
+        测试
+        <div class="delete" onclick="del1()">删除</div>
+     </div> -->
+
+     <div class="shape">
+        导航
+     </div>
+     <script>
+
+        var shape=document.querySelector('.shape')
+        shape.ontouchstart=function() {
+            console.log(event.touches[0].pageX)
+            console.log(event.touches[0].pageY)
+        }
+
+        shape.ontouchmove=function() {
+            // console.log(event.touches[0].pageX, window.outerHeight-50, window.outerWidth-15)
+            // console.log(window.outerWidth-event.touches[0].pageX-50, window.outerHeight-event.touches[0].pageY-50)
+            var width=window.outerWidth-event.touches[0].pageX-50
+            var height=window.outerHeight-event.touches[0].pageY-50
+            console.log(width,height, 100)
+            shape.style.right=width+'px'
+            shape.style.bottom=height+'px'
+            // console.log(event.touches[0].pageY)
+            console.log(shape.style)
+        }
+
+
+        // var app=document.querySelector("#app")
+        // var del=document.querySelector('.delete')
+        // app.ontouchstart=function() {
+        //     console.log('手指放在屏幕上')
+        //     x=event.touches[0].pageX
+        // }
+        // app.ontouchmove=function() {
+        //     console.log('手指在手机上边移动')
+        //     if(x>event.touches[0].pageX&&(x-event.touches[0].pageX)<=80) {
+        //         console.log(x-event.touches[0].pageX)
+        //         del.style.right=(-80+(x-event.touches[0].pageX))+'px'
+        //     }else {
+        //         console.log('右滑')
+        //     }
+           
+        // }
+        // app.ontouchend=function() {
+        //     console.log('手指离开手机')
+        // }
+        // function del1() {
+        //     event.target.parentNode.remove()
+        // }
+     </script>
+</body>
+</html>

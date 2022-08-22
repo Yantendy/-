@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav {
+            display: flex;
+            font-size: 20px;
+        }
+
+        .nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        #app {
+            width: 680px;
+            margin: 100px auto;
+        }
+
+        .item {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul class="nav" onclick="tab()">
+            <!-- <li onclick="tab(0)">穷游攻略</li>
+            <li onclick="tab(1)">结伴同游</li>
+            <li onclick="tab(2)">版面列表</li> -->
+            <li data-index="0">穷游攻略</li>
+            <li data-index="1">结伴同游</li>
+            <li data-index="2">版面列表</li>
+        </ul>
+        <div class="items">
+            <div class="item">
+
+            </div>
+            <div class="item">
+                2
+            </div>
+            <div class="item">
+                3
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // var navs=['穷游攻略','结伴同游','版面列表']
+        var nav = document.querySelector('.nav')
+        var items = document.querySelectorAll(".item")
+        // for(var i=0; i<navs.length; i++) {
+        //     nav.innerHTML+=`
+        //         <li onclick="tab(${i})">${navs[i]}</li>
+        //     `
+        // }
+        // function tab(index) {
+        //     // console.log(items[index])
+        //     for(var i=0; i<items.length; i++) {
+        //         items[i].classList.remove('active')
+        //     }
+        //     items[index].classList.add('active')
+        // }
+        // tab(0)
+        function tab(num) {
+            for (var i = 0; i < items.length; i++) {
+                items[i].classList.remove('active')
+            }
+            items[num == 0 ? 0 : event.target.dataset.index].classList.add('active')
+        }
+        tab(0)
+
+        // 数据
+        var stars=['★','★','★','★','★']
+        console.log()
+        var lists = [
+            {
+                "id": "3644795",
+                "subject": "世界尽头的灵感之旅｜加拿大大西洋四省房车亲子游，10600公里，117小时驱车，30天（含房车详细攻略）",
+                "url": "https://bbs.qyer.com/thread-3644795-1.html",
+                "uid": "9460",
+                "userurl": "https://www.qyer.com/u/9460",
+                "face": "https://pic.qyer.com/avatar/000/00/94/60/200?v=1525129242",
+                "userauth": {
+                    "type": "member",
+                    "adept_area": "",
+                    "auth_type": "2",
+                    "desc": "穷游精华作者",
+                    "info": {
+                        "attestation": "穷游精华作者"
+                    }
+                },
+                "username": "左手",
+                "digest": "3",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "加拿大",
+                "forumsurl": "https://bbs.qyer.com/forum-54-1.html",
+                "created": "1659556255",
+                "have_plan": "0",
+                "last_post_time": "7小时前",
+                "total_replies": 17,
+                "likeNumber": 371,
+                "viewNumber": "20998",
+                "post": "10600公里，117小时驱车，30天，一台房车。我们曾经自驾横穿东西两岸，在努纳武特的冰川之间穿梭，在西北漫天极光下许愿。而这个暑假的三十天，是我们一家三口第一次踏上大西洋四省，为走过加拿",
+                "image": "https://pic.qyer.com/album/user/4061/54/RUlTQx8DZEk/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                    {
+                        "id": 10530,
+                        "name": "家庭",
+                        "url": "https://www.qyer.com/tag/y79l4-HrFd4/bbs"
+                    },
+                    {
+                        "id": 10535,
+                        "name": "自驾",
+                        "url": "https://www.qyer.com/tag/A91yF3JbKcw/bbs"
+                    },
+                    {
+                        "id": 11087,
+                        "name": "国家公园",
+                        "url": "https://www.qyer.com/tag/1EvSm9is6A4/bbs"
+                    },
+                    {
+                        "id": 10525,
+                        "name": "摄影",
+                        "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                    },
+                    {
+                        "id": 8363,
+                        "name": "加拿大",
+                        "url": "https://www.qyer.com/tag/6UzigfhtBEw/bbs"
+                    },
+                    {
+                        "id": 11007,
+                        "name": "房车",
+                        "url": "https://www.qyer.com/tag/hkucRHb249I/bbs"
+                    },
+                    {
+                        "id": 8468,
+                        "name": "纽芬兰岛",
+                        "url": "https://www.qyer.com/tag/ied3mX6y2HU/bbs"
+                    }
+                ]
+            },
+            {
+                "id": "3594413",
+                "subject": "岁月不可辜负之七-----继续黔行之云舍村与梵净山的六日",
+                "url": "https://bbs.qyer.com/thread-3594413-1.html",
+                "uid": "1314579",
+                "userurl": "https://www.qyer.com/u/1314579",
+                "face": "https://pic.qyer.com/avatar/001/31/45/79/200?v=1472618042",
+                "userauth": {
+                    "type": "member",
+                    "adept_area": "",
+                    "auth_type": "2",
+                    "desc": "穷游资深精华作者",
+                    "info": {
+                        "attestation": "穷游资深精华作者"
+                    }
+                },
+                "username": "jane007",
+                "digest": "1",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "带父母旅行",
+                "forumsurl": "https://bbs.qyer.com/forum-123-1.html",
+                "created": "1641025660",
+                "have_plan": "1",
+                "last_post_time": "48分钟前",
+                "total_replies": 79,
+                "likeNumber": 272,
+                "viewNumber": "28345",
+                "post": "如今似乎连日历都不用翻，一年就过去了！幸好有些留存的记忆，才知道2021也是独一无二的。新年依旧没有奢望，愿望简单而朴实，健康快乐，几分自由！云舍村、梵净山，已成2021的往事。往事并不都",
+                "image": "https://pic.qyer.com/album/user/4025/14/RUlXRxsDZkk/index/161x107",
+                "hotel_recommend": 0,
+                "tag": []
+            },
+            {
+                "id": "3598717",
+                "subject": "TMB的故事 一个女生的环勃朗峰徒步日记 （大量攻略Tips 已完结）",
+                "url": "https://bbs.qyer.com/thread-3598717-1.html",
+                "uid": "11141045",
+                "userurl": "https://www.qyer.com/u/11141045",
+                "face": "https://pic.qyer.com/avatar/011/14/10/45/200?v=1566645878",
+                "userauth": "",
+                "username": "小安-Anne",
+                "digest": "2",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "环游欧洲",
+                "forumsurl": "https://bbs.qyer.com/forum-112-1.html",
+                "created": "1643710666",
+                "have_plan": "1",
+                "last_post_time": "1天前",
+                "total_replies": 126,
+                "likeNumber": 895,
+                "viewNumber": "42143",
+                "post": "前言三年前偶然看到TMB的旅行团路线，吸引了当时正想改变生活、环游世界的我。资料查得越多越感兴趣，不知为何萌生一个大胆的想法，做一件从来没做过的事吧。一个从来没徒步过、没自由行过的人",
+                "image": "https://pic.qyer.com/album/user/4030/25/RUlWQhgCZ0k/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                    {
+                        "id": 47013,
+                        "name": "TMB",
+                        "url": "https://www.qyer.com/tag/WJ3W-mN8OiY/bbs"
+                    },
+                    {
+                        "id": 12508,
+                        "name": "勃朗峰",
+                        "url": "https://www.qyer.com/tag/O61CBkS7UCs/bbs"
+                    },
+                    {
+                        "id": 35634,
+                        "name": "阿尔卑斯山徒步",
+                        "url": "https://www.qyer.com/tag/cmgLK4HAotk/bbs"
+                    },
+                    {
+                        "id": 10533,
+                        "name": "独自旅行",
+                        "url": "https://www.qyer.com/tag/GN0EV-mELIU/bbs"
+                    },
+                    {
+                        "id": 14800,
+                        "name": "徒步",
+                        "url": "https://www.qyer.com/tag/LU6MokIBRVc/bbs"
+                    }
+                ]
+            },
+            {
+                "id": "3578533",
+                "subject": "​岁月不可辜负之六-----再次黔行 加榜梯田肇兴侗寨小七孔包车+自驾之七日",
+                "url": "https://bbs.qyer.com/thread-3578533-1.html",
+                "uid": "1314579",
+                "userurl": "https://www.qyer.com/u/1314579",
+                "face": "https://pic.qyer.com/avatar/001/31/45/79/200?v=1472618042",
+                "userauth": {
+                    "type": "member",
+                    "adept_area": "",
+                    "auth_type": "2",
+                    "desc": "穷游资深精华作者",
+                    "info": {
+                        "attestation": "穷游资深精华作者"
+                    }
+                },
+                "username": "jane007",
+                "digest": "2",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "带父母旅行",
+                "forumsurl": "https://bbs.qyer.com/forum-123-1.html",
+                "created": "1632295066",
+                "have_plan": "1",
+                "last_post_time": "42分钟前",
+                "total_replies": 90,
+                "likeNumber": 414,
+                "viewNumber": "22274",
+                "post": "黔东南前年去年连着去了两次，有些地方尚未完全商业化、民风仍然淳朴，依稀有点二十年前云南的样子。去年去肇兴侗寨时就留意到加榜梯田，但因机缘不对，没去成。后来听说加榜梯田也许不久会成为",
+                "image": "https://pic.qyer.com/album/user/4006/11/RUlVRBsGYkE/index/161x107",
+                "hotel_recommend": 0,
+                "tag": []
+            },
+            {
+                "id": "3602670",
+                "subject": "打卡16个去处的2021年之下半年（苏州、山西全境、南京郊外、宏村西递太平湖）",
+                "url": "https://bbs.qyer.com/thread-3602670-1.html",
+                "uid": "153890",
+                "userurl": "https://www.qyer.com/u/153890",
+                "face": "https://pic.qyer.com/avatar/000/15/38/90/200?v=1448957023",
+                "userauth": {
+                    "type": "member",
+                    "adept_area": "欧洲",
+                    "auth_type": "2",
+                    "desc": "穷游资深精华作者",
+                    "info": {
+                        "attestation": "穷游资深精华作者"
+                    }
+                },
+                "username": "zygao",
+                "digest": "3",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "中国内地",
+                "forumsurl": "https://bbs.qyer.com/forum-51-1.html",
+                "created": "1646231669",
+                "have_plan": "0",
+                "last_post_time": "2天前",
+                "total_replies": 140,
+                "likeNumber": 428,
+                "viewNumber": "31789",
+                "post": "有多远，走多远。版主置顶&amp;3星加精！2021年依然是疫情满满，年底回顾一下，身在上海的我居然打卡了16个去处（其中外地是9处），我也真没闲着哦。 \n不过这16个去处多数是短途，甚至是上海本",
+                "image": "https://pic.qyer.com/album/user/4028/16/RUlXShsBZkg/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                    {
+                        "id": 10530,
+                        "name": "家庭",
+                        "url": "https://www.qyer.com/tag/y79l4-HrFd4/bbs"
+                    },
+                    {
+                        "id": 10525,
+                        "name": "摄影",
+                        "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                    },
+                    {
+                        "id": 10535,
+                        "name": "自驾",
+                        "url": "https://www.qyer.com/tag/A91yF3JbKcw/bbs"
+                    }
+                ]
+            },
+            {
+                "id": "3597242",
+                "subject": "完工-打卡16个去处的2021年之上半年（福建永福镇樱花、罗平黄果树、林芝桃花、昆明蓝花楹、新疆薰衣草独库）",
+                "url": "https://bbs.qyer.com/thread-3597242-1.html",
+                "uid": "153890",
+                "userurl": "https://www.qyer.com/u/153890",
+                "face": "https://pic.qyer.com/avatar/000/15/38/90/200?v=1448957023",
+                "userauth": {
+                    "type": "member",
+                    "adept_area": "欧洲",
+                    "auth_type": "2",
+                    "desc": "穷游资深精华作者",
+                    "info": {
+                        "attestation": "穷游资深精华作者"
+                    }
+                },
+                "username": "zygao",
+                "digest": "3",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "中国内地",
+                "forumsurl": "https://bbs.qyer.com/forum-51-1.html",
+                "created": "1642687134",
+                "have_plan": "0",
+                "last_post_time": "2天前",
+                "total_replies": 221,
+                "likeNumber": 452,
+                "viewNumber": "35193",
+                "post": "本帖完工，更新到6月新疆中南部，其余几处另开一贴吧。有多远，走多远。感谢版主评了3星&amp;置顶！2021年依然是疫情满满，年底回顾一下，身在上海的我居然打卡了16个去处（其中外地是9处），我",
+                "image": "https://pic.qyer.com/album/user/4032/13/RUlWQBsEZk8/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                    {
+                        "id": 10525,
+                        "name": "摄影",
+                        "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                    },
+                    {
+                        "id": 10535,
+                        "name": "自驾",
+                        "url": "https://www.qyer.com/tag/A91yF3JbKcw/bbs"
+                    }
+                ]
+            },
+            {
+                "id": "3592464",
+                "subject": "【藏地手记】冬回拉萨，寻梦南迦巴瓦（雪山四部曲之壹）",
+                "url": "https://bbs.qyer.com/thread-3592464-1.html",
+                "uid": "8743373",
+                "userurl": "https://www.qyer.com/u/8743373",
+                "face": "https://pic.qyer.com/avatar/008/74/33/73/200?v=1645166202",
+                "userauth": {
+                    "type": "member",
+                    "adept_area": "",
+                    "auth_type": "2,",
+                    "desc": "穷游资深精华作者，穷游精华Biu主",
+                    "info": {
+                        "attestation": "穷游资深精华作者，穷游精华Biu主"
+                    }
+                },
+                "username": "AllenL艾伦伦",
+                "digest": "2",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "中国内地",
+                "forumsurl": "https://bbs.qyer.com/forum-51-1.html",
+                "created": "1639922716",
+                "have_plan": "1",
+                "last_post_time": "3天前",
+                "total_replies": 12,
+                "likeNumber": 451,
+                "viewNumber": "22885",
+                "post": "预览 | 冬日暖阳，令人向往的西藏那个冬天最任性的决定，就是独自去西藏~时隔这么多年再次返回日光之城，领略浓郁而独特的藏地风情，感受古老圣地的崭新变化，更有机会深入林芝地区，踏上寻觅南",
+                "image": "https://pic.qyer.com/album/user/4023/6/RUlXQRoBYUg/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                    {
+                        "id": 10533,
+                        "name": "独自旅行",
+                        "url": "https://www.qyer.com/tag/GN0EV-mELIU/bbs"
+                    },
+                    {
+                        "id": 10543,
+                        "name": "美食",
+                        "url": "https://www.qyer.com/tag/DSiRh-ie3ag/bbs"
+                    },
+                    {
+                        "id": 10525,
+                        "name": "摄影",
+                        "url": "https://www.qyer.com/tag/TrH5qG1S0Wo/bbs"
+                    },
+                    {
+                        "id": 14249,
+                        "name": "西藏",
+                        "url": "https://www.qyer.com/tag/VY1vDf7Y2k0/bbs"
+                    },
+                    {
+                        "id": 14276,
+                        "name": "拉萨",
+                        "url": "https://www.qyer.com/tag/LKCc5UrlrcE/bbs"
+                    },
+                    {
+                        "id": 16872,
+                        "name": "林芝",
+                        "url": "https://www.qyer.com/tag/Q0uso7pdWt8/bbs"
+                    },
+                    {
+                        "id": 37554,
+                        "name": "人文摄影",
+                        "url": "https://www.qyer.com/tag/D6qLRZrbR4Y/bbs"
+                    },
+                    {
+                        "id": 10553,
+                        "name": "自然风光",
+                        "url": "https://www.qyer.com/tag/NRdFLFlZxQU/bbs"
+                    },
+                    {
+                        "id": 42762,
+                        "name": "深度自由行",
+                        "url": "https://www.qyer.com/tag/xtvcc13mxSQ/bbs"
+                    },
+                    {
+                        "id": 14625,
+                        "name": "攻略",
+                        "url": "https://www.qyer.com/tag/0bWH_eijqYA/bbs"
+                    }
+                ]
+            },
+            {
+                "id": "3582548",
+                "subject": "我是你的俘虏【跟新疆私奔】喀什、帕米尔、喀纳斯、禾木、布尔津、江布拉克14天独行",
+                "url": "https://bbs.qyer.com/thread-3582548-1.html",
+                "uid": "2264590",
+                "userurl": "https://www.qyer.com/u/2264590",
+                "face": "https://pic.qyer.com/avatar/002/26/45/90/200?v=1515080275",
+                "userauth": "",
+                "username": "EllisInWL",
+                "digest": "2",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "中国内地",
+                "forumsurl": "https://bbs.qyer.com/forum-51-1.html",
+                "created": "1633776375",
+                "have_plan": "0",
+                "last_post_time": "3天前",
+                "total_replies": 55,
+                "likeNumber": 5288,
+                "viewNumber": "292690",
+                "post": "前言“谁能凭爱意要富士山私有？”我不知道。谁能凭爱意要新疆私有？我能。这是我的第三次新疆之旅，我决定一个人奔向它的时候，它就是我的，我也是它的。这是我人生的第31个秋天，之前30年因求",
+                "image": "https://pic.qyer.com/album/user/4009/65/RUlVSxwCY0k/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                    {
+                        "id": 10533,
+                        "name": "独自旅行",
+                        "url": "https://www.qyer.com/tag/GN0EV-mELIU/bbs"
+                    },
+                    {
+                        "id": 14800,
+                        "name": "徒步",
+                        "url": "https://www.qyer.com/tag/LU6MokIBRVc/bbs"
+                    },
+                    {
+                        "id": 14195,
+                        "name": "新疆",
+                        "url": "https://www.qyer.com/tag/Bj7o69aizY0/bbs"
+                    },
+                    {
+                        "id": 17612,
+                        "name": "南疆",
+                        "url": "https://www.qyer.com/tag/DcbBFuI1J-c/bbs"
+                    },
+                    {
+                        "id": 11685,
+                        "name": "喀纳斯",
+                        "url": "https://www.qyer.com/tag/4LZmE1EuHr4/bbs"
+                    },
+                    {
+                        "id": 14136,
+                        "name": "禾木",
+                        "url": "https://www.qyer.com/tag/BTrhj9M84WI/bbs"
+                    },
+                    {
+                        "id": 69824,
+                        "name": "布尔津",
+                        "url": "https://www.qyer.com/tag/LV0CLxfBRqg/bbs"
+                    }
+                ]
+            },
+            {
+                "id": "3615017",
+                "subject": "【欧洲行记1】比卢法10日全程沙发客游记",
+                "url": "https://bbs.qyer.com/thread-3615017-1.html",
+                "uid": "9446891",
+                "userurl": "https://www.qyer.com/u/9446891",
+                "face": "https://pic.qyer.com/avatar/009/44/68/91/200?v=1654051319",
+                "userauth": "",
+                "username": "ChriaJIA",
+                "digest": "1",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "环游欧洲",
+                "forumsurl": "https://bbs.qyer.com/forum-112-1.html",
+                "created": "1653997826",
+                "have_plan": "1",
+                "last_post_time": "3天前",
+                "total_replies": 6,
+                "likeNumber": 133,
+                "viewNumber": "8395",
+                "post": "系列第二篇（一星精华）：【欧洲行记2】瑞典芬兰挪威9日极光之旅（沙发客+邮轮+青旅）https://bbs.qyer.com/thread-3641836-1.html系列第三篇正在更新中，欢迎关注：【欧洲行记3】摩洛哥西撒哈",
+                "image": "https://pic.qyer.com/album/user/4049/45/RUlRSx4CYE8/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                    {
+                        "id": 10533,
+                        "name": "独自旅行",
+                        "url": "https://www.qyer.com/tag/GN0EV-mELIU/bbs"
+                    },
+                    {
+                        "id": 11492,
+                        "name": "沙发客",
+                        "url": "https://www.qyer.com/tag/dWFm2FTYryQ/bbs"
+                    },
+                    {
+                        "id": 24336,
+                        "name": "背包客",
+                        "url": "https://www.qyer.com/tag/EmrFoV44zuM/bbs"
+                    },
+                    {
+                        "id": 5366,
+                        "name": "比利时",
+                        "url": "https://www.qyer.com/tag/Y6qZD2DJo6M/bbs"
+                    },
+                    {
+                        "id": 5856,
+                        "name": "卢森堡",
+                        "url": "https://www.qyer.com/tag/IpVyPley_U8/bbs"
+                    },
+                    {
+                        "id": 3516,
+                        "name": "法国",
+                        "url": "https://www.qyer.com/tag/5farOGRS2Nc/bbs"
+                    }
+                ]
+            },
+            {
+                "id": "3584908",
+                "subject": "“意”外之旅-疫情后独游北意大利18天全公共交通（部分景点价格大调整）",
+                "url": "https://bbs.qyer.com/thread-3584908-1.html",
+                "uid": "10415946",
+                "userurl": "https://www.qyer.com/u/10415946",
+                "face": "https://pic.qyer.com/avatar/010/41/59/46/200?v=1550681290",
+                "userauth": {
+                    "type": "member",
+                    "adept_area": "荷兰,德国,法国,加拿大,波兰,西班牙,葡萄牙",
+                    "auth_type": "4",
+                    "desc": "问答探路者    ",
+                    "info": {
+                        "attestation": "问答探路者    "
+                    }
+                },
+                "username": "Chen_mm",
+                "digest": "0",
+                "heated_discuss": "0",
+                "type": "1",
+                "typename": "游记",
+                "forumsname": "意大利/梵蒂冈/圣马力诺/马耳他",
+                "forumsurl": "https://bbs.qyer.com/forum-13-1.html",
+                "created": "1634811925",
+                "have_plan": "1",
+                "last_post_time": "3天前",
+                "total_replies": 43,
+                "likeNumber": 31,
+                "viewNumber": "2945",
+                "post": "先插入以往游记攻略：2020.9.27-10.07 疫情第一波后，在第二波来临前出行，再游德国：走在德国西部边境线(含卢森堡+法国+瑞士)，直到南德巴伐利亚小镇(自驾13天)https://bbs.qyer.com/thread-34",
+                "image": "https://pic.qyer.com/album/user/4012/15/RUlUQBsCYkg/index/161x107",
+                "hotel_recommend": 0,
+                "tag": [
+                    {
+                        "id": 3793,
+                        "name": "罗马",
+                        "url": "https://www.qyer.com/tag/iP8NcNpJGsU/bbs"
+                    },
+                    {
+                        "id": 3944,
+                        "name": "佩鲁贾",
+                        "url": "https://www.qyer.com/tag/K0ZsPZ4orz0/bbs"
+                    },
+                    {
+                        "id": 3797,
+                        "name": "佛罗伦萨",
+                        "url": "https://www.qyer.com/tag/bJbDgzASF90/bbs"
+                    },
+                    {
+                        "id": 4023,
+                        "name": "比萨",
+                        "url": "https://www.qyer.com/tag/9LgnVmHTKzw/bbs"
+                    },
+                    {
+                        "id": 4008,
+                        "name": "五渔村",
+                        "url": "https://www.qyer.com/tag/IhSD8hm_0rc/bbs"
+                    },
+                    {
+                        "id": 3958,
+                        "name": "热那亚",
+                        "url": "https://www.qyer.com/tag/9aNlVlHGwPM/bbs"
+                    },
+                    {
+                        "id": 3899,
+                        "name": "拉文纳",
+                        "url": "https://www.qyer.com/tag/BjnKVfrRdik/bbs"
+                    },
+                    {
+                        "id": 15143,
+                        "name": "圣马力诺",
+                        "url": "https://www.qyer.com/tag/VmnlGxzB60c/bbs"
+                    },
+                    {
+                        "id": 3848,
+                        "name": "博洛尼亚",
+                        "url": "https://www.qyer.com/tag/s-dueUP35tM/bbs"
+                    },
+                    {
+                        "id": 20385,
+                        "name": "天空之城",
+                        "url": "https://www.qyer.com/tag/VqiARxoxhng/bbs"
+                    }
+                ]
+            }
+        ]
+        for (var i = 0; i < lists.length; i++) {
+            items[0].innerHTML += `
+                <div class="yl-con"><i class="ylc-line ylcl"></i>
+                    <div class="con-inner xfix">
+                        <span data-tid="3644795" data-index="0"
+                            class="inbg yl-close index-tooltip" data-title="并不感兴趣"
+                            data-bn-ipg="bbs-index-topiclist-close" ra-arg="false|3644795" onclick="del()">×</span>
+                        <a
+                            href="https://www.qyer.com/u/9460" target="_blank"
+                            data-bn-ipg="bbs-index-topiclist-writerpic-9460" class="anchtoup" data-atrcln="dl-name"><img
+                                class="con-pic" src="${lists[i].face}"></a>
+                        <dl class="con-detail">
+                            <dt class="dl-title"><a href="https://www.qyer.com/u/9460" class="dl-name xc32 aptle"
+                                    target="_blank" data-bn-ipg="bbs-index-topiclist-writername-9460">左手</a>
+                                    <img style="width: 10px; height: 10px" class="${lists[i].userauth.length==0?'item':''}"
+                                    src="img/1.png"
+                                    class="indexauthen index-tooltip" data-title="穷游精华作者"
+                                    data-url="//www.qyer.com/u/member/xuan"></dt>
+                            <dd class="dl-des"><span class="dd-inw">在<strong><a
+                                            href="https://bbs.qyer.com/forum-54-1.html" target="_blank"
+                                            data-bn-ipg="bbs-index-topiclist-board-加拿大">加拿大</a></strong>发布的游记<i
+                                        class="bicf praise"></i><em class="xnum xc32">370</em>人赞</span><span
+                                    class="con-time"><i class="inbg zhhf"></i>最后回复于<b class="xnum">7小时前</b></span></dd>
+                            <dd class="xcfb">
+                                <div class="tle-con">
+                                    <p><a class="tc-title aptle" href="https://bbs.qyer.com/thread-3644795-1.html"
+                                            target="_blank" data-bn-ipg="bbs-index-topiclist-title-3644795"
+                                            ra_arg="false|3644795"><span
+                                                class="elite" title="3级精华">
+                                                ${stars.slice(0,lists[i].digest).join(' ')}
+                                                精华
+                                                </span></a></p>
+                                    <p class="tc-desc" data-iscount="1">
+                                        10600公里，117小时驱车，30天，一台房车。我们曾经自驾横穿东西两岸，在努纳武特的冰川之间穿梭，在西北漫天极光下许愿。而这个暑假的...</p>
+                                </div><a href="https://bbs.qyer.com/thread-3644795-1.html" class="tc-awrap anchtoup"
+                                    data-atrcln="tc-title" target="_blank" data-bn-ipg="bbs-index-topiclist-pic-3644795"
+                                    ra_arg="false|3644795"><img class="tc-rimg"
+                                        src="${lists[i].image}"></a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            `
+        }
+
+        function del() {
+            event.target.parentNode.parentNode.remove()
+        }
+
+
+        var travel=[
+  {
+    "id": "3645762",
+    "together_info": {
+      "id": "929019",
+      "created": "1660099254",
+      "modified": "1660099510",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-25",
+      "departure_time_latest": "2022-08-31",
+      "return_time": "1661961599",
+      "during": "7",
+      "place": "1-11,2-11800,1-11,2-11706,3-1474967,1-11,2-11778,3-1474949,1-11,2-11759,3-1474979,1-11,2-11744,3-1487955",
+      "uid": "12999666",
+      "tid": "3645762",
+      "pid": "21075374",
+      "biu_id": "2257869",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/chengdu/",
+          "placeid": "2-11800",
+          "cn_name": "成都",
+          "en_name": "Chengdu",
+          "id": "11800",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/ganzizhou/",
+          "placeid": "2-11706",
+          "cn_name": "甘孜州",
+          "en_name": "Ganzizhou",
+          "id": "11706",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/poi/V2UJZ1FhBzJTbVI5Cms/",
+          "placeid": "3-1474967",
+          "cn_name": "理塘",
+          "en_name": "",
+          "id": "1474967",
+          "type": "3",
+          "parent": {
+            "placeurl": "//place.qyer.com/ganzizhou/",
+            "placeid": "2-11706",
+            "cn_name": "甘孜州",
+            "en_name": "Ganzizhou",
+            "id": "11706",
+            "type": "2",
+            "parent": {
+              "placeurl": "//place.qyer.com/china/",
+              "placeid": "1-11",
+              "cn_name": "中国",
+              "en_name": "China",
+              "id": "11",
+              "type": "1"
+            }
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/seda-11778/",
+          "placeid": "2-11778",
+          "cn_name": "色达",
+          "en_name": "Seda",
+          "id": "11778",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/poi/V2UJZ1FhBzJTbVI7CmU/",
+          "placeid": "3-1474949",
+          "cn_name": "色达喇荣五明佛学院",
+          "en_name": "",
+          "id": "1474949",
+          "type": "3",
+          "parent": {
+            "placeurl": "//place.qyer.com/seda-11778/",
+            "placeid": "2-11778",
+            "cn_name": "色达",
+            "en_name": "Seda",
+            "id": "11778",
+            "type": "2",
+            "parent": {
+              "placeurl": "//place.qyer.com/china/",
+              "placeid": "1-11",
+              "cn_name": "中国",
+              "en_name": "China",
+              "id": "11",
+              "type": "1"
+            }
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/litang/",
+          "placeid": "2-11759",
+          "cn_name": "理塘",
+          "en_name": "Litang",
+          "id": "11759",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/poi/V2UJZ1FhBzJTbVI4CmU/",
+          "placeid": "3-1474979",
+          "cn_name": "格聂神山",
+          "en_name": "",
+          "id": "1474979",
+          "type": "3",
+          "parent": {
+            "placeurl": "//place.qyer.com/litang/",
+            "placeid": "2-11759",
+            "cn_name": "理塘",
+            "en_name": "Litang",
+            "id": "11759",
+            "type": "2",
+            "parent": {
+              "placeurl": "//place.qyer.com/china/",
+              "placeid": "1-11",
+              "cn_name": "中国",
+              "en_name": "China",
+              "id": "11",
+              "type": "1"
+            }
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/jinchuan/",
+          "placeid": "2-11744",
+          "cn_name": "金川",
+          "en_name": "Jinchuan",
+          "id": "11744",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/poi/V2UJZ1FuBzFTbVI6Cmk/",
+          "placeid": "3-1487955",
+          "cn_name": "情人海",
+          "en_name": "",
+          "id": "1487955",
+          "type": "3",
+          "parent": {
+            "placeurl": "//place.qyer.com/jinchuan/",
+            "placeid": "2-11744",
+            "cn_name": "金川",
+            "en_name": "Jinchuan",
+            "id": "11744",
+            "type": "2",
+            "parent": {
+              "placeurl": "//place.qyer.com/china/",
+              "placeid": "1-11",
+              "cn_name": "中国",
+              "en_name": "China",
+              "id": "11",
+              "type": "1"
+            }
+          }
+        }
+      ]
+    },
+    "subject": "野性川西自驾穿越活动：情人海、牛肝马肺海、莫斯卡、格聂南线（格聂之眼、丁真家乡）",
+    "url": "https://bbs.qyer.com/thread-3645762-1.html",
+    "uid": "12999666",
+    "userurl": "https://www.qyer.com/u/12999666",
+    "face": "https://pic.qyer.com/avatar/012/99/96/66/200?v=1650691643",
+    "userauth": "",
+    "username": "傲霜斗雪-陈帝灰",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660099252",
+    "have_plan": "0",
+    "last_post_time": "37分钟前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": "2",
+    "image": ""
+  },
+  {
+    "id": "3645761",
+    "together_info": {
+      "id": "929018",
+      "created": "1660099251",
+      "modified": "1660099507",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-10",
+      "departure_time_latest": "2022-08-17",
+      "return_time": "1660751999",
+      "during": "8",
+      "place": "1-11,2-24912",
+      "uid": "12560509",
+      "tid": "3645761",
+      "pid": "21075373",
+      "biu_id": "2257867",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/ningxia/",
+          "placeid": "2-24912",
+          "cn_name": "宁夏",
+          "en_name": "Ningxia",
+          "id": "24912",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "一人一车一狗，自驾环游中国。目前在宁夏银川，寻求有趣的人一起组队旅行。旅行地点无",
+    "url": "https://bbs.qyer.com/thread-3645761-1.html",
+    "uid": "12560509",
+    "userurl": "https://www.qyer.com/u/12560509",
+    "face": "https://pic.qyer.com/avatar/012/56/05/09/200?v=1597737845",
+    "userauth": "",
+    "username": "皮特大叔",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660099249",
+    "have_plan": "0",
+    "last_post_time": "37分钟前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": "1",
+    "image": ""
+  },
+  {
+    "id": "3645760",
+    "together_info": {
+      "id": "929017",
+      "created": "1660099248",
+      "modified": "1660101011",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-20",
+      "departure_time_latest": "2022-08-29",
+      "return_time": "1661788799",
+      "during": "10",
+      "place": "1-11,2-11714",
+      "uid": "12990636",
+      "tid": "3645760",
+      "pid": "21075372",
+      "biu_id": "2257864",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/lasa/",
+          "placeid": "2-11714",
+          "cn_name": "拉萨",
+          "en_name": "Lasa",
+          "id": "11714",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "8️20号成都出发拼车去西藏，2车已满，第3车两个女生寻拼车小伙伴，专业领队司",
+    "url": "https://bbs.qyer.com/thread-3645760-1.html",
+    "uid": "12990636",
+    "userurl": "https://www.qyer.com/u/12990636",
+    "face": "https://pic.qyer.com/avatar/012/99/06/36/200?v=1644722712",
+    "userauth": "",
+    "username": "ctwyy2022",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660099245",
+    "have_plan": "0",
+    "last_post_time": "37分钟前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": "1",
+    "image": ""
+  },
+  {
+    "id": "3645759",
+    "together_info": {
+      "id": "929016",
+      "created": "1660099244",
+      "modified": "1660099400",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-15",
+      "departure_time_latest": "2022-08-25",
+      "return_time": "1661443199",
+      "during": "11",
+      "place": "1-11,2-24902,1-11,2-24898",
+      "uid": "12721366",
+      "tid": "3645759",
+      "pid": "21075371",
+      "biu_id": "2257879",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/qinghai/",
+          "placeid": "2-24902",
+          "cn_name": "青海",
+          "en_name": "Qinghai",
+          "id": "24902",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/gansu/",
+          "placeid": "2-24898",
+          "cn_name": "甘肃",
+          "en_name": "Gansu",
+          "id": "24898",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "青甘线差一人，目前7人，8人15日从西宁出发，靠谱的朋友私信我加个v！",
+    "url": "https://bbs.qyer.com/thread-3645759-1.html",
+    "uid": "12721366",
+    "userurl": "https://www.qyer.com/u/12721366",
+    "face": "https://pic.qyer.com/avatar/012/72/13/66/200?v=1617440225",
+    "userauth": "",
+    "username": "坏坏哒啦",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660099242",
+    "have_plan": "0",
+    "last_post_time": "37分钟前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": 0,
+    "image": ""
+  },
+  {
+    "id": "3645758",
+    "together_info": {
+      "id": "929015",
+      "created": "1660099241",
+      "modified": "1660099401",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-10",
+      "departure_time_latest": "2022-08-15",
+      "return_time": "1660579199",
+      "during": "6",
+      "place": "1-11,2-11809",
+      "uid": "12362935",
+      "tid": "3645758",
+      "pid": "21075370",
+      "biu_id": "2257878",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/lijiang/",
+          "placeid": "2-11809",
+          "cn_name": "丽江",
+          "en_name": "Lijiang",
+          "id": "11809",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "丽江游8.11-8.15有组队的么？上海出发",
+    "url": "https://bbs.qyer.com/thread-3645758-1.html",
+    "uid": "12362935",
+    "userurl": "https://www.qyer.com/u/12362935",
+    "face": "https://pic.qyer.com/avatar/012/36/29/35/200?v=1659531905",
+    "userauth": "",
+    "username": "Mccree_jons",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660099238",
+    "have_plan": "0",
+    "last_post_time": "37分钟前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": "2",
+    "image": ""
+  },
+  {
+    "id": "3645757",
+    "together_info": {
+      "id": "929014",
+      "created": "1660099238",
+      "modified": "1660099402",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-11",
+      "departure_time_latest": "2022-08-11",
+      "return_time": "1660233599",
+      "during": "1",
+      "place": "1-11,2-11809",
+      "uid": "12812880",
+      "tid": "3645757",
+      "pid": "21075369",
+      "biu_id": "2257877",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/lijiang/",
+          "placeid": "2-11809",
+          "cn_name": "丽江",
+          "en_name": "Lijiang",
+          "id": "11809",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "有没有八月十一号到丽江的，可以一起拼车，到处玩，有的话私我哦",
+    "url": "https://bbs.qyer.com/thread-3645757-1.html",
+    "uid": "12812880",
+    "userurl": "https://www.qyer.com/u/12812880",
+    "face": "https://pic.qyer.com/avatar/012/81/28/80/200?v=1623725362",
+    "userauth": "",
+    "username": "爱冒险的小蚂蚁",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660099236",
+    "have_plan": "0",
+    "last_post_time": "37分钟前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": "2",
+    "image": ""
+  },
+  {
+    "id": "3645756",
+    "together_info": {
+      "id": "929013",
+      "created": "1660099234",
+      "modified": "1660099805",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-13",
+      "departure_time_latest": "2022-08-20",
+      "return_time": "1661011199",
+      "during": "8",
+      "place": "1-11,2-11628,1-11,2-11629,1-11,2-11642,1-11,2-12313",
+      "uid": "4027071",
+      "tid": "3645756",
+      "pid": "21075368",
+      "biu_id": "2257876",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/manzhouli/",
+          "placeid": "2-11628",
+          "cn_name": "满洲里",
+          "en_name": "Manzhouli",
+          "id": "11628",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/eerguna/",
+          "placeid": "2-11629",
+          "cn_name": "额尔古纳",
+          "en_name": "Eerguna",
+          "id": "11629",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/shiwei/",
+          "placeid": "2-11642",
+          "cn_name": "室韦",
+          "en_name": "Shiwei",
+          "id": "11642",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/genhe/",
+          "placeid": "2-12313",
+          "cn_name": "根河",
+          "en_name": "Genhe",
+          "id": "12313",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "8.13-8.20呼伦贝尔环线自驾游（14-19号为正式行程时间），两女一男缺一",
+    "url": "https://bbs.qyer.com/thread-3645756-1.html",
+    "uid": "4027071",
+    "userurl": "https://www.qyer.com/u/4027071",
+    "face": "https://pic.qyer.com/avatar/004/02/70/71/200?v=1577380570",
+    "userauth": "",
+    "username": "冯梓恺",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660099231",
+    "have_plan": "0",
+    "last_post_time": "37分钟前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": 0,
+    "image": ""
+  },
+  {
+    "id": "3645755",
+    "together_info": {
+      "id": "929012",
+      "created": "1660097406",
+      "modified": "1660099304",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-15",
+      "departure_time_latest": "2022-08-22",
+      "return_time": "1661183999",
+      "during": "8",
+      "place": "1-11,2-11790,1-11,2-11809,1-11,2-24914",
+      "uid": "12912287",
+      "tid": "3645755",
+      "pid": "21075366",
+      "biu_id": "2257823",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/dali-11790/",
+          "placeid": "2-11790",
+          "cn_name": "大理",
+          "en_name": "Dali",
+          "id": "11790",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/lijiang/",
+          "placeid": "2-11809",
+          "cn_name": "丽江",
+          "en_name": "Lijiang",
+          "id": "11809",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/yunnan/",
+          "placeid": "2-24914",
+          "cn_name": "云南",
+          "en_name": "Yunnan",
+          "id": "24914",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "攻略已做，男女不限，本人性格好脾气好，有一起结伴的吗？可以互相照顾下。都可以商量",
+    "url": "https://bbs.qyer.com/thread-3645755-1.html",
+    "uid": "12912287",
+    "userurl": "https://www.qyer.com/u/12912287",
+    "face": "https://pic.qyer.com/avatar/012/91/22/87/200?v=1660095683",
+    "userauth": "",
+    "username": "user_CfGu0Sb4F0",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660097402",
+    "have_plan": "0",
+    "last_post_time": "1小时前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": "2",
+    "image": ""
+  },
+  {
+    "id": "3645754",
+    "together_info": {
+      "id": "929011",
+      "created": "1660096871",
+      "modified": "1660100703",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-09-01",
+      "departure_time_latest": "2022-09-18",
+      "return_time": "1663516799",
+      "during": "18",
+      "place": "1-11,2-11936,1-11,2-11937,1-11,2-11938,1-11,2-24916",
+      "uid": "12249083",
+      "tid": "3645754",
+      "pid": "21075364",
+      "biu_id": "2257837",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/wulumuqi/",
+          "placeid": "2-11936",
+          "cn_name": "乌鲁木齐",
+          "en_name": "Wulumuqi",
+          "id": "11936",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/kanasi/",
+          "placeid": "2-11937",
+          "cn_name": "喀纳斯",
+          "en_name": "Kanasi",
+          "id": "11937",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/kashi/",
+          "placeid": "2-11938",
+          "cn_name": "喀什",
+          "en_name": "Kashi",
+          "id": "11938",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        },
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/xinjiang/",
+          "placeid": "2-24916",
+          "cn_name": "新疆",
+          "en_name": "Xinjiang",
+          "id": "24916",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "9月2号乌鲁木齐出发自驾游南北疆，有车有经验，自驾游纯玩自由行，不赶路，一边走一",
+    "url": "https://bbs.qyer.com/thread-3645754-1.html",
+    "uid": "12249083",
+    "userurl": "https://www.qyer.com/u/12249083",
+    "face": "https://pic.qyer.com/avatar/012/24/90/83/200?v=1574040578",
+    "userauth": "",
+    "username": "跨着喵步奔夕阳",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660096868",
+    "have_plan": "0",
+    "last_post_time": "1小时前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": "2",
+    "image": ""
+  },
+  {
+    "id": "3645753",
+    "together_info": {
+      "id": "929010",
+      "created": "1660096868",
+      "modified": "1660099315",
+      "state": "1",
+      "contact": "",
+      "departure_time_earliest": "2022-08-17",
+      "departure_time_latest": "2022-08-21",
+      "return_time": "1661097599",
+      "during": "5",
+      "place": "1-11,2-11919",
+      "uid": "10570918",
+      "tid": "3645753",
+      "pid": "21075363",
+      "biu_id": "2257834",
+      "placename": [
+        {
+          "placeurl": "//place.qyer.com/china/",
+          "placeid": "1-11",
+          "cn_name": "中国",
+          "en_name": "China",
+          "id": "11",
+          "type": "1"
+        },
+        {
+          "placeurl": "//place.qyer.com/xining/",
+          "placeid": "2-11919",
+          "cn_name": "西宁",
+          "en_name": "Xining",
+          "id": "11919",
+          "type": "2",
+          "parent": {
+            "placeurl": "//place.qyer.com/china/",
+            "placeid": "1-11",
+            "cn_name": "中国",
+            "en_name": "China",
+            "id": "11",
+            "type": "1"
+          }
+        }
+      ]
+    },
+    "subject": "周三到周日沿青海湖游玩，西宁起自驾，车房已定，有一起的小姐姐吗。倒淌河、黑马河、",
+    "url": "https://bbs.qyer.com/thread-3645753-1.html",
+    "uid": "10570918",
+    "userurl": "https://www.qyer.com/u/10570918",
+    "face": "https://pic.qyer.com/avatar/010/57/09/18/200?v=1533228378",
+    "userauth": "",
+    "username": "由埃尔",
+    "digest": "0",
+    "type": "3",
+    "typename": "结伴",
+    "typeurl": "https://bbs.qyer.com/forum--3-1.html?",
+    "created": "1660096865",
+    "have_plan": "0",
+    "last_post_time": "1小时前",
+    "total_replies": 0,
+    "likeNumber": 0,
+    "viewNumber": "1",
+    "image": ""
+  }
+]
+
+// console.log(getTxt(0))
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swiper.min.css">
+    <title>Document</title>
+    <style>
+         body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background-color: #fdfdfc;
+            height: 43px;
+            line-height: 43px;
+        }
+        .nav .swiper-container {
+            width: 100%;
+        }
+        .nav .swiper-slide {
+            text-align: center;
+            font-size: 12px;
+            background: #fff;
+            width: 60%;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .nav .swiper-slide:nth-child(2n) {
+            width: 40%;
+        }
+        .nav .swiper-slide:nth-child(3n) {
+            width: 20%;
+        }
+        .slider .swiper-slide {
+            position: relative;
+            height: 164px;
+            text-align: center;
+            font-size: 12px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .slider {
+            width: 100%;
+            height: 100%;
+        }
+        .slider p {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            text-align: center;
+            color: #fff;
+            font-size: 14px
+        }
+        .text {
+            background: #f5f8fc;
+            border: 1px solid #d2e1f1;
+        }
+        .text .swiper-container {
+            color: #294c7f;
+            text-decoration: none;
+            display: block;
+            line-height: 32px;
+            height: 32px;
+            overflow: hidden;
+        }
+        .title {
+            display: flex;
+        }
+        ul {
+            list-style: none;
+        }
+        .title li {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 顶部导航 -->
+        <div class="nav">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">新闻</div>
+                    <div class="swiper-slide">新闻</div>
+                    <div class="swiper-slide">新闻</div>
+                    <div class="swiper-slide">新闻</div>
+                    <div class="swiper-slide">新闻</div>
+                    <div class="swiper-slide">新闻</div>
+                    <div class="swiper-slide">新闻</div>
+                    <div class="swiper-slide">新闻</div>
+                    <div class="swiper-slide">新闻</div>
+                </div>
+            </div>
+        </div>
+        <!-- 轮播 -->
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="1.jpg" alt="">
+                        <p>阿里程序员穿特步相亲被拒绝</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="2.jpg" alt="">
+                        <p>Swiper为北京2022年冬奥会助力</p>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- 文字滚动 -->
+        <div class="text">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">你为什么还没过上你想要的生活</div>
+                    <div class="swiper-slide">莲花粉橙色也太美了！连直男都爱的仙女色！</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                </div>
+            </div>
+        </div>
+        <!-- tab切换 -->
+        <div class="tab">
+            <ul class="title">
+                <li data-index="0">新闻</li>
+                <li data-index="1">社会</li>
+                <li data-index="2">娱乐</li>
+            </ul>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li>1111111111</li>
+                            <li>1111111111</li>
+                            <li>1111111111</li>
+                            <li>1111111111</li>
+                            <li>1111111111</li>
+                            <li>1111111111</li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li>22222222</li>
+                            <li>22222222</li>
+                            <li>22222222</li>
+                            <li>22222222</li>
+                            <li>22222222</li>
+                            <li>22222222</li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li>333333333</li>
+                            <li>333333333</li>
+                            <li>333333333</li>
+                            <li>333333333</li>
+                            <li>333333333</li>
+                            <li>333333333</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="swiper.min.js"></script>
+    <script>
+        // nav导航
+        new Swiper('.nav .swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            slidesPerView: 4,
+            spaceBetween: 10,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                },
+                640: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                },
+                320: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                }
+            }
+        });
+        
+        // 文字滚动
+        new Swiper('.text .swiper-container', {
+            pagination: '.swiper-pagination',
+            direction: 'vertical',
+            autoplay : 1000,
+            loop : true
+        });
+        // 轮播
+        new Swiper('.slider .swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+        // tab切换
+        new Swiper('.tab .swiper-container', {
+            pagination: '.tab .swiper-pagination'
+        });
+
+        // function tab() {
+        //     console.log(event.target.dataset.index)
+        //     var mySwiper = new Swiper('.tab .swiper-container');
+        //     mySwiper.slideTo(event.target.dataset.index, 1000, false);
+        // }
+        var mySwiper = new Swiper('.tab .swiper-container');
+        $('.title').click(function() {
+            console.log(event.target.dataset.index)
+            mySwiper.slideTo(event.target.dataset.index, 1000, false);
+        })
+    </script>
+</body>
+</html>

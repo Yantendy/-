@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        BOM
+            浏览器对象模型
+            browser object model
+            可以访问浏览器的一些信息
+
+            BOM最顶层对象是window对象  window浏览器窗口
+                屏幕尺寸screen
+                历史记录history
+                浏览器信息navigator
+                地址栏location
+
+
+            window浏览器窗口对象
+                所有的浏览器都支持window对象
+                js全局对象是window的成员
+                访问全局变量和方法的时候 其实都是省略window
+
+                window对象中属性
+                    window.history
+                        历史记录
+                        back    返回上一级  后退
+                        forward 跳转下一级  前进
+                        go      既可以前进 也可以后退 还可以刷新
+                            go(n)   // n的值是整数 0    正整数 负整数
+                            写的正值 表示前进多少页面
+                            写的负值 表示后退多少页面
+                            写0   表示刷新
+                    window.location
+                        地址栏
+                        完整链接地址 由 
+                            协议       http  https
+                            域名       www.xxx.com
+                            端口       8081 8082 3000  3001 ...
+
+                        hash
+                            哈希值
+                        host
+                            主域名加端口 包含端口
+                        hostname
+                            主域名
+                        port
+                            端口
+
+                        href
+                            当前地址栏地址 完整地址
+
+                        search
+                            返回当前链接地址的参数
+
+                            地址传参 主要为了在新的页面能够获取一些必要的数据
+                            页面传值格式：
+                                https://www.xxx.com?参数名1=参数值1&参数名2=参数值2&参数名n=参数值n
+
+                                页面进行传值需要写道问号后边  因为问号后边数据 不影响原地址
+
+                    window.screen
+                        当前窗口
+                    window.navigator
+                        浏览器信息
+                    window.innerWidth
+                        页面的可视宽度
+                    window.innerHeight
+                        页面的可视高度
+                    window.outerWidth
+                        页面的真实宽度
+                    window.outerHeight
+                        页面的真实高度
+
+
+            window.alert()
+            window.open()
+            window.close()
+            window.confirm()
+            window.scrollTo(x,y)
+                x表示水平方向坐标
+                y表示垂直方向坐标
+
+     -->
+     <!-- 声明式导航 -->
+     <!-- <a href="a.html">跳转a页面</a>
+     <button onclick="forward()">跳转a页面</button> -->
+     <div onclick="jump()" class="a">跳转a页面</div>
+     <div style="height: 8000px;"></div>
+     <script>
+        // var num=0
+        // function jump() {
+        //     var t=setInterval(function() {
+        //         if(num<1000) {
+        //             num+=30
+        //             window.scrollTo(0, num)
+        //         }else {
+        //             clearInterval(t)
+        //         }
+               
+        //     },10)
+            
+        // }
+        // var a=document.querySelector('.a') 
+        // function jump() {
+        //     var msg=window.confirm('是否删除当前选项')
+        //     if(msg) {
+        //         console.log('删除成功')
+        //         a.remove()
+        //     }else {
+        //         console.log('取消')
+        //     }
+        // }
+        // window.close()
+        // window.location.href="https://www.jd.com"
+        // console.log(window.innerHeight,window.outerHeight,window)
+        // window.open('https://www.baidu.com')
+        // 编程式导航 更加灵活
+        // var name1='zhangsan'
+        // var a=123
+        // var b=456
+        // function jump() {
+        //     // window.location.href='b.html/name1='+name1
+        //     window.location.href='b.html?a='+a+'&b='+b
+        // }
+        // console.log(window.location)
+        // console.log(window)
+        // window.alert(111)
+        // var a=123
+        // console.log(a)
+        // console.log(window)
+        // function forward() {
+        //     // window.history.forward()
+        //     window.history.go(1)
+        // }
+        
+     </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #eee;
+        }
+        #app {
+            height: 100vh;
+            overflow: auto;
+        }
+        .items {
+            height: 5000px;
+        }
+        .nav {
+            width: 100%;
+            height: 200px;
+            background: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .nav1 {
+            position: fixed;
+            height: 80px;
+            left: 0;
+            top: -80px;
+            right: 0;
+            border-bottom: 2px solid #cb3232;
+            background: #fff;
+            text-align: center;
+        }
+        .float {
+            position: fixed;
+            right: 10%;
+            bottom: 30%;
+            background: #fff;
+        }
+        ul {
+            list-style: none;
+            width: 58px;
+            text-align: center;
+        }
+        li {
+            position: relative;
+            height: 58px;
+            line-height: 58px;
+        }
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-bottom: 1px solid #ccc
+        }
+        .list {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid red;
+            margin: 30px auto
+        }
+        .active {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="items">
+            <div class="nav">
+                这是一个顶部导航
+            </div>
+            <div class="nav1">这是一个新的导航</div>
+            <div style="width: 1000px; height: 500px; border: 1px solid red; margin: 50px auto;"></div>
+            <div class="lists">
+                <div class="list" style="margin-top: 80px">
+                    1
+                </div>
+                <div class="list">
+                    2
+                </div>
+                <div class="list">
+                    3
+                </div>
+                <div class="list">
+                    4
+                </div>
+                <div class="list">
+                    5
+                </div>
+            </div>
+            <ul class="float">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var nav=document.querySelector('.nav')
+        var app=document.querySelector("#app")
+        var nav1=document.querySelector('.nav1')
+        var li=document.querySelectorAll('li')
+        var list=document.querySelectorAll('.list')
+        app.onscroll=function() {
+            console.log(app.scrollTop,100)
+            if(app.scrollTop>=400) {
+                nav.style.display="none"
+                nav1.style.top="0"
+            }else {
+                nav.style.display="block"
+                nav1.style.top="-80px"
+            }
+            nav1.style.transition='all 1s'
+            for(var i=0; i<li.length; i++) {
+                li[i].classList.remove('active')
+                if(list[i+1]) {
+                    if(app.scrollTop>=list[i].offsetTop && app.scrollTop<(list[i+1].offsetTop-80)) {
+                        li[i].classList.add('active')
+                    }
+                }else {
+                    if(app.scrollTop>(list[i].offsetTop-80)) {
+                        li[li.length-1].classList.add('active')
+                    }
+                }
+            }
+            // if(app.scrollTop>=280 && app.scrollTop<535) {
+            //     li[0].classList.add('active')
+            // }else if(app.scrollTop>=535 && app.scrollTop<1075){
+            //     li[1].classList.add('active')
+            // }else if(app.scrollTop>=1075 && app.scrollTop<1630){
+            //     li[2].classList.add('active')
+            // }else if(app.scrollTop>=1630 && app.scrollTop<2160){
+            //     li[3].classList.add('active')
+            // }else if(app.scrollTop>=2160) {
+            //     li[4].classList.add('active')
+            // }
+            
+
+        }
+
+    </script>
+</body>
+</html>

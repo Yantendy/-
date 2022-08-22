@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            /* overflow: auto;
+            height: 100vh; */
+        }
+        /* .demo {
+            position: relative;
+            border: 10px solid #ccc;
+            width: 100%;
+            height: 600px;
+            
+        } */
+        /* #app {
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 150px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 50px auto;
+            padding: 10px 20px;
+            word-wrap: break-word;
+            overflow: auto;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 
+        DOM样式设置
+            样式设置都是添加行内样式
+            行内样式
+                元素.style.属性=属性值
+
+            非行内样式（了解）
+                var style=window.getComputedStyle(元素)
+                style.属性
+
+
+        元素尺寸
+            offsetParent （了解）
+                可以对当前元素的 定位父元素 进行返回   返回一整个dom
+            offsetLeft/Top
+                可以输出当前元素偏移量
+                1 如果当前元素设置是top left
+                输出偏移量就是 top  left
+                2 如果当前元素设置是 margin
+                输出偏移量就是当前元素距离 定位父元素外层的距离
+
+            offsetWidth/Height
+                元素所占有的宽高: 内容区域+padding+border
+            clientLeft/Top
+                边框与内容的相对距离
+                不包含padding margin
+
+            clientWidth/Height
+                内容的宽  内容的宽+左右padding
+                内容的高  内容的高+上下padding
+
+            scrollLeft/Top(后期使用最多)
+                表示元素内容距离父元素顶部的距离 (包含滚动条卷起来的距离)
+                表示元素内容距离父元素左边的距离 (包含滚动条卷起来的距离)
+
+            scrollWidth/Height
+                表示元素高度和宽度  包含被隐藏的高度和宽度
+
+
+
+    -->
+    <!-- <div class="demo" id="demo">
+        <div id="app">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+            <button onclick="back()" style="position: fixed; right: 15px; bottom: 50%">返回顶部</button>
+        </div>
+    </div> -->
+
+
+    <div id="test" style="height: 100vh; overflow: auto;">
+        <div class="demo1" style="height: 2800px;"></div>
+        <div class="top" style="display: none; position: fixed; right: 20px; bottom: 50%;" onclick="back()">返回顶部</div>
+    </div>
+    
+
+    <script>
+        var body=document.querySelector('body')
+        var test=document.getElementById('test')
+        var top1=document.querySelector('.top')
+
+        console.log(test.scrollHeight, test.scrollWidth)
+
+        // body.scrollTop=180
+        // test.scrollTop=500
+        // console.log(test.scrollTop=100)
+
+
+        // var t=setInterval(function() {
+        //     // console.log(body.scrollTop)
+        //     console.log(test.scrollTop)
+        //     if(test.scrollTop>=300) {
+        //         // console.log(top.style.display)
+        //         top1.style='display: block; position: fixed; right: 20px; bottom: 50%;'
+        //     }else {
+        //         top1.style='display: none;'
+        //     }
+        // },1)
+            test.onscroll=function() {
+                // if(test.scrollTop>=300) {
+                //     top1.style='display: block; position: fixed; right: 20px; bottom: 50%;'
+                // }else {
+                //     top1.style='display: none;'
+                // }
+                console.log(test.scrollHeight, test.scrollWidth)
+            }
+
+        // var app=document.getElementById('app')
+        // console.log(app.offsetWidth,app.offsetHeight)
+        // console.log(app.clientTop,app.clientLeft)
+        // console.log(app.clientWidth, app.clientHeight)
+        // console.log(app.scrollTop=80, app.scrollLeft)
+        // console.log(app.scrollLeft=800)
+        function back() {
+            // if(app.scrollTop>0) {
+            //     for(var i=app.scrollTop-1; i<app.scrollTop; i--) {
+                    
+            //     }
+            // }
+            
+                var t=setInterval(function() {
+                    if(test.scrollTop>0) {
+                       test.scrollTop-=20
+                    }else {
+                        clearInterval(t)
+                    }
+                },10)
+            
+        }
+        // console.log(app.offsetLeft)
+        // console.log(app.offsetTop)
+        // app.offsetParent.style.background='red'
+        // app.parentNode.style.background='blue'
+        // console.log(app.offsetParent.style)
+        // app.style.color='red'
+        // app.style.fontSize='15px'
+        // app.style.marginTop="50px"
+        // app.style='margin-left: 80px'
+
+        // var style=window.getComputedStyle(app)
+        // console.log(style)
+        // style['color']='red'
+    </script>
+</body>
+</html>

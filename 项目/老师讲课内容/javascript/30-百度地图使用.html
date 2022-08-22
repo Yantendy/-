@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #app {
+            position: relative;
+        }
+        .search {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 99;
+            display: flex;
+        }
+        input {
+            width: 368px;
+            height: 38px;
+            color: #333;
+            position: relative;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            box-shadow: 1px 2px 1px rgb(0 0 0 / 15%);
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            padding-left: 10px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        #container {
+            width: 100%;
+            height: 100vh;
+        }
+        button {
+            background: #3385ff;
+            /* width: 57px; */
+            height: 38px;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            padding: 0 20px;
+            letter-spacing: 1px;
+            border-radius: 0 2px 2px 0;
+            box-shadow: 1px 2px 1px rgb(0 0 0 / 15%);
+        }
+        ul {
+            display: none;
+            list-style: none;
+        }
+        .lists {
+            position: absolute;
+            left: 30px;
+            top: 68px;
+            width: 368px;
+            max-height: 320px;
+            background: #fff;
+            z-index: 99;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+            box-sizing: border-box;
+            overflow: auto;
+            /* display: none; */
+        }
+        li {
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+        .tab {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            z-index: 99;
+            display: flex;
+            background: #fff;
+            padding: 10px;
+            width: 300px;
+        }
+        p {
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <!-- 
+        发起后台ajax异步请求
+            1 原生js里边ajax
+                XMLHttpRequest
+
+            2 使用jquery里边ajax
+                必须引入jquery
+                $.ajax()
+                $.get()
+                $.post()
+
+            3 基于promise的原生ajax请求
+                fetch('api接口地址').then(response=> {
+                    return response.json()
+                }).then(res=> {
+                    console.log(res)   // 后台接口返回的数据
+                }).catch(err=> {
+                    // 捕获错误信息
+                    console.log(err)
+                })
+     -->
+</head>
+<body>
+    <!-- 地图的容器 -->
+    <div id="app">
+       <div id="container"></div> 
+       <div class="search">
+            <input type="text">
+            <button>搜索</button>
+       </div>
+       <ul class="lists">
+       </ul>
+
+       <div class="tab" onclick="tab()">
+            <p>足浴</p>
+            <p>spa</p>
+            <p>酒店</p>
+            <p>网吧</p>
+       </div>
+    </div>
+    
+
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=g9bs0YW0BkBogFSCykx2ifBBiroCtYIe"></script>
+    <script type="text/javascript">
+        var map = new BMapGL.Map("container");
+        // 创建地图实例  里边是初始化的经纬度
+        var point = new BMapGL.Point(113.6249, 34.7472);
+        // 创建点坐标 
+        map.centerAndZoom(point, 15);
+        // 初始化地图，设置中心点坐标和地图级别 
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+
+        
+
+        // 实现搜索框实时检索
+        var ipt=document.querySelector('input')
+        var ul=document.querySelector('ul')
+        ipt.oninput=function() {
+            if(ipt.value.trim().length>0) {
+                ul.style.display='block'
+            }else {
+                ul.style.display='none'
+            }
+            ul.innerHTML=''
+            fetch('https://api.map.baidu.com/place/v2/search?query='+ipt.value+'&region=郑州&output=json&ak=g9bs0YW0BkBogFSCykx2ifBBiroCtYIe').then(response=> {
+                return response.json()
+            }).then(res=> {
+                console.log(res.results)   // 后台接口返回的数据
+                for(var i=0; i<res.results.length; i++) {
+                    ul.innerHTML+=`
+                        <li data-lat="${res.results[i].location.lat}" data-lng="${res.results[i].location.lng}">${res.results[i].name}</li>
+                    `
+                }
+            }).catch(err=> {
+                // 捕获错误信息
+                console.log(err)
+            })
+        }
+
+        // 点击下拉列表实现数据的替换
+        ul.onclick=function() {
+            // 清除所有的标记点
+            map.clearOverlays()
+            console.log(event.target.dataset.lat, event.target.dataset.lng)
+            lat1=event.target.dataset.lat
+            lng1=event.target.dataset.lng
+            ipt.value=event.target.innerHTML
+            ul.style.display='none'
+            var point = new BMapGL.Point(event.target.dataset.lng, event.target.dataset.lat);
+            // 创建点坐标 
+            map.centerAndZoom(point, 15);
+            // 创建点标记
+            var marker1 = new BMapGL.Marker(new BMapGL.Point(event.target.dataset.lng, event.target.dataset.lat));
+            // 在地图上添加点标记
+            map.addOverlay(marker1);
+            
+        }
+
+        // 获取周边的设施
+        var arr=[]
+        function tab() {
+            console.log(event.target.innerHTML)
+            // 清除所有的标记点
+            map.clearOverlays()
+            fetch('https://api.map.baidu.com/place/v2/search?query='+event.target.innerHTML+'&location='+lat1+','+lng1+'&radius=2000&output=json&ak=g9bs0YW0BkBogFSCykx2ifBBiroCtYIe').then(response=> {
+                return response.json()
+            }).then(res=> {
+                console.log(res.results,999)   // 后台接口返回的数据
+                for(var i=0; i<res.results.length; i++) {
+                    // // 在地图上添加点标记
+                    let marker = 'marker' + i; //动态生成变量名
+                    let point = 'point' + i; //动态生成变量名
+                    let opts = 'opts' + i; //动态生成变量名
+                    let infoWindow = 'infoWindow' + i; //动态生成变量名
+                    // 创建点标记
+                    window[point] = new BMapGL.Point(res.results[i].location.lng, res.results[i].location.lat); //给变量赋值
+                    // console.log(window)
+                    // // 在地图上添加点标记
+                    window[marker] = new BMapGL.Marker(window[point]); //给变量赋值
+                    // console.log(window)
+                    map.addOverlay(window[marker]); //使用变量
+                    window[opts] = {
+                        width: 300,
+                        height: 'auto',
+                        title: res.results[i].name
+                    };
+                    window[infoWindow] = new BMapGL.InfoWindow('商户地址：' + res.results[i].address,window[opts]);//使用变量
+                    // 点标记添加点击事件
+                    window[marker].addEventListener('mouseover', function () {
+                        map.openInfoWindow(window[infoWindow], window[point]); // 开启信息窗口
+                    });
+                }
+            }).catch(err=> {
+                // 捕获错误信息
+                console.log(err)
+            })
+        }
+    </script>
+</body>
+</html>

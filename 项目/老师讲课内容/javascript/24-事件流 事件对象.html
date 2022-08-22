@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .item1 {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            margin: 50px auto;
+            padding: 100px;
+            box-sizing: border-box;
+        }
+        .item2 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            padding: 100px;
+            box-sizing: border-box;
+        }
+        .item3 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        事件流
+            事件流是从页面中接受事件的顺序
+
+
+        事件流模型
+            冒泡型事件流
+                事件的传播是从最特定的事件目标到最不特定的事件目标
+
+            捕获型事件流
+                事件的传播是从最不特定的事件目标到最特定的事件目标
+
+            事件捕获的思想就是不太具体的节点应该更早的接收事件
+
+
+        阻止冒泡
+            event.stopPropagation
+            e.cancelBubble=true
+
+        阻止默认行为
+            e.preventDefault
+
+        事件代理(事件委托)
+            事件代理原理是事件冒泡到目标元素，事件处理函数添加个父元素  等待子元素的冒泡
+
+            获取元素需要通过event.target获取目标元素
+
+            将子元素的事件 委托绑定到父元素上边
+
+        事件对象
+            就是当你触发一个事件之后 该事件的一些描述信息
+
+            例如：
+                当你点击了一个按钮 这个事件可以给你返回当前按钮所在的位置(坐标)
+
+                当你触发了键盘事件 他知道你点了那个按钮
+
+            每一个事件都会有一个对应的对象来描述这些信息 我们就把这个对象成为 事件对象
+
+        事件对象的获取
+            标准浏览器
+                function 函数名() {
+                    console.log(event.target)
+                }
+
+            ie低版本
+                function 函数名(e) {
+                    console.log(e)
+                }
+
+     -->
+     <!-- <div class="item1">
+        <div class="item2">
+            <div class="item3"></div>
+        </div>
+     </div> -->
+     <!-- <a href="https://www.baidu.com">跳转</a> -->
+     <ul onclick="pop()">
+        <!-- <li onclick="pop('标题1')">标题1</li>
+        <li onclick="pop('标题2')">标题2</li>
+        <li onclick="pop('标题3')">标题3</li>
+        <li onclick="pop('标题4')">标题4</li> -->
+        <li>标题1</li>
+        <li>标题2</li>
+        <li>标题3</li>
+        <li>标题4</li>
+     </ul>
+
+     <button id="app">获取</button>
+
+     <script>
+        var btn=document.getElementById("app")
+        // btn.onclick=function(e) {
+        //     console.log(e)
+        // }
+
+        // function pop(txt) {
+        //     console.log(txt)
+        // }
+
+        // function pop() {
+        //     console.log(event.target.innerHTML)
+        // }
+
+        // var a=document.querySelector('a')
+        // a.onclick=function(e) {
+        //     e.preventDefault()
+        // }
+
+        // var item1=document.querySelector('.item1')
+        // var item2=document.querySelector('.item2')
+        // var item3=document.querySelector('.item3')
+        // item1.onclick=function() {
+        //     console.log('item1')
+        // }
+        // item2.onclick=function(e) {
+        //     console.log('item2')
+        //     // event.stopPropagation()
+        //     e.cancelBubble=true
+        // }
+        // item3.onclick=function(e) {
+        //     console.log('item3')
+        //     // event.stopPropagation()
+        //     e.cancelBubble=true
+        // }
+        
+     </script>
+</body>
+</html>
