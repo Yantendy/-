@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        jquery介绍
+            jquery是基于javascript的一个插件库
+
+            使用时候首先
+                1 在页面中需要引入jquery插件 
+                    在bootcdn搜索jquery  在本地文件进行引入
+                    https://www.bootcdn.cn/
+
+                    jquery有很多的版本  不同版本所支持的方法是不一样的
+
+                2 在页面中script标签中编写jquery
+
+            语法：
+                所有jquery都是以 $开头
+                格式：
+                    $(document).ready(function() {
+                        // 要执行的代码
+                    })
+
+    -->
+    <ul>
+        <li>1111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>4444</li>
+    </ul>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // console.log($(document))
+        $(document).ready(function() {
+            // $("body").css('background','red')
+            $("li:first-child").css('color','red')
+            $("li:nth-child(2)").css('color','green')
+            $("li:nth-child(3)").css('color','blue')
+            $("li:nth-child(4)").css('color','yellow')
+        })
+        // $("li").on('click',function() {
+        //     console.log(111)
+        // })
+        $("li").click(function() {
+            $(this).slideUp(2000)
+            // console.log($(this).html())
+        })
+    </script>
+</body>
+</html>
